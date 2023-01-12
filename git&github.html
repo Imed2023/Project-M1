@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Ayeb Imed</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/imed.png">
+    <link rel="stylesheet" href="style-git.css">
+
+    
+
+</head>
+
+<body>
+
+
+  <div class="side-barp1" id="sidenav">
+
+    <a id="b0" href="#Getting Started With Git" >Getting Started With GIT</a>
+    <a id="b1" href="#Basic Git Commands" >Basic Git Commands</a>
+    <a id="b2" href="#Configuring Git" >Configuring Git</a>
+    <a id="b3" href="#GitHub Introduction" >GitHub Introduction</a>
+    <a id="b4" href="#Working with Remotes" >Working with Remotes</a>
+    <a id="b5" href="#GitHub Workflow" >GitHub Workflow</a>
+    <a id="b6" href="#Conclusion" >Conclusion</a>
+    
+
+
+</div>
+
+
+
+<img id="git-img" src="images/gith.png" alt="GIT">
+    <a href="index.html"><img id="home" src="images/home1.png" alt="home" ></a>
+    <h1 id="first-line">Git & GitHub</h1>
+    
+<!----------------------------------------------------Getting Started With Git---------------------------------------------------------------->
+   
+    <h1 id="Getting Started With Git">Getting Started With Git</h2> 
+  <div class="parag1">
+    
+    <p>We can imagine that web design is like a building and Git is one of the many important pillars that web design is built on.
+      Our primary objectives right now are to:</p>
+    <br>
+    
+    <ul>
+      <li>Understand what Git is</li>
+      <li>Learn how to use the basic Git commands</li>
+      <li>Discover how to configure Git</li>
+      <li>Understand what Github is and how to work with remote repositories</li>
+  </ul>
+
+ 
+  </div>
+
+  <h2>What Is a VCS?</h2>
+    <div class="parag2">
+      
+      
+        <p>A version control system is a software tool that helps developer teams track and manage source code changes over time.</p>
+        <br>
+        <p> As you edit and add to your code, you tell the version control system to take a snapshot of your files or save a checkpoint of your progress.
+        The version control system saves that snapshot permanently so you can recall it later on if you need it.</p>
+        <br>
+        <p> Without a VCS, you’re tempted to keep multiple copies of code on your computer. This is dangerous because it’s easy for a file to get corrupted or deleted meaning you’re susceptible to losing months or even years worth of work.</p>
+        <br>
+        <p> Version control systems solve that problem by presenting you with all versions of your code with a clear history of the changes made. This allows you to go back to older versions of the code and try a different approach.</p>
+      
+        
+      </div>
+      <div id="img1">
+      <img  src="images/Version_Control.webp" alt=""> 
+      </div>
+ 
+      <h2>What Is Git?</h2>
+      <div class="parag3">
+      
+      
+        <p>Git is a free and open source VCS designed to handle everything from small to very large projects with speed and efficiency.</p>
+        <br>
+        <p> In plain English, Git is a tool that allows developers to track versions of their code over time. It does this by creating "snapshots" of the current state of the code base whenever you tell it to.</p>
+        <br>
+        <p>Git is essential when collaborating with other developers to ensure that there are no code conflicts between them and that previous "snapshots" of the code can be revisited if necessary.</p>
+        <br>
+        <p>For example, if you are coding and you accidentally break or crash the app, you’ve just lost all your progress and you’re forced to start from scratch. However, it’s easier and safer if you're using Git and you can simply roll back to a previous version of the code.
+
+        </p>
+      
+        
+      </div>
+      <div id="vid1">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1GyYr528VhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+<!----------------------------------------------------Basic Git Commands---------------------------------------------------------------->
+
+<h1 id="Basic Git Commands">Basic Git Commands</h1>
+<h2>Installing Git</h2>
+<div class="parag2">
+<p>Git isn’t usually set up by default on your computer, so you need to install and configure it before you can start using it to manage your code.
+  It’s important to keep Git up to date, just like all the other software on your machine. Updates protect you from security vulnerabilities, fix bugs, and give you access to new features.</p>
+<br>
+<p>The recommended method of installing and maintaining Git is provided for three major platforms below:</p>
+
+<h3>Windows</h3>
+
+<p>Download and install Git for Windows. Once installed, you’ll be able to use Git from the command prompt or PowerShell. We recommend that you stick with the defaults selected during the installation unless you have a good reason to change them.</p>
+
+<h3>Linux</h3>
+
+<div class="papt"><p>On the terminal, just run&ensp;<p id="apt-install">sudo apt install git-all.</p></p></div>
+
+<h3>Mac</h3>
+<div class="papt">
+<p>The best thing to do is to install</p>
+<a href="https://brew.sh/" target="_blank" id="brew">Homebrew</a>
+<p>and then from the terminal run the command brew install git.</p>
+</div>
+
+</div>
+<h2>Start Using Git</h2>
+
+<div class="parag2">
+  <p>Once we have Git installed we need to "initialize" a repository before we can start using it.
+    It’s very easy to do, just follow my lead:</p>
+    <br>
+    <ol class="olist">
+      <li>Access the wanted folder using the terminal (prompt cmd).</li>
+      <li>To initialize a repository, we only have to run:</li>
+  </ol>
+<br>
+<p class="git">git init</p>
+<br>
+<p>Output</p>
+<div class="img-gitinit" >
+<img src="images/S0LaUGt.png" alt="">
+</div>
+</div>
+
+<h2>Adding and Committing Files</h2>
+<div class="parag2">
+<p>Remember that folder we’ve created? It’s time to use it. We’ll be creating a file and placing it in there
+  Feel free to add whatever you want!</p>
+  <h3>Check the Status of Your Repository</h3>
+  <p>Now that we have a few files in our repository, let's see how Git processes them.</p>  
+  <p>To check the current status of your repository we use the git status command.</p>
+  <p class="git">git status</p>
+  <br>
+<p>Output</p>
+<div class="img-gitinit" >
+<img src="images/BADcL0z.png" alt="">
+</div>
+  <h3>Adding Files for Git to Track</h3>
+  <p>At this point, we do not have any files for Git to track.</p>  
+  <p>We need to add files specifically to Git in order to tell Git to track them. We add files using the “add” command.</p>
+  <p>After running git add . Git will add all the repository files to an intermediate area called the staging area. We can also add what we want simply by running git add myFileName</p>
+  <p class="git">git add .</p>
+  <br>
+<p>Output</p>
+<div class="img-gitinit" >
+<img src="images/raB0aR0.png" alt="">
+</div>
+<h3>Removing Files</h3>
+  <p>Let’s say that you have added files to Git and you do not want it to track any of them.</p>  
+  <p>In a situation like this you have to tell Git to stop tracking them.</p>
+  <p>However, running a simple git rm command will not only remove it from Git, but will also remove it from your local file system as well! To tell Git to stop</p>
+  <p>tracking a file while still keep it in your local system, run the following command:</p>
+  <p class="git"> git rm --cached [file_name]</p>
+  <br>
+<p>Output</p>
+<div class="img-gitinit" >
+<img src="images/V5DEfcs.png" alt="">
+</div>
+<h3>Committing Changes</h3>
+  <p>Once you have staged your files, you can commit them into Git.</p>  
+  <p>Imagine a commit command as a snapshot at a certain point and time where you can return back to access your repository at that stage. You assign a commit message to every commit, which you can pass with the -m prefix.</p>
+  <p class="git"> git commit -m 'first commit'</p>
+  <br>
+<p>Output</p>
+<div class="img-gitinit" >
+<img src="images/iIOmpc5.png" alt="">
+</div>
+
+</div>
+
+<!----------------------------------------------------Configuring GIT---------------------------------------------------------------->
+<h1 id="Configuring Git">Configuring Git</h1>
+<div class="parag2">
+
+<h3>File Status</h3>
+  <p>Git sees every file in your working copy as one of three things:</p>  
+  <h4>Tracked:</h4>
+  <p>A file which has been previously staged or committed.</p>
+  <h4>Untracked:</h4>
+  <p>A file which has not been staged or committed.</p>
+  <h4>Ignored:</h4>
+  <p>A file which Git has been explicitly told to ignore.</p>
+  <p>Ignored files are usually built artifacts and machine generated files that can be derived from your repository source or should otherwise not be committed.</p>
+  <p>PS: If we have a file that we do not want to track, we just put it inside the .gitignore file.</p>
+  <h3>Configuration Settings</h3>
+  <p>The .gitconfig file contains a list of configurations that affects the behavior of git commands. So in order to manipulate it, we use the command git config <configuration>. Therefore, to change the name and email used by Git to identify the user, we run the following command: (PS. change YOUR.NAME and YOUR.EMAIL with your own values.)</p>
+  <p class="git"> git config --global user.name "YOUR NAME" <br> git config --global user.email "YOUR EMAIL"</p>
+  
+  <h3>Git Aliases</h3>
+  <p>Oftentimes, you’ll be finding yourself typing git commands over and over again. For example, git add, git init and git status are commands you will be repeatedly using.</p>
+  <p>The smart thing to do in this case is use a shortcut, or an alias. Aliases help make your Git experience simpler, easier, and more familiar.</p>
+  <p>To create a temporary alias, which will last as long as your terminal session is open, you can type:</p>
+  <p class="git"> git config alias.KEYBOARD_SHORTCUT COMMAND</p>
+  <p>So if we wanted to type git st and have it function like git status, we would type git config alias.st status. Now we can type git st and have the same output as if we typed git status.</p>
+  <p>If you would like your alias to be a part of your global configuration, add the --global command after git config. For example, to alias git i to git init globally, you would type git config --global alias.i init.</p>
+
+</div>
+
+
+<!----------------------------------------------------GitHub Introduction---------------------------------------------------------------->
+
+<h1 id="GitHub Introduction">GitHub Introduction</h1>
+<div class="parag2">
+
+<h3>What Is GitHub?</h3>
+  <p>GitHub is a web-based Git repository hosting service.</p>  
+  <p>Simply put, it is a tool that enables collaboration by hosting shared Git repositories that teams of developers can all contribute to.</p>
+  <p>While GitHub uses Git, the functionality it provides is entirely different from Git. So try to make it stick in your mind that Git and GitHub are not the same thing.</p>
+  <br>
+  <p>In short, Git is a Version Control System while GitHub is an online platform for hosting and sharing code, text files, and more complex file formats.</p>
+  <div id="vid2">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ct2aJXjzISs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <h3>Why Use GitHub?</h3>
+  <p>GitHub provides a great way for you to store your code in a safe and remote location (in case something happens to your local machine). It's a fantastic way to collaborate with other developers both privately and publicly.</p>
+  <br>
+  <p>Many large open source projects are hosted on GitHub, which makes it very easy to examine shared code both on GitHub and on local machines.</p>
+  <br>
+  <p>In the next couple of chapters we will learn how to move code from our local repository to a remote repository on GitHub using the push command, as well as retrieve code from a remote repository on GitHub using the <b style="color: salmon;">pull</b>  command.</p>
+  <br>
+  <p>We'll also learn about GitHub specific concepts like <b>forking</b>  and <b>pull requests</b> .</p>
+  <br>
+  <p>Want to get a sense for how popular GitHub is in the development community? Here are some projects you may have heard of that are hosted there:</p>
+  <ul class="liste-ang" type="square">
+    <li><a href="https://github.com/angular/angular" target="_blank">Angular</a></li>
+    <li><a href="https://github.com/facebook/react" target="_blank">React</a></li>
+    <li><a href="https://github.com/rails/rails" target="_blank">Ruby on Rails</a></li>
+    <li><a href="https://github.com/twbs/bootstrap" target="_blank">Twitter Bootstrap</a></li>
+    <li><a href="https://github.com/nodejs/node" target="_blank">Node.js</a></li>
+    <li><a href="https://github.com/jquery/jquery" target="_blank">JQuery</a></li>
+    <li><a href="https://github.com/Homebrew/brew" target="_blank">Homebrew</a></li>
+  </ul>
+
+  <h3>Getting Started with GitHub</h3>
+  
+  <p>If you don't have an account on GitHub yet, head to <a href="github.com" target="_blank">github.com</a> and create an account. Signing up is easy!</p>
+  <br>
+  <p>Be sure to use whatever email address is in your <b style="color: rgb(59, 2, 2);">.gitconfig</b> when you sign up on GitHub.</p>
+  <br>
+  <p>If you'd rather sign up with a different email address, change your <b style="color: rgb(59, 2, 2);">.gitconfig</b> accordingly. You'll run into some minor annoyances if there's a mismatch between the email address in your GitHub profile and the email address in your <b style="color: rgb(59, 2, 2);">.gitconfig</b>.</p>
+</div>
+
+<!----------------------------------------------------Working with Remotes---------------------------------------------------------------->
+
+<h1 id="Working with Remotes">Working with Remotes</h1>
+<div class="parag2">
+<h3>Creating a Remote Repository</h3>
+<p>Once you have a GitHub account, head over to https://github.com/new and create a repository. In this example, we will be creating a repository called <b>first_repo</b>. Do not worry about the description or checking the box to initialize the repository with <b>README</b>.</p>
+<br>
+<p>After you've created the repository, GitHub will give you a few instructions to get started. The instructions should look something like this (The url towards the end will depend on your GitHub username)</p>
+
+
+<div class="img-imed" >
+  <img src="images/MDTlbys.png" alt="">
+</div>
+
+<h3>Pushing Code to GitHub</h3>
+<p>After creating a repository in GitHub, we need to add our local code (after commits) to the remote repo. It’s very simple. First, we need to attach the address of the GitHub repo to our local project, simply by running git remote add origin YOUR_REPO_URL.</p>
+<div class="img-imed" ><img src="images/XImiQbs.png" alt=""></div>
+<p>Now, after providing the remote URL to the local repository to take the local files to the remote host, we have to run this command git push origin master.</p>
+<div class="img-imed" ><img src="images/tlhUR7I.png" alt=""></div>
+<p>And voila! Our files are now in GitHub.</p>
+<div class="img-imed" ><img src="images/removed.png" alt=""></div>
+
+</div> 
+
+<!----------------------------------------------------GitHub Workflow---------------------------------------------------------------->
+
+<h1 id="GitHub Workflow">GitHub Workflow</h1>
+<div class="parag2">
+<p>Now that we know how to push code to GitHub, let's explore one of GitHub’s important features: forking.</p>
+<br>
+<p>When collaborating with others you’re unable to push directly to the original repository (Imagine if you could play with one of the world’s largest open source projects and repositories… that would be insane).</p>
+<br>
+<p>So the logical thing to do is make a copy of someone else's remote repository and make sure it is under our username so that we can push code to it. This ensures that our experimenting with the repository doesn’t affect the original version.</p>
+<br>
+<p>To practice forking, head over to any repo on <a href="https://github.com/">github</a> and on the top right you will see a button with the text Fork. Click on this button and you will have a copy of the repository under your name!</p>
+<br>
+<p>Remember, "forking" is strictly a <b>GitHub</b> feature and it is not by any means related to Git. It is simply a way to make your own copy of a repository on your account where you have permission to push your code to GitHub.</p>
+<div class="img-imed" ><img src="images/rDxcUaM.png" alt=""></div>
+<h3>Clone</h3>
+<p>Once you have applied “forking” on the repository, you need to select it (the remote one you just made) and download the code on your local computer (i.e. make a local repository). Instead of making a folder and going through the whole git init process and adding a remote, you can conveniently use the git clone command, which accepts a link to the repository and downloads it into a folder (with everything already set up!).</p>
+<br>
+<p>In order to do this, click on the button clone and that will provide us with a remote URL. Then just copy the URL.</p>
+<p>In the terminal, just run git clone THE_COPYED_ADDRESS.</p>
+<div class="img-imed" ><img src="images/pci8SE5.png" alt=""></div>
+<p style="background-color: black;color:white;font-size: 14px;padding: 5px;">git clone https://github.com/facebook/react.git</p>
+<div class="img-imed" ><img src="images/WPOxxBF.png" alt=""></div>
+<h3>Pull Request</h3>
+<p>Now let's say you are collaborating with an organization on GitHub (where you forked the repository from) and you would like to merge your changes with the original repo that you forked (remember you can't just push to it, because you do not have permission to do so). You can issue a pull request and the person who can grant permission can either merge or reject it.</p>
+<br>
+<p>To do this, click on "New pull request” and then click on "Create pull request". You should then be able to go to the original repository and see your pull request or "PR".</p>
+<div class="img-imed" ><img src="images/t2C2pyD.png" alt=""></div>
+
+</div>
+
+<!----------------------------------------------------Conclusion---------------------------------------------------------------->
+<h1 id="Conclusion">Conclusion</h1>
+<div class="parag2">
+<h3>What you should know by now :</h3>
+<div id="vid2">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MjOGLJDkLos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="conc-git">
+  <h2 style="margin: auto;">Kudos to you for making it this far!</h2>
+  <br>
+  <p>We can fairly say we have mastered Git & GitHub!</p>
+  <br>
+  <p>But, there’s always more to learn.</p>
+  <br>
+  <p>We can now work with remote repositories and keep track of different versions of our code. We can also work and collaborate with teams in order to build large projects.</p>
+  <hr>
+  <h3>As every superskill, we prepared a cheatsheet with everything you learned in this chapter:</h3>
+  <h3 style="color: blue;"><a href="https://drive.google.com/file/d/1bCAgl2Baeoo1a8OhEPkf_y5d6xR8_crO/view" target="_blank">📜 GMC Git/GitHub Cheat Sheet</a></h3>
+  
+</div>
+</div>
+
+<a id="top-btn" href="git&github.html"><img id="top" src="images/top1.png" alt="" ></a>
+
+
+
+<footer>
+  <img  id="imd-logo" src="images/imed_logo1.png" alt="">
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>
+

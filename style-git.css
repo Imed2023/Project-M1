@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+  }
+
+  
+    
+    .webfund {
+        padding-left: 5%;
+        line-height: 25pt;
+    }
+    body {
+        background-image: url(images/bg2.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin-bottom: 80px;
+    }
+    
+    #sidenav a {
+      position: fixed;
+      left: -90px;
+      transition: 0.4s; 
+      padding: 15px;
+      width: 240px; 
+      text-decoration: none; 
+      font-size: 15px;
+      color: white;
+      border-radius: 0 5px 5px 0;
+      text-align: right; 
+      
+    }
+    #sidenav a:hover {
+      left: 0;
+      text-align: left;
+      
+    }
+    #b0 {
+      top: 150px;
+      background-color: #d18e82;
+      position: fixed;
+    }
+  
+    #b1 {
+      top: 215px;
+      background-color: #04AA6D;
+     
+    }
+    
+    #b2 {
+      top: 280px;
+      background-color: #2196F3; 
+      
+    }
+    
+    #b3 {
+      top: 345px;
+      background-color: #f44336;
+       
+    }
+    
+    #b4 {
+      top: 410px;
+      background-color: #555; 
+      
+    }
+    #b5 {
+      top: 475px;
+      background-color: rgb(52, 61, 5); 
+      
+    }
+    #b6 {
+      top: 540px;
+      background-color: rgb(161, 15, 125);
+       
+    }
+    
+
+#first-line{
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-size: 50px;
+    text-shadow: none;
+    background-color: darkorange;
+    display: flex;
+    width: 400px;
+    border-radius: 10px 40px;
+    justify-content: center;
+    margin-left: calc((100vw - 400px)/2);
+    margin-bottom: 20px;
+    
+
+}
+#git-img {
+  float:right;
+  padding:10px;
+  max-width:20%;
+  max-height: 20%;
+  
+
+}
+
+#home {
+    position: sticky;
+    top: 20px;
+    left:3px;
+    width:140px;
+    height: 50px;
+    
+}
+
+.parag1 {
+
+  margin-left: 200px;
+  margin-right: 100px;
+  font-size: 16px;
+}
+
+.parag1 li {
+
+  margin-left: 50px;
+}
+
+h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 200px;
+  margin-right: 100px;
+  width: calc(100vw - 250px)
+
+}
+.parag2 h3 {
+  margin: 0;
+  padding: 0;
+}
+.parag2 {
+  
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 16px;
+   
+  
+}
+
+#img1 {
+ 
+  margin-left: 200px;
+  margin-right: 100px;
+  width: calc(100vw - 300px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+ 
+}
+#img1 img {
+  max-width: 70%;
+  max-height: 65%;
+  padding: 30px;
+}
+.parag3 {
+  
+  margin-left: 200px;
+  margin-right: 100px;
+  font-size: 16px;
+  
+  
+}
+
+#vid1 {
+ 
+  margin-left: 200px;
+  margin-right: 100px;
+  width: calc(100vw - 300px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+#vid2 {
+ 
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  
+}
+
+
+h1 {
+  margin-left: 200px;
+  margin-right: 100px;
+  color: rgb(5, 44, 82);
+  padding-bottom: 10px;
+  text-shadow: #1b0db4 1px 0 8px;
+}
+.parag2 h3 {
+  color: blueviolet;
+  padding: 10px 0;
+}
+
+.papt p {
+  display:inline-block;
+}
+#apt-install {
+  color: red;
+}
+#brew {
+  text-decoration: none;
+  color: brown;
+}
+.parag2 li {
+  margin-left: 50px;
+}
+.git {
+  background-color: black;
+  color: white;
+  margin: 6px 0;
+
+}
+.img-gitinit {
+  display: flex;
+  justify-content: center;
+}
+
+.img-gitinit img {
+  max-width: 50%;
+  padding: 10px 0;
+}
+.img-imed {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.img-imed img {
+  
+  max-width: 80%;
+  padding: 15px 0;
+}
+
+
+.liste-ang {
+  
+  list-style-image: url("images/122663.png");
+  text-decoration: none;
+}
+a {
+   
+  text-decoration: none;
+}
+
+.conc-git {
+  padding: 20px;
+  background-color: lightpink;
+  border-radius: 10px 10px;
+  width: 80%;
+  margin: auto;
+  
+}
+#imd-logo {
+  position : fixed;
+  bottom : 0;
+  right: 5px;
+  width:120px;
+  
+  
+}

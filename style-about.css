@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+  }
+
+
+ 
+  body {
+    background-image: url(images/bg2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   
+}
+#home {
+  position: fixed;
+  float: left;
+  width:140px;
+  bottom: 5px;
+ z-index: 9999999;
+  
+}
+
+
+.contact {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  width: 800px;
+  height: 460px;
+  padding: 40px;
+  border-style: groove;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: calc(( 100vh - 460px ) / 2);
+  border-radius: 25px;
+  background-image: url("images/ins.png");
+  background-repeat: no-repeat;
+  background-size: inherit;
+  
+}
+  
+#contact-details {
+  
+  align-items: left;
+  font-size: 20px;
+  color: whitesmoke;
+  width: fit-content
+  
+}
+
+
+
+#reseau-soc {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: start;
+  gap: 20px;
+  
+}
+
+p:hover {
+  zoom: 1.2;
+  color: gold;
+}
+
+#home1 {
+  display: flex;
+  justify-content: flex-end
+}
+
+

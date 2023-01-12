@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+  }
+    body {
+        background-image: url(images/bg2.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+       
+    }
+       
+   
+
+    #css-img {
+      float:right;
+      padding:25px;
+      max-width:12%;
+      max-height: 12%;
+      
+    } 
+    
+
+    #home {
+      position: sticky;
+      top: 20px;
+      left:3px;
+      width:140px;
+      height: 50px;
+      z-index: 999999999;
+      
+  } 
+
+
+pre {
+  margin: 20px;
+  background-color: rgb(243, 246, 214);
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+.parag {
+  margin-left: 220px;
+  margin-right: 220px;
+  
+}
+
+.parag ul {
+
+  margin-left: 100px;
+}
+
+h1 {
+  padding: 10px 0;
+  color: red;
+  text-shadow: #de4e22 1px 0 8px;
+
+}
+h2 {
+  padding: 10px 0;
+  color: rgb(71, 14, 177);
+  text-shadow: #604dbe 1px 0 8px;
+  font-size: 30px;
+
+}
+h3 {
+  padding: 10px 0;
+  color: rgb(13, 152, 67);
+ 
+
+
+}
+
+p {
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.parag img {
+
+  display: flex;
+  margin: auto;
+}
+
+#imd-logo {
+  position : fixed;
+  bottom : 0;
+  right: 5px;
+  width:120px;
+  
+  
+}
+
+
+/*------------------------------------------*/
+
+.top img {
+
+  position : fixed;
+  bottom : 5px;
+  left: 5px;
+  z-index: 10;
+  animation: taillemod 1300ms infinite;
+  width: 50px;
+ 
+    
+}
+
+
+
+@keyframes taillemod {
+  0% {
+    
+    bottom: 5px;
+  }
+  25% {
+    
+    bottom: 10px;
+  }
+  50% {
+    
+    bottom: 15px;
+  }
+  75% {
+    
+    bottom: 10px;
+  }
+  100% {
+    
+    bottom: 5px;
+  }
+}
+
+
+
+
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /*background-image: url("images/side_css.jpg");*/
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin-left: 0px;
+  margin-top: 80px;
+  width: 200px;
+  z-index: 10;
+  padding : 5px 0 5px 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-style: double;
+  }
+
+
+.side-bar a {
+
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  
+}
+
+
+.side-bar a:hover {
+
+  color: rgb(224, 111, 24);
+}

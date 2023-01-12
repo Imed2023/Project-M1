@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Ayeb Imed</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/imed.png">
+    <link rel="stylesheet" href="style-html.css">
+
+    
+
+</head>
+
+<body>
+  <img id="html-img" src="images/html-tutorial.png" alt="HTML tutorial">
+  <a href="index.html"><img id="home" src="images/home1.png" alt="home" ></a>
+  <div class="side-barp1" id="sidenav">
+
+    <a id="b0" href="#preface" >Preface</a>
+    <a id="b1" href="#html-basics" >HTML Basics</a>
+    <a id="b2" href="#the-document-heading" >The document heading</a>
+    <a id="b3" href="#the-document-body" >The document body</a>
+    <a id="b4" href="#tags-that-interact-with-text" >Tags that interact with text</a>
+    <a id="b5" href="#links" >Links</a>
+    <a id="b6" href="#container-tags" >Container tags</a>
+    <a id="b7" href="#forms" >Forms</a>
+    <a id="b8" href="#tables" >Tables</a>
+    <a id="b9" href="#multimedia-tags" >Multimedia tags</a>
+    <a id="b10" href="#iframes" >iframes</a>
+    <a id="b11" href="#images" >Images</a>
+    <a id="b12" href="#accessibility" >Accessibility</a>
+   
+
+</div>
+
+
+<div class="parag">
+  <h2 id="preface">1. Preface</h2>
+  
+  <p>HTML, a shorthand for <strong>Hyper Text Markup Language</strong>, is one of the most fundamental building blocks of the Web.</p>
+  <p>HTML was officially born in 1993 and since then it evolved into its current state, moving from simple text documents to powering rich 
+    Web Applications.</p>
+  <p>This handbook is aimed at a vast audience.</p>
+  <p>First, the beginner. I explain HTML from zero in a succinct but comprehensive way, so you can use this book to learn HTML from the basics.</p>
+  <p>Then, the professional. HTML is often considered like a secondary thing to learn. It might be given for granted.</p>
+  <p>Yet lots of things are obscure to many people. Me included. I wrote this handbook to help my understanding of the topic, because when 
+    I need to explain something, I better make sure I first know the thing inside out.</p>
+  <p>Even if you don’t write HTML in your day to day work, knowing how HTML works can help save you some headaches when you need to understand 
+    it from time to time, for example while tweaking a web page.</p>
+  <p>HTML is the foundation of the marvel called the Web.</p>
+  <p>There is an incredible power underneath this rather simple and limited set of rules, which lets us – developers, makers, designers, writers, 
+    and tinkerers – craft documents, apps, and experiences for people all around the globe.</p>
+  <p>My first HTML book came out in 1997 and was called “HTML Unleashed”. A big, lots-of-pages, long tome.</p>
+  <p>20+ years have passed, and HTML is still the foundation of the Web, with minimal changes from back then.</p>
+  <p>Sure, we got more semantic tags, presentational HTML is no longer a thing, and CSS has taken care of the design of things.</p>
+  <p>HTML’s success is based on one thing: <strong>simplicity</strong>.</p>
+  <p>It resisted being hijacked into an XML dialect via XHTML, when eventually people realized that thing was way, way too complex.</p>
+  <p>It did so because of another feature it provides us: <strong>forgiveness</strong>. There are <em>some</em> rules, right, but after you learn 
+    those, you have a lot of freedom.</p>
+  <p>Browsers learned to be resilient and to always try to do their best when parsing and presenting HTML to the users.</p>
+  <p>And the whole Web platform did one thing right: it never broke backward compatibility. Pretty incredibly, we can go back to HTML documents 
+    written in 1991, and they look pretty much as they looked back then.</p>
+  <p>We even know what the first web page was. It’s this: <a target="_blank" href="http://info.cern.ch/hypertext/WWW/TheProject.html">http://info.cern.ch/hypertext/WWW/TheProject.html</a></p>
+  <p>And you can see the source of the page, thanks to another big feature of the Web and HTML: <strong>we can inspect the HTML of any web page</strong>.</p>
+  <p>Don’t take this for granted. I don’t know any other platform that gives us this ability.</p>
+  <p>The exceptional Developer Tools built into any browser let us inspect and take inspiration from HTML written by anyone in the world.</p>
+  <p>If you are new to HTML this book aims to help you get started. If you are a seasoned Web Developer this book will improve your knowledge.</p>
+  <p>I learned so much while writing it, even though I’ve been working with the Web for 20+ years, and I’m sure you’ll find something new, too.</p>
+  <p>Or you’ll re-learn something old you forgot.</p>
+  <p>In any case, the goal of the book is to be useful to you, and I hope it succeeds.</p>
+  <h2 id="html-basics">2. HTML Basics</h2>
+  <p>HTML is a standard defined by the <strong>WHATWG</strong>, an acronym for Web Hypertext Application Technology Working Group, an organization formed by people working on the most popular web browser. This means it’s basically controlled by Google, Mozilla, Apple and Microsoft.</p>
+  <p>In the past the <strong>W3C</strong> (World Wide Web Consortium) was the organization in charge of creating the HTML standard.</p>
+  <p>The control informally moved from W3C to WHATWG when it became clear that the W3C push towards XHTML was not a good idea.</p>
+  <p>If you’ve never heard of XHTML, here’s a short story. In the early 2000s, we all believed the future of the Web was XML (seriously). So HTML moved from being an SGML-based authoring language to an XML markup language.</p>
+  <p>It was a big change. We had to know, and respect, more rules. Stricter rules.</p>
+  <p>Eventually browser vendors realized this was not the right path for the Web, and they pushed back, creating what is now known as HTML5.</p>
+  <p>W3C did not really agree on giving up control of HTML, and for years we had 2 competing standards, each one aiming to be the official one. Eventually on 28 May 2019 it was made official by W3C that the “true” HTML version was the one published by WHATWG.</p>
+  <p>I mentioned HTML5. Let me explain this little story. I know, it’s kind of confusing up to now, as with many things in life when many actors are involved, yet it’s also fascinating.</p>
+  <p>We had <strong>HTML version 1</strong> in 1993. <a target="_blank" href="https://tools.ietf.org/html/rfc1983">Here’s the original RFC</a>.</p>
+  <p><strong>HTML 2</strong> followed in 1995.</p>
+  <p>We got <strong>HTML 3</strong> in January 1997, and <strong>HTML 4</strong> in December 1997.</p>
+ 
+  <p>Busy times!</p>
+  <p>20+ years went by, we had this entire XHTML thing, and eventually we got to this HTML5 “thing”, which is not really <em>just HTML</em> any more.</p>
+  <p>HTML5 is a term that now defines a whole set of technologies, which includes HTML but adds a lot of APIs and standards like WebGL, SVG and more.</p>
+  <p>The key thing to understand here is this: there is no such thing (any more) as an HTML version now. It’s a living standard. Like CSS, which is called “3”, but in reality is a bunch of independent modules developed separately. Like JavaScript, where we have one new edition each year, but nowadays, the only thing that matters is which individual features are implemented by the engine.</p>
+  <p>Yes we call it HTML5, but HTML4 is from 1997. That’s a long time for anything, let alone for the web.</p>
+  <p>This is where the standard now “lives”: <a target="_blank" href="https://html.spec.whatwg.org/multipage">https://html.spec.whatwg.org/multipage</a>.</p>
+  <p>HTML is the markup language we use to structure content that we consume on the Web.</p>
+  <p>HTML is served to the browser in different ways.</p>
+  <ul>
+  <li>It can be generated by a server-side application that builds it depending on the request or the session data, for example a Rails or Laravel or Django application.</li>
+  <li>It can be generated by a JavaScript client-side application that generates HTML on the fly.</li>
+  <li>In the simplest case, it can be stored in a file and served to the browser by a Web server.</li>
+  </ul>
+  <p>Let’s dive into this last case. Although in practice it’s probably the least popular way to generate HTML, it’s still essential to know the basic building blocks.</p>
+  <p>By convention, an HTML file is saved with a <code>.html</code> or <code>.htm</code> extension.</p>
+  <p>Inside this file, we organize the content using <strong>tags</strong>.</p>
+  <p>Tags wrap the content, and each tag gives a special meaning to the text it wraps.</p>
+  <p>Let’s make a few examples.</p>
+  <p>This HTML snippet creates a paragraph using the <code>p</code> tag:</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span><span>&gt;</span></span>A paragraph of text<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><p>This HTML snippet creates a list of items using the <code>ul</code> tag, which means <em>unordered list</em>, and the <code>li</code> tags, which mean <em>list item</em>:</p>
+  <div><pre><code><span><span><span>&lt;</span>ul</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>li</span><span>&gt;</span></span>First item<span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>li</span><span>&gt;</span></span>Second item<span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>li</span><span>&gt;</span></span>Third item<span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>ul</span><span>&gt;</span></span>
+  </code></pre></div><p>When an HTML page is served by the browser, the tags are interpreted, and the browser renders the elements according to the rules that define their visual appearance.</p>
+  <p>Some of those rules are built-in, such as how a list renders or how a link is underlined in blue.</p>
+  <p>Some other rules are set by you with CSS.</p>
+  <p>HTML is not presentational. It’s not concerned with how things <em>look</em>. Instead, it’s concerned with what things <em>mean</em>.</p>
+  <p>It’s up to the browser to determine how things look, with the directives defined by who builds the page, with the CSS language.</p>
+  <p>Now, those two examples I made are HTML snippets taken outside of a page context.</p>
+  <h3>2.1. HTML page structure</h3>
+  <p>Let’s make an example of a proper HTML page.</p>
+  <p>Things start with the Document Type Declaration (aka <em>doctype</em>), a way to tell the browser this is an HTML page, and which version of HTML we are using.</p>
+  <p>Modern HTML uses this doctype:</p>
+  <div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>&gt;</span></span>
+  </code></pre></div><p>Then we have the <code>html</code> element, which has an opening and closing tag:</p>
+  <div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>&gt;</span></span>
+  <span><span><span>&lt;</span>html</span><span>&gt;</span></span>
+    ...
+  <span><span><span>&lt;/</span>html</span><span>&gt;</span></span>
+  </code></pre></div><p>Most tags come in pairs with an opening tag and a closing tag. The closing tag is written the same as the opening tag, but with a <code>/</code>:</p>
+  <div><pre><code><span><span><span>&lt;</span>sometag</span><span>&gt;</span></span>some content<span><span><span>&lt;/</span>sometag</span><span>&gt;</span></span>
+  </code></pre></div><p>There are a few self-closing tags, which means they don’t need a separate closing tag as they don’t contain anything <em>in them</em>.</p>
+  <p>The <code>html</code> starting tag is used at the beginning of the document, right after the document type declaration.</p>
+  <p>The <code>html</code> ending tag is the last thing present in an HTML document.</p>
+  <p>Inside the <code>html</code> element we have 2 elements: <code>head</code> and <code>body</code>:</p>
+  <div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>&gt;</span></span>
+  <span><span><span>&lt;</span>html</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>head</span><span>&gt;</span></span>
+      ...
+    <span><span><span>&lt;/</span>head</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>body</span><span>&gt;</span></span>
+      ...
+    <span><span><span>&lt;/</span>body</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>html</span><span>&gt;</span></span>
+  </code></pre></div><p>Inside <code>head</code> we will have tags that are essential to creating a web page, like the title, the metadata, and internal or external CSS and JavaScript. Mostly things that do not directly appear on the page, but only help the browser (or bots like the Google search bot) display it properly.</p>
+  <p>Inside <code>body</code> we will have the content of the page. The <strong>visible stuff</strong>.</p>
+  <h3>2.2. Tags vs elements</h3>
+  <p>I mentioned tags and elements. What’s the difference?</p>
+  <p>Elements have a starting tag and a closing tag. In this example, we use the <code>p</code> starting and closing tags to create a <code>p</code> element:</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span><span>&gt;</span></span>A paragraph of text<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><p>So, an element constitutes the whole <em>package</em>:</p>
+  <ul>
+  <li>starting tag</li>
+  <li>text content (and possibly other elements)</li>
+  <li>closing tag</li>
+  </ul>
+  <p>If an element has doesn’t have a closing tag, it is only written with the starting tag, and it cannot contain any text content.</p>
+  <p>That said, I might use the tag or element term in the book meaning the same thing, except if I explicitly mention starting tag or ending tag.</p>
+  <h3>2.3. Attributes</h3>
+  <p>The starting tag of an element can have special snippets of information we can attach, called <strong>attributes</strong>.</p>
+  <p>Attributes have the <code>key="value"</code> syntax:</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span> <span>class</span><span><span>=</span><span>"</span>a-class<span>"</span></span><span>&gt;</span></span>A paragraph of text<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><blockquote>
+  <p>You can also use single quotes, but using double quotes in HTML is a nice convention.</p>
+  </blockquote>
+  <p>We can have many of them:</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span> <span>class</span><span><span>=</span><span>"</span>a-class<span>"</span></span> <span>id</span><span><span>=</span><span>"</span>an-id<span>"</span></span><span>&gt;</span></span>A paragraph of text<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><p>and some attributes are boolean, meaning you only need the key:</p>
+  <div><pre><code><span><span><span>&lt;</span>script</span> <span>defer</span> <span>src</span><span><span>=</span><span>"</span>file.js<span>"</span></span><span>&gt;</span></span><span></span><span><span><span>&lt;/</span>script</span><span>&gt;</span></span>
+  </code></pre></div><p>The <code>class</code> and <code>id</code> attributes are two of the most common you will find used.</p>
+  <p>They have a special meaning, and they are useful both in CSS and JavaScript.</p>
+  <p>The difference between the two is that an <code>id</code> is unique in the context of a web page; it cannot be duplicated.</p>
+  <p>Classes, on the other hand, can appear multiple times on multiple elements.</p>
+  <p>Plus, an <code>id</code> is just one value. <code>class</code> can hold multiple values, separated by a space:</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span> <span>class</span><span><span>=</span><span>"</span>a-class another-class<span>"</span></span><span>&gt;</span></span>A paragraph of text<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><p>It’s common to use the dash <code>-</code> to separate words in a class value, but it’s just a convention.</p>
+  <p>Those are just two of the possible attributes you can have. Some attributes are only used for one tag. They are highly specialized.</p>
+  <p>Other attributes can be used in a more general way. You just saw <code>id</code> and <code>class</code>, but we have other ones too, like <code>style</code> which can be used to insert inline CSS rules on an element.</p>
+  <h3>2.4. Case insensitive</h3>
+  <p>HTML is case insensitive. Tags can be written in all caps, or lowercase. In the early days, caps were the norm. Today lowercase is the norm. It is a convention.</p>
+  <p>You usually write like this:</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span><span>&gt;</span></span>A paragraph of text<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><p>not like this:</p>
+  <div><pre><code><span><span><span>&lt;</span>P</span><span>&gt;</span></span>A paragraph of text<span><span><span>&lt;/</span>P</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h3>2.5. White space</h3>
+  <p>Pretty important. In HTML, even if you add multiple white spaces into a line, it’s collapsed by the browser’s CSS engine.</p>
+  <p>For example the rendering of this paragraph</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span><span>&gt;</span></span>A paragraph of text<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><p>is the same as this:</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span><span>&gt;</span></span>A paragraph of text     <span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><p>and the same as this:</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span><span>&gt;</span></span>
+    
+    
+    A paragraph of text
+    
+    
+    
+    <span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><blockquote>
+  <p>Using the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space"><code>white-space</code> CSS property</a> you can change how things behave. You can find more information on how CSS processes white space in the <a target="_blank" href="https://www.w3.org/TR/CSS2/text.html#white-space-model">CSS Spec</a></p>
+  </blockquote>
+  <p>I’d say use the syntax that makes things visually more organized and easier to read, but you can use any syntax you like.</p>
+  <p>I typically favor</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span><span>&gt;</span></span>A paragraph of text<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><p>or</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span><span>&gt;</span></span>
+    A paragraph of text
+  <span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><p>Nested tags should be indented with 2 or 4 characters, depending on your preference:</p>
+  <div><pre><code><span><span><span>&lt;</span>body</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>p</span><span>&gt;</span></span>A paragraph of text<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>ul</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>li</span><span>&gt;</span></span>A list item<span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>ul</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>body</span><span>&gt;</span></span>
+  </code></pre></div><blockquote>
+  <p>Note: this “white space is not relevant” feature means that if you want to add additional space, it can make you pretty mad. I suggest you use CSS to make more space when needed.</p>
+  </blockquote>
+  <blockquote>
+  <p>Note: in special cases, you can use the <code>&amp;nbsp;</code> HTML entity (an acronym that means <em>non-breaking space</em>) - more on HTML entities later on. I think this should not be abused. CSS is always preferred to alter the visual presentation.</p>
+  </blockquote>
+  <h2 id="the-document-heading">3. The document heading</h2>
+  <p>The <code>head</code> tag contains special tags that define the document properties.</p>
+  <p>It’s always written before the <code>body</code> tag, right after the opening <code>html</code> tag:</p>
+  <div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>&gt;</span></span>
+  <span><span><span>&lt;</span>html</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>head</span><span>&gt;</span></span>
+      ...
+    <span><span><span>&lt;/</span>head</span><span>&gt;</span></span>
+    ...
+  <span><span><span>&lt;/</span>html</span><span>&gt;</span></span>
+  </code></pre></div><p>We never use attributes on this tag. And we don’t write content in it.</p>
+  <p>It’s just a container for other tags.
+  Inside it we can have a wide variety of tags, depending on what you need to do:</p>
+  <ul>
+  <li><code>title</code></li>
+  <li><code>script</code></li>
+  <li><code>noscript</code></li>
+  <li><code>link</code></li>
+  <li><code>style</code></li>
+  <li><code>base</code></li>
+  <li><code>meta</code></li>
+  </ul>
+  <h3>3.1. The <code>title</code> tag</h3>
+  <p>The <code>title</code> tag determines the page title. The title is displayed in the browser, and it’s especially important as it’s one of the key factors for Search Engine Optimization (SEO).</p>
+  <h3>3.2. The <code>script</code> tag</h3>
+  <p>This tag is used to add JavaScript into the page.</p>
+  <p>You can include it inline, using an opening tag, the JavaScript code and then the closing tag:</p>
+  <div><pre><code><span><span><span>&lt;</span>script</span><span>&gt;</span></span><span><span class="token language-javascript">
+    <span>.</span><span>.</span>some <span class="token constant">JS</span>
+  </span></span><span><span><span>&lt;/</span>script</span><span>&gt;</span></span>
+  </code></pre></div><p>Or you can load an external JavaScript file by using the <code>src</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>file.js<span>"</span></span><span>&gt;</span></span><span></span><span><span><span>&lt;/</span>script</span><span>&gt;</span></span>
+  </code></pre></div><blockquote>
+  <p>The <code>type</code> attribute by default is set to <code>text/javascript</code>, so it’s completely optional.</p>
+  </blockquote>
+  <p>There is something pretty important to know about this tag.</p>
+  <p>Sometimes this tag is used at the bottom of the page, just before the closing <code>&lt;/body&gt;</code> tag. Why? For performance reasons.</p>
+  <p>Loading scripts by default blocks the rendering of the page until the script is parsed and loaded.</p>
+  <p>By putting it at the bottom of the page, the script is loaded and executed after the whole page is already parsed and loaded, giving a better experience to the user over keeping it in the <code>head</code> tag.</p>
+  <p>My opinion is that this is now bad practice. Let <code>script</code> live in the <code>head</code> tag.</p>
+  <p>In modern JavaScript we have an alternative this is more performant than keeping the script at the bottom of the page – the <code>defer</code> attribute. This is an example that loads a <code>file.js</code> file, relative to the current URL:</p>
+  <div><pre><code><span><span><span>&lt;</span>script</span> <span>defer</span> <span>src</span><span><span>=</span><span>"</span>file.js<span>"</span></span><span>&gt;</span></span><span></span><span><span><span>&lt;/</span>script</span><span>&gt;</span></span>
+  </code></pre></div><p>This is the scenario that triggers the faster path to a fast-loading page, and fast-loading JavaScript.</p>
+  <blockquote>
+  <p>Note: the <code>async</code> attribute is similar, but in my opinion a worse option than <code>defer</code>. I describe why, in more detail, on page <a target="_blank" href="https://flaviocopes.com/javascript-async-defer/">https://flaviocopes.com/javascript-async-defer/</a></p>
+  </blockquote>
+  <h3>3.3. The <code>noscript</code> tag</h3>
+  <p>This tag is used to detect when scripts are disabled in the browser.</p>
+  <blockquote>
+  <p>Note: users can choose to disable JavaScript scripts in the browser settings. Or the browser might not support them by default.</p>
+  </blockquote>
+  <p>It is used differently depending on whether it’s put in the document head or in the document body.</p>
+  <p>We’re talking about the document head now, so let’s first introduce this usage.</p>
+  <p>In this case, the <code>noscript</code> tag can only contain other tags:</p>
+  <ul>
+  <li><code>link</code> tags</li>
+  <li><code>style</code> tags</li>
+  <li><code>meta</code> tags</li>
+  </ul>
+  <p>to alter the resources served by the page, or the <code>meta</code> information, if scripts are disabled.</p>
+  <p>In this example I set an element with the <code>no-script-alert</code> class to display if scripts are disabled, as it was <code>display: none</code> by default:</p>
+  <div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>&gt;</span></span>
+  <span><span><span>&lt;</span>html</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>head</span><span>&gt;</span></span>
+      ...
+      <span><span><span>&lt;</span>noscript</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>style</span><span>&gt;</span></span><span><span>
+          <span>.no-script-alert</span> <span>{</span>
+            <span>display</span><span>:</span> block<span>;</span>
+          <span>}</span>
+        </span></span><span><span><span>&lt;/</span>style</span><span>&gt;</span></span>
+      <span><span><span>&lt;/</span>noscript</span><span>&gt;</span></span>
+  
+      ...
+    <span><span><span>&lt;/</span>head</span><span>&gt;</span></span>
+    ...
+  <span><span><span>&lt;/</span>html</span><span>&gt;</span></span>
+  </code></pre></div><blockquote>
+  <p>Let’s solve the other case: if put in the body, it can contain content, like paragraphs and other tags, which are rendered in the UI.</p>
+  </blockquote>
+  <h3>3.4. The <code>link</code> tag</h3>
+  <p>The <code>link</code> tag is used to set relationships between a document and other resources.</p>
+  <p>It’s mainly used to link an external CSS file to be loaded.</p>
+  <p>This element has no closing tag.</p>
+  <p>Usage:</p>
+  <div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>&gt;</span></span>
+  <span><span><span>&lt;</span>html</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>head</span><span>&gt;</span></span>
+      ...
+      <span><span><span>&lt;</span>link</span> <span>href</span><span><span>=</span><span>"</span>file.css<span>"</span></span> <span>rel</span><span><span>=</span><span>"</span>stylesheet<span>"</span></span> <span>/&gt;</span></span>
+      ...
+    <span><span><span>&lt;/</span>head</span><span>&gt;</span></span>
+    ...
+  <span><span><span>&lt;/</span>html</span><span>&gt;</span></span>
+  </code></pre></div><p>The <code>media</code> attribute allows the loading of different stylesheets depending on the device capabilities:</p>
+  <div><pre><code><span><span><span>&lt;</span>link</span> <span>href</span><span><span>=</span><span>"</span>file.css<span>"</span></span> <span>media</span><span><span>=</span><span>"</span>screen<span>"</span></span> <span>rel</span><span><span>=</span><span>"</span>stylesheet<span>"</span></span> <span>/&gt;</span></span>
+  <span><span><span>&lt;</span>link</span> <span>href</span><span><span>=</span><span>"</span>print.css<span>"</span></span> <span>media</span><span><span>=</span><span>"</span>print<span>"</span></span> <span>rel</span><span><span>=</span><span>"</span>stylesheet<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>We can also link to resources other than stylesheets.</p>
+  <p>For example we can associate an RSS feed using</p>
+  <div><pre><code><span><span><span>&lt;</span>link</span> <span>rel</span><span><span>=</span><span>"</span>alternate<span>"</span></span> <span>type</span><span><span>=</span><span>"</span>application/rss+xml<span>"</span></span> <span>href</span><span><span>=</span><span>"</span>/index.xml<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>Or we can associate a favicon using:</p>
+  <div><pre><code><span><span><span>&lt;</span>link</span>
+    <span>rel</span><span><span>=</span><span>"</span>apple-touch-icon<span>"</span></span>
+    <span>sizes</span><span><span>=</span><span>"</span>180x180<span>"</span></span>
+    <span>href</span><span><span>=</span><span>"</span>/assets/apple-touch-icon.png<span>"</span></span>
+  <span>/&gt;</span></span>
+  
+  <span><span><span>&lt;</span>link</span>
+    <span>rel</span><span><span>=</span><span>"</span>icon<span>"</span></span>
+    <span>type</span><span><span>=</span><span>"</span>image/png<span>"</span></span>
+    <span>sizes</span><span><span>=</span><span>"</span>32x32<span>"</span></span>
+    <span>href</span><span><span>=</span><span>"</span>/assets/favicon-32x32.png<span>"</span></span>
+  <span>/&gt;</span></span>
+  
+  <span><span><span>&lt;</span>link</span>
+    <span>rel</span><span><span>=</span><span>"</span>icon<span>"</span></span>
+    <span>type</span><span><span>=</span><span>"</span>image/png<span>"</span></span>
+    <span>sizes</span><span><span>=</span><span>"</span>16x16<span>"</span></span>
+    <span>href</span><span><span>=</span><span>"</span>/assets/favicon-16x16.png<span>"</span></span>
+  <span>/&gt;</span></span>
+  </code></pre></div><p>This tag <em>was</em> also used for multi-page content, to indicate the previous and next page using <code>rel="prev"</code> and <code>rel="next"</code>. Mostly for Google. As of 2019, <a target="_blank" href="https://twitter.com/googlewmc/status/1108726443251519489">Google announced it does not use this tag any more</a> because it can find the correct page structure without it.</p>
+  <h3>3.5. The <code>style</code> tag</h3>
+  <p>This tag can be used to add styles into the document, rather than loading an external stylesheet.</p>
+  <p>Usage:</p>
+  <div><pre><code><span><span><span>&lt;</span>style</span><span>&gt;</span></span><span><span>
+    <span>.some-css</span> <span>{</span>
+    <span>}</span>
+  </span></span><span><span><span>&lt;/</span>style</span><span>&gt;</span></span>
+  </code></pre></div><p>As with the <code>link</code> tag, you can use the <code>media</code> attribute to use that CSS only on the specified medium:</p>
+  <div><pre><code><span><span><span>&lt;</span>style</span> <span>media</span><span><span>=</span><span>"</span>print<span>"</span></span><span>&gt;</span></span><span><span>
+    <span>.some-css</span> <span>{</span>
+    <span>}</span>
+  </span></span><span><span><span>&lt;/</span>style</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h3>3.6. The <code>base</code> tag</h3>
+  <p>This tag is used to set a base URL for all relative URLs contained in the page.</p>
+  <div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>&gt;</span></span>
+  <span><span><span>&lt;</span>html</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>head</span><span>&gt;</span></span>
+      ...
+      <span><span><span>&lt;</span>base</span> <span>href</span><span><span>=</span><span>"</span>https://flaviocopes.com/<span>"</span></span> <span>/&gt;</span></span>
+      ...
+    <span><span><span>&lt;/</span>head</span><span>&gt;</span></span>
+    ...
+  <span><span><span>&lt;/</span>html</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h3>3.7. The <code>meta</code> tag</h3>
+  <p>Meta tags perform a variety of tasks and they are very, very important.</p>
+  <p>Especially for SEO.</p>
+  <p><code>meta</code> elements only have the starting tag.</p>
+  <p>The most basic one is the <code>description</code> meta tag:</p>
+  <div><pre><code><span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>description<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>A nice page<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>This <em>might</em> be used by Google to generate the page description in its result pages, if it finds it better describes the page than the on-page content (don’t ask me how).</p>
+  <p>The <code>charset</code> meta tag is used to set the page character encoding. <code>utf-8</code> in most cases:</p>
+  <div><pre><code><span><span><span>&lt;</span>meta</span> <span>charset</span><span><span>=</span><span>"</span>utf-8<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>The <code>robots</code> meta tag instructs the Search Engine bots whether to index a page or not:</p>
+  <div><pre><code><span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>robots<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>noindex<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>Or if they should follow links or not:</p>
+  <div><pre><code><span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>robots<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>nofollow<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><blockquote>
+  <p>You can set nofollow on individual links, too. This is how you can set <code>nofollow</code> globally.</p>
+  </blockquote>
+  <p>You can combine them:</p>
+  <div><pre><code><span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>robots<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>noindex, nofollow<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>The default behavior is <code>index, follow</code>.</p>
+  <p>You can use other properties, including <code>nosnippet</code>, <code>noarchive</code>, <code>noimageindex</code> and more.</p>
+  <p>You can also just tell Google instead of targeting <em>all</em> search engines:</p>
+  <div><pre><code><span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>googlebot<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>noindex, nofollow<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>And other search engines might have their own meta tag, too.</p>
+  <p>Speaking of which, we can tell Google to disable some features. This prevents the translate functionality in the search engine results:</p>
+  <div><pre><code><span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>google<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>notranslate<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>The <code>viewport</code> meta tag is used to tell the browser to set the page width based on the device width.</p>
+  <div><pre><code><span><span><span>&lt;</span>meta</span> <span>name</span><span><span>=</span><span>"</span>viewport<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>width=device-width, initial-scale=1<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <p>Another rather popular meta tag is the <code>http-equiv="refresh"</code> one. This line tells the browser to wait 3 seconds, then redirect to that other page:</p>
+  <div><pre><code><span><span><span>&lt;</span>meta</span>
+    <span>http-equiv</span><span><span>=</span><span>"</span>refresh<span>"</span></span>
+    <span>content</span><span><span>=</span><span>"</span>3;url=http://flaviocopes.com/another-page<span>"</span></span>
+  <span>/&gt;</span></span>
+  </code></pre></div><p>Using 0 instead of 3 will redirect as soon as possible.</p>
+  <p>This is not a full reference; Other less-used meta tags exist.</p>
+  <p>After this document heading introduction, we can start diving into the document body.</p>
+  <h2 id="the-document-body">4. The document body</h2>
+  <p>After the closing head tag, we can only have one thing in an HTML document: the <code>body</code> element.</p>
+  <div><pre><code><span><span>&lt;!</span><span>DOCTYPE</span> <span>html</span><span>&gt;</span></span>
+  <span><span><span>&lt;</span>html</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>head</span><span>&gt;</span></span>
+      ...
+    <span><span><span>&lt;/</span>head</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>body</span><span>&gt;</span></span>
+      ...
+    <span><span><span>&lt;/</span>body</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>html</span><span>&gt;</span></span>
+  </code></pre></div><p>Just like the <code>head</code> and <code>html</code> tags, we can only have one <code>body</code> tag in one page.</p>
+  <p>Inside the <code>body</code> tag we have all the tags that define the content of the page.</p>
+  <p>Technically, the start and ending tags are optional. But I consider it a good practice to add them. Just for clarity.</p>
+  <p>In the next chapters we’ll define the variety of tags you can use inside the page body.</p>
+  <p>But before, we must introduce a difference between block elements and inline elements.</p>
+  <h3>4.1. Block elements vs inline elements</h3>
+  <p>Visual elements, the ones defined in the page body, can be generally classified in 2 categories:</p>
+  <ul>
+  <li>block elements (<code>p</code>, <code>div</code>, heading elements, lists and list items, …)</li>
+  <li>inline elements (<code>a</code>, <code>span</code>, <code>img</code>, …)</li>
+  </ul>
+  <p>What is the difference?</p>
+  <p>Block elements, when positioned in the page, do not allow other elements next to them. To the left, or to the right.</p>
+  <p>Inline elements instead can sit next to other inline elements.</p>
+  <p>The difference also lies in the visual properties we can edit using CSS. We can alter the width/height, margin, padding and border of block elements. We can’t do that for inline elements.</p>
+  <blockquote>
+  <p>Note that using CSS we can change the default for each element, setting a <code>p</code> tag to be inline, for example, or a <code>span</code> to be a block element.</p>
+  </blockquote>
+  <p>Another difference is that inline elements can be contained in block elements. The reverse is not true.</p>
+  <p>Some block elements can contain other block elements, but it depends. The <code>p</code> tag for example does not allow such option.</p>
+  <h2 id="tags-that-interact-with-text">5. Tags that interact with text</h2>
+  <h3>5.1. The <code>p</code> tag</h3>
+  <p>This tag defines a paragraph of text.</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span><span>&gt;</span></span>Some text<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><p>It’s a block element.</p>
+  <p>Inside it, we can add any inline element we like, like <code>span</code> or <code>a</code>.</p>
+  <p>We cannot add block elements.</p>
+  <p>We cannot nest a <code>p</code> element into another one.</p>
+  <p>By default browsers style a paragraph with a margin on top and at the bottom. <code>16px</code> in Chrome, but the exact value might vary between browsers.</p>
+  <p>This causes two consecutive paragraphs to be spaced, replicating what we think of a “paragraph” in printed text.</p>
+  <h3>5.2. The <code>span</code> tag</h3>
+  <p>This is an inline tag that can be used to create a section in a paragraph that can be targeted using CSS:</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span><span>&gt;</span></span>A part of the text <span><span><span>&lt;</span>span</span><span>&gt;</span></span>and here another part<span><span><span>&lt;/</span>span</span><span>&gt;</span></span><span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h3>5.3. The <code>br</code> tag</h3>
+  <p>This tag represents a line break. It’s an inline element, and does not need a closing tag.</p>
+  <p>We use it to create a new line inside a <code>p</code> tag, without creating a new paragraph.</p>
+  <p>And compared to creating a new paragraph, it does not add additional spacing.</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span><span>&gt;</span></span>Some text<span><span><span>&lt;</span>br</span> <span>/&gt;</span></span>A new line<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h3>5.4. The heading tags</h3>
+  <p>HTML provides us 6 heading tags. From most important to least important, we have <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code>.</p>
+  <p>Typically a page will have one <code>h1</code> element, which is the page title. Then you might have one or more <code>h2</code> elements depending on the page content.</p>
+  <p>Headings, especially the heading organization, are also essential for SEO, and search engines use them in various ways.</p>
+  <p>The browser by default will render the <code>h1</code> tag bigger, and will make the elements size smaller as the number near <code>h</code> increases:</p>
+  <p><img src="images/Screen%20Shot%202019-06-11%20at%2019.46.57.png" alt="" loading="lazy"></p>
+  <p>All headings are block elements. They cannot contain other elements, just text.</p>
+  <h3>5.5. The <code>strong</code> tag</h3>
+  <p>This tag is used to mark the text inside it as <em>strong</em>. This is pretty important, it’s not a visual hint, but a semantic hint. Depending on the medium used, its interpretation will vary.</p>
+  <p>Browsers by default make the text in this tag <strong>bold</strong>.</p>
+  <h3>5.6. The <code>em</code> tag</h3>
+  <p>This tag is used to mark the text inside it as <em>emphasized</em>. Like with <code>strong</code>, it’s not a visual hint but a semantic hint.</p>
+  <p>Browsers by default make the text in this <strong>italic</strong>.</p>
+  <h4>5.6.1. Quotes</h4>
+  <p>The <code>blockquote</code> HTML tag is useful to insert citations in the text.</p>
+  <p>Browsers by default apply a margin to the <code>blockquote</code> element. Chrome applies a 40px left and right margin, and a 10px top and bottom margin.</p>
+  <p>The <code>q</code> HTML tag is used for inline quotes.</p>
+  <h3>5.7. Horizontal line</h3>
+  <p>Not really based on text, but the <code>hr</code> tag is often used inside a page. It means <code>horizontal rule</code>, and it adds a horizontal line in the page.</p>
+  <p>Useful to separate sections in the page.</p>
+  <h3>5.8. Code blocks</h3>
+  <p>The <code>code</code> tag is especially useful to show code, because browsers give it a monospaced font.</p>
+  <p>That’s typically the only thing that browsers do. This is the CSS applied by Chrome:</p>
+  <div><pre><code><span>code</span> <span>{</span>
+    <span>font-family</span><span>:</span> monospace<span>;</span>
+  <span>}</span>
+  </code></pre></div><p>This tag is typically wrapped in a <code>pre</code> tag, because the <code>code</code> element ignores whitespace and line breaks. Like the <code>p</code> tag.</p>
+  <p>Chrome gives <code>pre</code> this default styling:</p>
+  <div><pre><code><span>pre</span> <span>{</span>
+    <span>display</span><span>:</span> block<span>;</span>
+    <span>font-family</span><span>:</span> monospace<span>;</span>
+    <span>white-space</span><span>:</span> pre<span>;</span>
+    <span>margin</span><span>:</span> 1em 0px<span>;</span>
+  <span>}</span>
+  </code></pre></div><p>which prevents white space collapsing and makes it a block element.</p>
+  <h3>5.9. Lists</h3>
+  <p>We have 3 types of lists:</p>
+  <ul>
+  <li>unordered lists</li>
+  <li>ordered lists</li>
+  <li>definition lists</li>
+  </ul>
+  <p>Unordered lists are created using the <code>ul</code> tag. Each item in the list is created with the <code>li</code> tag:</p>
+  <div><pre><code><span><span><span>&lt;</span>ul</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>li</span><span>&gt;</span></span>First<span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>li</span><span>&gt;</span></span>Second<span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>ul</span><span>&gt;</span></span>
+  </code></pre></div><p>Ordered lists are similar, just made with the <code>ol</code> tag:</p>
+  <div><pre><code><span><span><span>&lt;</span>ol</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>li</span><span>&gt;</span></span>First<span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>li</span><span>&gt;</span></span>Second<span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>ol</span><span>&gt;</span></span>
+  </code></pre></div><p>The difference between the two is that ordered lists have a number before each item:</p>
+  <p><img src="images/Screen%20Shot%202019-06-12%20at%2009.35.05.png" alt="" loading="lazy"></p>
+  <p>Definition lists are a bit different. You have a term, and its definition:</p>
+  <div><pre><code><span><span><span>&lt;</span>dl</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>dt</span><span>&gt;</span></span>Flavio<span><span><span>&lt;/</span>dt</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>dd</span><span>&gt;</span></span>The name<span><span><span>&lt;/</span>dd</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>dt</span><span>&gt;</span></span>Copes<span><span><span>&lt;/</span>dt</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>dd</span><span>&gt;</span></span>The surname<span><span><span>&lt;/</span>dd</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>dl</span><span>&gt;</span></span>
+  </code></pre></div><p>This is how browsers typically render them:</p>
+  <p><img src="images/Screen%20Shot%202019-06-12%20at%2009.45.21.png" alt="" loading="lazy"></p>
+  <p>I must say you rarely see them in the wild, for sure not much as <code>ul</code> and <code>ol</code>, but sometimes they might be useful.</p>
+  <h3>5.10. Other text tags</h3>
+  <p>There is a number of tags with presentational purposes:</p>
+  <ul>
+  <li>the <code>mark</code> tag</li>
+  <li>the <code>ins</code> tag</li>
+  <li>the <code>del</code> tag</li>
+  <li>the <code>sup</code> tag</li>
+  <li>the <code>sub</code> tag</li>
+  <li>the <code>small</code> tag</li>
+  <li>the <code>i</code> tag</li>
+  <li>the <code>b</code> tag</li>
+  </ul>
+  <p>This is an example of the visual rendering of them which is applied by default by browsers:</p>
+  <p><img src="images/Screen%20Shot%202019-06-12%20at%2008.43.55.png" alt="" loading="lazy"></p>
+  <p>You might wonder, how is <code>b</code> different than <code>strong</code>? And how <code>i</code> is different than <code>em</code>?</p>
+  <p>The difference lies in the semantic meaning. While <code>b</code> and <code>i</code> are a direct hint at the browser to make a piece of text bold or italic, <code>strong</code> and <code>em</code> give the text a special meaning, and it’s up to the browser to give the styling. Which happens to be exactly the same as <code>b</code> and <code>i</code>, by default. Although you can change that using CSS.</p>
+  <p>There are a number of other, less used tags related to text. I just mentioned the ones that I see used the most.</p>
+  <h2 id="links">6. Links</h2>
+  <p>Links are defined using the <code>a</code> tag. The link destination is set via its <code>href</code> attribute.</p>
+  <p>Example:</p>
+  <div><pre><code><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>https://flaviocopes.com<span>"</span></span><span>&gt;</span></span>click here<span><span><span>&lt;/</span>a</span><span>&gt;</span></span>
+  </code></pre></div><p>Between the starting and closing tag we have the link text.</p>
+  <p>The above example is an absolute URL. Links also work with relative URLs:</p>
+  <div><pre><code><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>/test<span>"</span></span><span>&gt;</span></span>click here<span><span><span>&lt;/</span>a</span><span>&gt;</span></span>
+  </code></pre></div><p>In this case, when clicking the link the user is moved to the <code>/test</code> URL on the current origin.</p>
+  <p>Be careful with the <code>/</code> character. If omitted, instead of starting from the origin, the browser will just add the <code>test</code> string to the current URL.</p>
+  <p>Example, I’m on the page <code>https://flaviocopes.com/axios/</code> and I have these links:</p>
+  <ul>
+  <li><code>/test</code> once clicked brings me to <code>https://flaviocopes.com/test</code></li>
+  <li><code>test</code> once clicked brings me to <code>https://flaviocopes.com/axios/test</code></li>
+  </ul>
+  <p>Link tags can include other things inside them, not just text. For example, images:</p>
+  <div><pre><code><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>https://flaviocopes.com<span>"</span></span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>img</span> <span>src</span><span><span>=</span><span>"</span>test.jpg<span>"</span></span> <span>/&gt;</span></span>
+  <span><span><span>&lt;/</span>a</span><span>&gt;</span></span>
+  </code></pre></div><p>or any other elements, except other <code>&lt;a&gt;</code> tags.</p>
+  <p>If you want to open the link in a new tab, you can use the <code>target</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>https://flaviocopes.com<span>"</span></span> <span>target</span><span><span>=</span><span>"</span>_blank<span>"</span></span><span>&gt;</span></span>open in new tab<span><span><span>&lt;/</span>a</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h2 id="container-tags">7. Container tags and page structure HTML</h2>
+  <h3>7.1. Container tags</h3>
+  <p>HTML provides a set of container tags. Those tags can contain an unspecified set of other tags.</p>
+  <p>We have:</p>
+  <ul>
+  <li><code>article</code></li>
+  <li><code>section</code></li>
+  <li><code>div</code></li>
+  </ul>
+  <p>and it can be confusing to understand the difference between them.</p>
+  <p>Let’s see when to use each one of them.</p>
+  <h4>7.1.1. <code>article</code></h4>
+  <p>The article tag identifies a <em>thing</em> that can be independent from other <em>things</em> in a page.</p>
+  <p>For example a list of blog posts in the homepage.</p>
+  <p>Or a list of links.</p>
+  <div><pre><code><span><span><span>&lt;</span>div</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>article</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>h2</span><span>&gt;</span></span>A blog post<span><span><span>&lt;/</span>h2</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>a</span> <span>...</span><span>&gt;</span></span>Read more<span><span><span>&lt;/</span>a</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>article</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>article</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>h2</span><span>&gt;</span></span>Another blog post<span><span><span>&lt;/</span>h2</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>a</span> <span>...</span><span>&gt;</span></span>Read more<span><span><span>&lt;/</span>a</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>article</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>div</span><span>&gt;</span></span>
+  </code></pre></div><p>We’re not limited to lists: an article can be the main element in a page.</p>
+  <div><pre><code><span><span><span>&lt;</span>article</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>h2</span><span>&gt;</span></span>A blog post<span><span><span>&lt;/</span>h2</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>p</span><span>&gt;</span></span>Here is the content...<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>article</span><span>&gt;</span></span>
+  </code></pre></div><p>Inside an <code>article</code> tag we should have a title (<code>h1</code>-<code>h6</code>) and</p>
+  <h4>7.1.2. <code>section</code></h4>
+  <p>Represents a section of a document. Each section has a heading tag (<code>h1</code>-<code>h6</code>), then the section <em>body</em>.</p>
+  <p>Example:</p>
+  <div><pre><code><span><span><span>&lt;</span>section</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>h2</span><span>&gt;</span></span>A section of the page<span><span><span>&lt;/</span>h2</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>p</span><span>&gt;</span></span>...<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>img</span> <span>...</span> <span>/&gt;</span></span>
+  <span><span><span>&lt;/</span>section</span><span>&gt;</span></span>
+  </code></pre></div><p>It’s useful to break a long article into different <strong>sections</strong>.</p>
+  <p>Shouldn’t be used as a generic container element. <code>div</code> is made for this.</p>
+  <h4>7.1.3. <code>div</code></h4>
+  <p><code>div</code> is the generic container element:</p>
+  <div><pre><code><span><span><span>&lt;</span>div</span><span>&gt;</span></span>...<span><span><span>&lt;/</span>div</span><span>&gt;</span></span>
+  </code></pre></div><p>You often add a <code>class</code> or <code>id</code> attribute to this element, to allow it to be styled using CSS.</p>
+  <p>We use <code>div</code> in any place where we need a container but the existing tags are not suited.</p>
+  <h3>7.2. Tags related to page</h3>
+  <h4>7.2.1. <code>nav</code></h4>
+  <p>This tag is used to create the markup that defines the page navigation. Into this we typically add an <code>ul</code> or <code>ol</code> list:</p>
+  <div><pre><code><span><span><span>&lt;</span>nav</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>ol</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>li</span><span>&gt;</span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>/<span>"</span></span><span>&gt;</span></span>Home<span><span><span>&lt;/</span>a</span><span>&gt;</span></span><span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>li</span><span>&gt;</span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>/blog<span>"</span></span><span>&gt;</span></span>Blog<span><span><span>&lt;/</span>a</span><span>&gt;</span></span><span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>ol</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>nav</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h4>7.2.2. <code>aside</code></h4>
+  <p>The <code>aside</code> tag is used to add a piece of content that is related to the main content.</p>
+  <p>A box where to add a quote, for example. Or a sidebar.</p>
+  <p>Example:</p>
+  <div><pre><code><span><span><span>&lt;</span>div</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>p</span><span>&gt;</span></span>some text..<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>aside</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>p</span><span>&gt;</span></span>A quote..<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>aside</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>p</span><span>&gt;</span></span>other text...<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>div</span><span>&gt;</span></span>
+  </code></pre></div><p>Using <code>aside</code> is a signal that the things it contains are not part of the regular flow of the section it lives into.</p>
+  <h4>7.2.3. <code>header</code></h4>
+  <p>The <code>header</code> tag represents a part of the page that is the introduction. It can for example contain one or more heading tag (<code>h1</code>-<code>h6</code>), the tagline for the article, an image.</p>
+  <div><pre><code><span><span><span>&lt;</span>article</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>header</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>h1</span><span>&gt;</span></span>Article title<span><span><span>&lt;/</span>h1</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>header</span><span>&gt;</span></span>
+    ...
+  <span><span><span>&lt;/</span>div</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h4>7.2.4. <code>main</code></h4>
+  <p>The <code>main</code> tag represents the main part of a page:</p>
+  <div><pre><code><span><span><span>&lt;</span>body</span><span>&gt;</span></span>
+    ....
+    <span><span><span>&lt;</span>main</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>p</span><span>&gt;</span></span>....<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>main</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>body</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h4>7.2.5. <code>footer</code></h4>
+  <p>The <code>footer</code> tag is used to determine the footer of an article, or the footer of the page:</p>
+  <div><pre><code><span><span><span>&lt;</span>article</span><span>&gt;</span></span>
+   ....
+    <span><span><span>&lt;</span>footer</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>p</span><span>&gt;</span></span>Footer notes..<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>footer</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>div</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h2 id="forms">8. Forms</h2>
+  <p>Forms are the way you can interact with a page, or an app, built with Web technologies.</p>
+  <p>You have a set of controls, and when you submit the form, either with a click to a “submit” button or programmatically, the browser will send the data to the server.</p>
+  <p>By default this data sending causes the page to reload after the data is sent, but using JavaScript you can alter this behavior (not going to explain how in this book).</p>
+  <p>A form is created using the <code>form</code> tag:</p>
+  <div><pre><code><span><span><span>&lt;</span>form</span><span>&gt;</span></span>...<span><span><span>&lt;/</span>form</span><span>&gt;</span></span>
+  </code></pre></div><p>By default forms are submitted using the GET HTTP method. Which has its drawbacks, and usually you want to use POST.</p>
+  <p>You can set the form to use POST when submitted by using the <code>method</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>form</span> <span>method</span><span><span>=</span><span>"</span>POST<span>"</span></span><span>&gt;</span></span>...<span><span><span>&lt;/</span>form</span><span>&gt;</span></span>
+  </code></pre></div><p>The form is submitted, either using GET or POST, to the same URL where it resides.</p>
+  <p>So if the form is in the <code>https://flaviocopes.com/contacts</code> page, pressing the “submit” button will make a request to that same URL.</p>
+  <p>Which might result in nothing happening.</p>
+  <p>You need something server-side to handle the request, and typically you “listen” for those form submit events on a dedicated URL.</p>
+  <p>You can specify the URL via the <code>action</code> parameter:</p>
+  <div><pre><code><span><span><span>&lt;</span>form</span> <span>action</span><span><span>=</span><span>"</span>/new-contact<span>"</span></span> <span>method</span><span><span>=</span><span>"</span>POST<span>"</span></span><span>&gt;</span></span>...<span><span><span>&lt;/</span>form</span><span>&gt;</span></span>
+  </code></pre></div><p>This will cause the browser to submit the form data using POST to the <code>/new-contact</code> URL on the same origin.</p>
+  <p>If the origin (protocol + domain + port) is <code>https://flaviocopes.com</code> (port 80 is the default), this means the form data will be sent to <code>https://flaviocopes.com/new-contact </code>.</p>
+  <p>I talked about data. Which data?</p>
+  <p>Data is provided by users via the set of controls that are available on the Web platform:</p>
+  <ul>
+  <li>input boxes (single line text)</li>
+  <li>text areas (multiline text)</li>
+  <li>select boxes (choose one option from a drop-down menu)</li>
+  <li>radio buttons (choose one option from a list always visible)</li>
+  <li>checkboxes (choose zero, one or more option)</li>
+  <li>file uploads</li>
+  <li>and more!</li>
+  </ul>
+  <p>Let’s introduce each one of them in the following form fields overview.</p>
+  <h3>8.1. The <code>input</code> tag</h3>
+  <p>The <code>input</code> field is one of the most widely used form elements. It’s also a very versatile element, and it can completely change behavior based on the <code>type</code> attribute.</p>
+  <p>The default behavior is to be a single-line text input control:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>/&gt;</span></span>
+  </code></pre></div><p>Equivalent to using:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>text<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>As with all the other fields that follow, you need to give the field a name in order for its content to be sent to the server when the form is submitted:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>text<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>username<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>The <code>placeholder</code> attribute is used to have some text showing up, in light gray, when the field is empty. Useful to add a hint to the user for what to type in:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>text<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>username<span>"</span></span> <span>placeholder</span><span><span>=</span><span>"</span>Your username<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h4>8.1.1. Email</h4>
+  <p>Using <code>type="email"</code> will validate client-side (in the browser) an email for correctness (semantic correctness, not ensuring the email address is existing) before submitting.</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>email<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>email<span>"</span></span> <span>placeholder</span><span><span>=</span><span>"</span>Your email<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h4>8.1.2. Password</h4>
+  <p>Using <code>type="password"</code> will make every key entered appear as an asterisk (*) or dot, useful for fields that host a password.</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>password<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>password<span>"</span></span> <span>placeholder</span><span><span>=</span><span>"</span>Your password<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h4>8.1.3. Numbers</h4>
+  <p>You can have an input element accept only numbers:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>number<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>age<span>"</span></span> <span>placeholder</span><span><span>=</span><span>"</span>Your age<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>You can specify a minimum and maximum value accepted:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>number<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>age<span>"</span></span> <span>placeholder</span><span><span>=</span><span>"</span>Your age<span>"</span></span> <span>min</span><span><span>=</span><span>"</span>18<span>"</span></span> <span>max</span><span><span>=</span><span>"</span>110<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>The <code>step</code> attribute helps identify the steps between different values. For example this accepts a value between 10 and 50, at steps of 5:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>number<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>a-number<span>"</span></span> <span>min</span><span><span>=</span><span>"</span>10<span>"</span></span> <span>max</span><span><span>=</span><span>"</span>50<span>"</span></span> <span>step</span><span><span>=</span><span>"</span>5<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h4>8.1.4. Hidden field</h4>
+  <p>Fields can be hidden from the user. They will still be sent to the server upon the form submit:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>hidden<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>some-hidden-field<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>some-value<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>This is commonly used to store values like a CSRF token, used for security and user identification, or even to detect robots sending spam, using special techniques.</p>
+  <p>It can also just be used to identify a form and its action.</p>
+  <h4>8.1.5. Setting a default value</h4>
+  <p>All those fields accept a predefined value. If the user does not change it, this will be the value sent to the server:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>number<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>age<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>18<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>If you set a placeholder, that value will appear if the user clears the input field value:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>number<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>age<span>"</span></span> <span>placeholder</span><span><span>=</span><span>"</span>Your age<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>18<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h3>8.2. Form submit</h3>
+  <p>The <code>type="submit"</code> field is a button that, once pressed by the user, submits the form:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>submit<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>The <code>value</code> attribute sets the text on the button, which if missing shows the “Submit” text:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>submit<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>Click me<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h3>8.3. Form validation</h3>
+  <p>Browsers provide client-side validation functionality to forms.</p>
+  <p>You can set fields as required, ensuring they are filled, and enforce a specific format for the input of each field.</p>
+  <p>Let’s see both options.</p>
+  <h4>8.3.1. Set fields as required</h4>
+  <p>The <code>required</code> attribute helps you with validation. If the field is not set, client-side validation fails and the browser does not submit the form:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>text<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>username<span>"</span></span> <span>required</span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h4>8.3.2. Enforce a specific format</h4>
+  <p>I described the <code>type="email"</code> field above. It automatically validates the email address according to a format set in the specification.</p>
+  <p>In the <code>type="number"</code> field, I mentioned the <code>min</code> and <code>max</code> attribute to limit values entered to an interval.</p>
+  <p>You can enforce a specific format on any field through the <code>pattern</code> attribute, which gives you the ability to set a regular expression to validate the value against.</p>
+  <p>I recommend reading my Regular Expressions Guide at <a target="_blank" href="https://flaviocopes.com/javascript-regular-expressions/">flaviocopes.com/javascript-regular-expressions/</a>.</p>
+  <p>Example:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>text<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>username<span>"</span></span> <span>pattern</span><span><span>=</span><span>"</span>[a-zA-Z]{8}<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h3>8.4. Other fields</h3>
+  <h4>8.4.1. File uploads</h4>
+  <p>You can load files from your local computer and send them to the server using a <code>type="file"</code> input element:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>file<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>secret-documents<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>You can attach multiple files:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>file<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>secret-documents<span>"</span></span> <span>multiple</span> <span>/&gt;</span></span>
+  </code></pre></div><p>You can specify one or more file types allowed using the <code>accept</code> attribute. This accepts images:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>file<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>secret-documents<span>"</span></span> <span>accept</span><span><span>=</span><span>"</span>image/*<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>You can use a specific MIME type, like <code>application/json</code> or set a file extension like <code>.pdf</code>. Or set multiple file extensions, like this:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>file<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>secret-documents<span>"</span></span> <span>accept</span><span><span>=</span><span>"</span>.jpg, .jpeg, .png<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h4>8.4.2. Buttons</h4>
+  <p>The <code>type="button"</code> input fields can be used to add additional buttons to the form, that are not submit buttons:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>button<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>Click me<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>They are used to programmatically do something, using JavaScript.</p>
+  <p>There is a special field rendered as a button, whose special action is to clear the entire form and bring back the state of the fields to the initial one:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>reset<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h4>8.4.3. Radio buttons</h4>
+  <p>Radio buttons are used to create a set of choices, of which one is pressed and all the others are disabled.</p>
+  <p>The name comes from old car radios that had this kind of interface.</p>
+  <p>You define a set of <code>type="radio"</code> inputs, all with the same <code>name</code> attribute, and different <code>value</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>radio<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>color<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>yellow<span>"</span></span> <span>/&gt;</span></span>
+  <span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>radio<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>color<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>red<span>"</span></span> <span>/&gt;</span></span>
+  <span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>radio<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>color<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>blue<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>Once the form is submitted, the <code>color</code> data property will have one single value.</p>
+  <p>There’s always one element checked. The first item is the one checked by default.</p>
+  <p>You can set the value that’s pre-selected using the <code>checked</code> attribute. You can use it only once per radio inputs group.</p>
+  <h4>8.4.4. Checkboxes</h4>
+  <p>Similar to radio boxes, but they allow multiple values to be chosen, or none at all.</p>
+  <p>You define a set of <code>type="checkbox"</code> inputs, all with the same <code>name</code> attribute, and different <code>value</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>checkbox<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>color<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>yellow<span>"</span></span> <span>/&gt;</span></span>
+  <span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>checkbox<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>color<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>red<span>"</span></span> <span>/&gt;</span></span>
+  <span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>checkbox<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>color<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>blue<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>All those checkboxes will be unchecked by default. Use the <code>checked</code> attribute to enable them on page load.</p>
+  <p>Since this input field allows multiple values, upon form submit the value(s) will be sent to the server as an array.</p>
+  <h4>8.4.5. Date and time</h4>
+  <p>We have a few input types to accept date values.</p>
+  <p>The <code>type="date"</code> input field allows the user to enter a date, and shows a date picker if needed:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>date<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>birthday<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>The <code>type="time"</code> input field allows the user to enter a time, and shows a time picker if needed:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>time<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>time-to-pickup<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>The <code>type="month"</code> input field allows the user to enter a month and a year:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>month<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>choose-release-month<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>The <code>type="week"</code> input field allows the user to enter a week and a year:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>week<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>choose-week<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>All those fields allow to limit the range and the step between each value. I recommend checking MDN for the little details on their usage.</p>
+  <p>The <code>type="datetime-local"</code> field lets you choose a date and a time.</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>datetime-local<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>date-and-time<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>Here is a page to test them all: <a target="_blank" href="https://codepen.io/flaviocopes/pen/ZdWQPm">https://codepen.io/flaviocopes/pen/ZdWQPm</a></p>
+  <h4>8.4.6. Color picker</h4>
+  <p>You can let users pick a color using the <code>type="color"</code> element:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>color<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>car-color<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>You set a default value using the <code>value</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>color<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>car-color<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>#000000<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>The browser will take care of showing a color picker to the user.</p>
+  <h4>8.4.7. Range</h4>
+  <p>This input element shows a slider element. People can use it to move from a starting value to an ending value:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>range<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>age<span>"</span></span> <span>min</span><span><span>=</span><span>"</span>0<span>"</span></span> <span>max</span><span><span>=</span><span>"</span>100<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>30<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>You can provide an optional step:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>range<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>age<span>"</span></span> <span>min</span><span><span>=</span><span>"</span>0<span>"</span></span> <span>max</span><span><span>=</span><span>"</span>100<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>30<span>"</span></span> <span>step</span><span><span>=</span><span>"</span>10<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h4>8.4.8. Telephone</h4>
+  <p>The <code>type="tel"</code> input field is used to enter a phone number:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>tel<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>telephone-number<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>The main selling point for using <code>tel</code> over <code>text</code> is on mobile, where the device can choose to show a numeric keyboard.</p>
+  <p>Specify a <code>pattern</code> attribute for additional validation:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>tel<span>"</span></span> <span>pattern</span><span><span>=</span><span>"</span>[0-9]{3}-[0-9]{8}<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>telephone-number<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h4>8.4.9. URL</h4>
+  <p>The <code>type="url"</code> field is used to enter a URL.</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>url<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>website<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>You can validate it using the <code>pattern</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>input</span> <span>type</span><span><span>=</span><span>"</span>url<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>website<span>"</span></span> <span>pattern</span><span><span>=</span><span>"</span>https://.*<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h3>8.5. The <code>textarea</code> tag</h3>
+  <p>The <code>textarea</code> element allows users to enter multi-line text. Compared to <code>input</code>, it requires an ending tag:</p>
+  <div><pre><code><span><span><span>&lt;</span>textarea</span><span>&gt;</span></span><span><span><span>&lt;/</span>textarea</span><span>&gt;</span></span>
+  </code></pre></div><p>You can set the dimensions using CSS, but also using the <code>rows</code> and <code>cols</code> attributes:</p>
+  <div><pre><code><span><span><span>&lt;</span>textarea</span> <span>rows</span><span><span>=</span><span>"</span>20<span>"</span></span> <span>cols</span><span><span>=</span><span>"</span>10<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>textarea</span><span>&gt;</span></span>
+  </code></pre></div><p>As with the other form tags, the <code>name</code> attribute determines the name in the data sent to the server:</p>
+  <div><pre><code><span><span><span>&lt;</span>textarea</span> <span>name</span><span><span>=</span><span>"</span>article<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>textarea</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h3>8.6. The <code>select</code> tag</h3>
+  <p>This tag is used to create a drop-down menu.</p>
+  <p>The user can choose one of the options available.</p>
+  <p>Each option is created using the <code>option</code> tag. You add a name to the select, and a value to each option:</p>
+  <div><pre><code><span><span><span>&lt;</span>select</span> <span>name</span><span><span>=</span><span>"</span>color<span>"</span></span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span>red<span>"</span></span><span>&gt;</span></span>Red<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span>yellow<span>"</span></span><span>&gt;</span></span>Yellow<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>select</span><span>&gt;</span></span>
+  </code></pre></div><p>You can set an option disabled:</p>
+  <div><pre><code><span><span><span>&lt;</span>select</span> <span>name</span><span><span>=</span><span>"</span>color<span>"</span></span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span>red<span>"</span></span> <span>disabled</span><span>&gt;</span></span>Red<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span>yellow<span>"</span></span><span>&gt;</span></span>Yellow<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>select</span><span>&gt;</span></span>
+  </code></pre></div><p>You can have one empty option:</p>
+  <div><pre><code><span><span><span>&lt;</span>select</span> <span>name</span><span><span>=</span><span>"</span>color<span>"</span></span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span><span>"</span></span><span>&gt;</span></span>None<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span>red<span>"</span></span><span>&gt;</span></span>Red<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span>yellow<span>"</span></span><span>&gt;</span></span>Yellow<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>select</span><span>&gt;</span></span>
+  </code></pre></div><p>Options can be grouped using the <code>optgroup</code> tag. Each option group has a <code>label</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>select</span> <span>name</span><span><span>=</span><span>"</span>color<span>"</span></span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>optgroup</span> <span>label</span><span><span>=</span><span>"</span>Primary<span>"</span></span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span>red<span>"</span></span><span>&gt;</span></span>Red<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span>yellow<span>"</span></span><span>&gt;</span></span>Yellow<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span>blue<span>"</span></span><span>&gt;</span></span>Blue<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>optgroup</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>optgroup</span> <span>label</span><span><span>=</span><span>"</span>Others<span>"</span></span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span>green<span>"</span></span><span>&gt;</span></span>Green<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>option</span> <span>value</span><span><span>=</span><span>"</span>pink<span>"</span></span><span>&gt;</span></span>Pink<span><span><span>&lt;/</span>option</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>optgroup</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>select</span><span>&gt;</span></span>
+  </code></pre></div><h2 id="tables">9. Tables</h2>
+  <p>In the early days of the web tables were a very important part of building layouts.</p>
+  <p>Later on they were replaced by CSS and its layout capabilities, and today we have powerful tools like CSS Flexbox and CSS Grid to build layouts. Tables are now used just for, guess what, building tables!</p>
+  <h4>9.0.1. The <code>table</code> tag</h4>
+  <p>You define a table using the <code>table</code> tag:</p>
+  <div><pre><code><span><span><span>&lt;</span>table</span><span>&gt;</span></span><span><span><span>&lt;/</span>table</span><span>&gt;</span></span>
+  </code></pre></div><p>Inside the table we’ll define the data. We reason in terms of rows, which means we add rows into a table (not columns). We’ll define columns inside a row.</p>
+  <h4>9.0.2. Rows</h4>
+  <p>A row is added using the <code>tr</code> tag, and that’s the only thing we can add into a <code>table</code> element:</p>
+  <div><pre><code><span><span><span>&lt;</span>table</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span><span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span><span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span><span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>table</span><span>&gt;</span></span>
+  </code></pre></div><p>This is a table with 3 rows.</p>
+  <p>The first row <em>can</em> take the role of the header.</p>
+  <h4>9.0.3. Column headers</h4>
+  <p>The table header contains the name of a column, typically in a bold font.</p>
+  <p>Think about an Excel / Google Sheets document. The top <code>A-B-C-D...</code> header.</p>
+  <p><img src="images/Screen%20Shot%202019-06-20%20at%2010.18.17.png" alt="" loading="lazy"></p>
+  <p>We define the header using the <code>th</code> tag:</p>
+  <div><pre><code><span><span><span>&lt;</span>table</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 1<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 2<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 3<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span><span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span><span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>table</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h4>9.0.4. The table content</h4>
+  <p>The content of the table is defined using <code>td</code> tags, inside the other <code>tr</code> elements:</p>
+  <div><pre><code><span><span><span>&lt;</span>table</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 1<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 2<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 3<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Row 1 Column 1<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Row 1 Column 2<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Row 1 Column 3<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Row 2 Column 1<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Row 2 Column 2<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Row 2 Column 3<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>table</span><span>&gt;</span></span>
+  </code></pre></div><p>This is how browsers render it, if you don’t add any CSS styling:</p>
+  <p><img src="images/Screen%20Shot%202019-06-20%20at%2010.24.08.png" alt="" loading="lazy"></p>
+  <p>Adding this CSS:</p>
+  <div><pre><code><span>th,
+  td</span> <span>{</span>
+    <span>padding</span><span>:</span> 10px<span>;</span>
+    <span>border</span><span>:</span> 1px solid #333<span>;</span>
+  <span>}</span>
+  </code></pre></div><p>makes the table look more like a proper table:</p>
+  <p><img src="images/Screen%20Shot%202019-06-20%20at%2010.26.15.png" alt="" loading="lazy"></p>
+  <h4>9.0.5. Span columns and rows</h4>
+  <p>A row can decide to span over 2 or more columns, using the <code>colspan</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>table</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 1<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 2<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 3<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span> <span>colspan</span><span><span>=</span><span>"</span>2<span>"</span></span><span>&gt;</span></span>Row 1 Columns 1-2<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Row 1 Column 3<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span> <span>colspan</span><span><span>=</span><span>"</span>3<span>"</span></span><span>&gt;</span></span>Row 2 Columns 1-3<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>table</span><span>&gt;</span></span>
+  </code></pre></div><p><img src="images/Screen%20Shot%202019-06-20%20at%2010.27.59.png" alt="" loading="lazy"></p>
+  <p>Or it can span over 2 or more rows, using the <code>rowspan</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>table</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 1<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 2<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 3<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span> <span>colspan</span><span><span>=</span><span>"</span>2<span>"</span></span> <span>rowspan</span><span><span>=</span><span>"</span>2<span>"</span></span><span>&gt;</span></span>Rows 1-2 Columns 1-2<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Row 1 Column 3<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Row 2 Column 3<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>table</span><span>&gt;</span></span>
+  </code></pre></div><p><img src="images/Screen%20Shot%202019-06-20%20at%2010.29.37.png" alt="" loading="lazy"></p>
+  <h4>9.0.6. Row headings</h4>
+  <p>Before I explained how you can have column headings, using the <code>th</code> tag inside the first <code>tr</code> tag of the table.</p>
+  <p>You can add a <code>th</code> tag as the first element inside a <code>tr</code> that’s not the first <code>tr</code> of the table, to have row headings:</p>
+  <div><pre><code><span><span><span>&lt;</span>table</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span><span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 2<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 3<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Row 1<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Col 2<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Col 3<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Row 2<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Col 2<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Col 3<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>table</span><span>&gt;</span></span>
+  </code></pre></div><p><img src="images/Screen%20Shot%202019-06-20%20at%2010.49.16.png" alt="" loading="lazy"></p>
+  <h4>9.0.7. More tags to organize the table</h4>
+  <p>You can add 3 more tags into a table, to have it more organized.</p>
+  <p>This is best when using big tables. And to properly define a header and a footer, too.</p>
+  <p>Those tags are</p>
+  <ul>
+  <li><code>thead</code></li>
+  <li><code>tbody</code></li>
+  <li><code>tfoot</code></li>
+  </ul>
+  <p>They wrap the <code>tr</code> tags to clearly define the different sections of the table. Here’s an example:</p>
+  <div><pre><code><span><span><span>&lt;</span>table</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>thead</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>th</span><span>&gt;</span></span><span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 2<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Column 3<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>thead</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tbody</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Row 1<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Col 2<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Col 3<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Row 2<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Col 2<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Col 3<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tbody</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tfoot</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>td</span><span>&gt;</span></span><span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Footer of Col 1<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+        <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Footer of Col 2<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tfoot</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>table</span><span>&gt;</span></span>
+  </code></pre></div><p><img src="images/Screen%20Shot%202019-06-20%20at%2010.52.41.png" alt="" loading="lazy"></p>
+  <h3>9.1. Table caption</h3>
+  <p>A table should have a <code>caption</code> tag that describes its content. That tag should be put immediately after the opening <code>table</code> tag:</p>
+  <div><pre><code><span><span><span>&lt;</span>table</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>caption</span><span>&gt;</span></span>
+      Dogs age
+    <span><span><span>&lt;/</span>caption</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Dog<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Age<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Roger<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>7<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>table</span><span>&gt;</span></span>
+  </code></pre></div><h2 id="multimedia-tags">10. Multimedia tags: <code>audio</code> and <code>video</code></h2>
+  <p>In this section I want to show you the
+  <code>audio</code> and <code>video</code> tags.</p>
+  <h3>10.1. The <code>audio</code> tag</h3>
+  <p>This tag allows you to embed audio content in your HTML pages.</p>
+  <p>This element can stream audio, maybe using a microphone via <code>getUserMedia()</code>, or it can play an audio source which you reference using the <code>src</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>audio</span> <span>src</span><span><span>=</span><span>"</span>file.mp3<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>audio</span><span>&gt;</span></span>
+  </code></pre></div><p>By default the browser does not show any controls for this element. Which means the audio will play only if set to autoplay (more on this later) and the user can’t see how to stop it or control the volume or move through the track.</p>
+  <p>To show the built-in controls, you can add the <code>controls</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>audio</span> <span>src</span><span><span>=</span><span>"</span>file.mp3<span>"</span></span> <span>controls</span><span>&gt;</span></span><span><span><span>&lt;/</span>audio</span><span>&gt;</span></span>
+  </code></pre></div><p>Controls can have a custom skin.</p>
+  <p>You can specify the MIME type of the audio file using the <code>type</code> attribute. If not set, the browser will try to automatically determine it:</p>
+  <div><pre><code><span><span><span>&lt;</span>audio</span> <span>src</span><span><span>=</span><span>"</span>file.mp3<span>"</span></span> <span>controls</span> <span>type</span><span><span>=</span><span>"</span>audio/mpeg<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>audio</span><span>&gt;</span></span>
+  </code></pre></div><p>An audio file by default does not play automatically. Add the <code>autoplay</code> attribute to play the audio automatically:</p>
+  <div><pre><code><span><span><span>&lt;</span>audio</span> <span>src</span><span><span>=</span><span>"</span>file.mp3<span>"</span></span> <span>controls</span> <span>autoplay</span><span>&gt;</span></span><span><span><span>&lt;/</span>audio</span><span>&gt;</span></span>
+  </code></pre></div><blockquote>
+  <p>Note: mobile browsers don’t allow autoplay</p>
+  </blockquote>
+  <p>The <code>loop</code> attribute restarts the audio playing at 0:00 if set; otherwise, if not present, the audio stops at the end of the file:</p>
+  <div><pre><code><span><span><span>&lt;</span>audio</span> <span>src</span><span><span>=</span><span>"</span>file.mp3<span>"</span></span> <span>controls</span> <span>autoplay</span> <span>loop</span><span>&gt;</span></span><span><span><span>&lt;/</span>audio</span><span>&gt;</span></span>
+  </code></pre></div><p>You can also play an audio file muted using the <code>muted</code> attribute (not really sure what’s the usefulness of this):</p>
+  <div><pre><code><span><span><span>&lt;</span>audio</span> <span>src</span><span><span>=</span><span>"</span>file.mp3<span>"</span></span> <span>controls</span> <span>autoplay</span> <span>loop</span> <span>muted</span><span>&gt;</span></span><span><span><span>&lt;/</span>audio</span><span>&gt;</span></span>
+  </code></pre></div><p>Using JavaScript you can listen for various events happening on an <code>audio</code> element, the most basic of which are:</p>
+  <ul>
+  <li><code>play</code> when the file starts playing</li>
+  <li><code>pause</code> when the audio playing was paused</li>
+  <li><code>playing</code> when the audio is resumed from a pause</li>
+  <li><code>ended</code> when the end of the audio file was reached</li>
+  </ul>
+  <h3>10.2. The <code>video</code> tag</h3>
+  <p>This tag allows you to embed video content in your HTML pages.</p>
+  <p>This element can stream video, using a webcam via <code>getUserMedia()</code> or <strong>WebRTC</strong>, or it can play a video source which you reference using the <code>src</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>video</span> <span>src</span><span><span>=</span><span>"</span>file.mp4<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>video</span><span>&gt;</span></span>
+  </code></pre></div><p>By default the browser does not show any controls for this element, just the video.</p>
+  <p>Which means the video will play only if set to autoplay (more on this later) and the user can’t see how to stop it, pause it, control the volume or skip to a specific position in the video.</p>
+  <p>To show the built-in controls, you can add the <code>controls</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>video</span> <span>src</span><span><span>=</span><span>"</span>file.mp4<span>"</span></span> <span>controls</span><span>&gt;</span></span><span><span><span>&lt;/</span>video</span><span>&gt;</span></span>
+  </code></pre></div><p>Controls can have a custom skin.</p>
+  <p>You can specify the MIME type of the video file using the <code>type</code> attribute. If not set, the browser will try to automatically determine it:</p>
+  <div><pre><code><span><span><span>&lt;</span>video</span> <span>src</span><span><span>=</span><span>"</span>file.mp4<span>"</span></span> <span>controls</span> <span>type</span><span><span>=</span><span>"</span>video/mp4<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>video</span><span>&gt;</span></span>
+  </code></pre></div><p>A video file by default does not play automatically. Add the <code>autoplay</code> attribute to play the video automatically:</p>
+  <div><pre><code><span><span><span>&lt;</span>video</span> <span>src</span><span><span>=</span><span>"</span>file.mp4<span>"</span></span> <span>controls</span> <span>autoplay</span><span>&gt;</span></span><span><span><span>&lt;/</span>video</span><span>&gt;</span></span>
+  </code></pre></div><p>Some browsers also require the <code>muted</code> attribute to autoplay. The video autoplays only if muted:</p>
+  <div><pre><code><span><span><span>&lt;</span>audio</span> <span>src</span><span><span>=</span><span>"</span>file.mp3<span>"</span></span> <span>controls</span> <span>autoplay</span> <span>muted</span><span>&gt;</span></span><span><span><span>&lt;/</span>audio</span><span>&gt;</span></span>
+  </code></pre></div><p>The <code>loop</code> attribute restarts the video playing at 0:00 if set; otherwise, if not present, the video stops at the end of the file:</p>
+  <div><pre><code><span><span><span>&lt;</span>video</span> <span>src</span><span><span>=</span><span>"</span>file.mp4<span>"</span></span> <span>controls</span> <span>autoplay</span> <span>loop</span><span>&gt;</span></span><span><span><span>&lt;/</span>video</span><span>&gt;</span></span>
+  </code></pre></div><p>You can set an image to be the poster image:</p>
+  <div><pre><code><span><span><span>&lt;</span>video</span> <span>src</span><span><span>=</span><span>"</span>file.mp4<span>"</span></span> <span>poster</span><span><span>=</span><span>"</span>picture.png<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>video</span><span>&gt;</span></span>
+  </code></pre></div><p>If not present, the browser will display the first frame of the video as soon as it’s available.</p>
+  <p>You can set the <code>width</code> and <code>height</code> attributes to set the space that the element will take so that the browser can account for it and it does not change the layout when it’s finally loaded.
+  It takes a numeric value, expressed in pixels.</p>
+  <p>Using JavaScript you can listen for various events happening on an <code>video</code> element, the most basic of which are:</p>
+  <ul>
+  <li><code>play</code> when the file starts playing</li>
+  <li><code>pause</code> when the video was paused</li>
+  <li><code>playing</code> when the video is resumed from a pause</li>
+  <li><code>ended</code> when the end of the video file was reached</li>
+  </ul>
+  <h2 id="iframes">11. iframes</h2>
+  <p>The <code>iframe</code> tag allows us to embed content coming from other origins (other sites) into our web page.</p>
+  <p>Technically, an iframe creates a new nested browsing context. This means that anything in the iframe does not interfere with the parent page, and vice versa. JavaScript and CSS do not “leak” to/from iframes.</p>
+  <p>Many sites use iframes to perform various things. You might be familiar with Codepen, Glitch or other sites that allow you to code in one part of the page, and you see the result in a box. That’s an iframe.</p>
+  <p>You create one this way:</p>
+  <div><pre><code><span><span><span>&lt;</span>iframe</span> <span>src</span><span><span>=</span><span>"</span>page.html<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>iframe</span><span>&gt;</span></span>
+  </code></pre></div><p>You can load an absolute URL, too:</p>
+  <div><pre><code><span><span><span>&lt;</span>iframe</span> <span>src</span><span><span>=</span><span>"</span>https://site.com/page.html<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>iframe</span><span>&gt;</span></span>
+  </code></pre></div><p>You can set a set of width and height parameters (or set them using CSS) otherwise the iframe will use the defaults, a 300x150 pixels box:</p>
+  <div><pre><code><span><span><span>&lt;</span>iframe</span> <span>src</span><span><span>=</span><span>"</span>page.html<span>"</span></span> <span>width</span><span><span>=</span><span>"</span>800<span>"</span></span> <span>height</span><span><span>=</span><span>"</span>400<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>iframe</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h3>11.1. Srcdoc</h3>
+  <p>The <code>srcdoc</code> attribute lets you specify some inline HTML to show. It’s an alternative to <code>src</code>, but recent and not supported in Edge 18 and lower, and in IE:</p>
+  <div><pre><code><span><span><span>&lt;</span>iframe</span> <span>srcdoc</span><span><span>=</span><span>"</span>&lt;p&gt;My dog is a good dog&lt;/p&gt;<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>iframe</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h3>11.2. Sandbox</h3>
+  <p>The <code>sandbox</code> attribute allows us to limit the operations allowed in the iframes.</p>
+  <p>If we omit it, everything is allowed:</p>
+  <div><pre><code><span><span><span>&lt;</span>iframe</span> <span>src</span><span><span>=</span><span>"</span>page.html<span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>iframe</span><span>&gt;</span></span>
+  </code></pre></div><p>If we set it to “”, nothing is allowed:</p>
+  <div><pre><code><span><span><span>&lt;</span>iframe</span> <span>src</span><span><span>=</span><span>"</span>page.html<span>"</span></span> <span>sandbox</span><span><span>=</span><span>"</span><span>"</span></span><span>&gt;</span></span><span><span><span>&lt;/</span>iframe</span><span>&gt;</span></span>
+  </code></pre></div><p>We can select what to allow by adding options in the <code>sandbox</code> attribute. You can allow multiple ones by adding a space in between. Here’s an incomplete list of the options you can use:</p>
+  <ul>
+  <li><code>allow-forms</code>: allow to submit forms</li>
+  <li><code>allow-modals</code> allow to open modals windows, including calling <code>alert()</code> in JavaScript</li>
+  <li><code>allow-orientation-lock</code> allow to lock the screen orientation</li>
+  <li><code>allow-popups</code> allow popups, using <code>window.open()</code> and <code>target="_blank"</code> links</li>
+  <li><code>allow-same-origin</code> treat the resource being loaded as same origin</li>
+  <li><code>allow-scripts</code> lets the loaded iframe run scripts (but not create popups).</li>
+  <li><code>allow-top-navigation</code> gives access to the iframe to the top level browsing context</li>
+  </ul>
+  <h3>11.3. Allow</h3>
+  <p>Currently experimental and only supported by Chromium-based browsers, this is the future of resource sharing between the parent window and the iframe.</p>
+  <p>It’s similar to the <code>sandbox</code> attribute, but lets us allow specific features, including:</p>
+  <ul>
+  <li><code>accelerometer</code> gives access to the Sensors API Accelerometer interface</li>
+  <li><code>ambient-light-sensor</code> gives access to the Sensors API AmbientLightSensor interface</li>
+  <li><code>autoplay</code> allows to autoplay video and audio files</li>
+  <li><code>camera</code> allows to access the camera from the getUserMedia API</li>
+  <li><code>display-capture</code> allows to access the screen content using the getDisplayMedia API</li>
+  <li><code>fullscreen</code> allows to access fullscreen mode</li>
+  <li><code>geolocation</code> allows to access the Geolocation API</li>
+  <li><code>gyroscope</code> gives access to the Sensors API Gyroscope interface</li>
+  <li><code>magnetometer</code> gives access to the Sensors API Magnetometer interface</li>
+  <li><code>microphone</code> gives access to the device microphone using the getUserMedia API</li>
+  <li><code>midi</code> allows access to the Web MIDI API</li>
+  <li><code>payment</code> gives access to the Payment Request API</li>
+  <li><code>speaker</code> allows access to playing audio through the device speakers</li>
+  <li><code>usb</code> gives access to the WebUSB API.</li>
+  <li><code>vibrate</code> gives access to the Vibration API</li>
+  <li><code>vr</code> gives access to the WebVR API</li>
+  </ul>
+  <h3>11.4. Referrer</h3>
+  <p>When loading an iframe, the browser sends it important information about who is loading it in the <code>Referer</code> header (notice the single <code>r</code>, a typo we must live with).</p>
+  <blockquote>
+  <p>The misspelling of referrer originated in the original proposal by computer scientist Phillip Hallam-Baker to incorporate the field into the HTTP specification. The misspelling was set in stone by the time of its incorporation into the Request for Comments standards document RFC 1945</p>
+  </blockquote>
+  <p>The <code>referrerpolicy</code> attribute lets us set the referrer to send to the iframe when loading it. The referrer is an HTTP header that lets the page know who is loading it. These are the allowed values:</p>
+  <ul>
+  <li><code>no-referrer-when-downgrade</code> it’s the default, and does not send the referrer when the current page is loaded over HTTPS and the iframe loads on the HTTP protocol</li>
+  <li><code>no-referrer</code> does not send the referrer header</li>
+  <li><code>origin</code> the referrer is sent, and only contains the origin (port, protocol, domain), not the origin + path which is the default</li>
+  <li><code>origin-when-cross-origin</code> when loading from the same origin (port, protocol, domain) in the iframe, the referrer is sent in its complete form (origin + path). Otherwise only the origin is sent</li>
+  <li><code>same-origin</code> the referrer is sent only when loading from the same origin (port, protocol, domain) in the iframe</li>
+  <li><code>strict-origin</code> sends the origin as the referrer if the current page is loaded over HTTPS and the iframe also loads on the HTTPS protocol. Sends nothing if the iframe is loaded over HTTP</li>
+  <li><code>strict-origin-when-cross-origin</code> sends the origin + path as the referrer when working on the same origin. Sends the origin as the referrer if the current page is loaded over HTTPS and the iframe also loads on the HTTPS protocol. Sends nothing if the iframe is loaded over HTTP</li>
+  <li><code>unsafe-url</code>: sends the origin + path as the referrer even when loading resources from HTTP and the current page is loaded over HTTPS</li>
+  </ul>
+  <h2 id="images">12. Images</h2>
+  <p>Images can be displayed using the <code>img</code> tag.</p>
+  <p>This tag accepts a <code>src</code> attribute, which we use to set the image source:</p>
+  <div><pre><code><span><span><span>&lt;</span>img</span> <span>src</span><span><span>=</span><span>"</span>image.png<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>We can use a wide set of images. The most common ones are PNG, JPEG, GIF, SVG and more recently WebP.</p>
+  <p>The HTML standard requires an <code>alt</code> attribute to be present, to describe the image. This is used by screen readers and also by search engine bots:</p>
+  <div><pre><code><span><span><span>&lt;</span>img</span> <span>src</span><span><span>=</span><span>"</span>dog.png<span>"</span></span> <span>alt</span><span><span>=</span><span>"</span>A picture of a dog<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>You can set the <code>width</code> and <code>height</code> attributes to set the space that the element will take, so that the browser can account for it and it does not change the layout when it’s fully loaded. It takes a numeric value, expressed in pixels.</p>
+  <div><pre><code><span><span><span>&lt;</span>img</span> <span>src</span><span><span>=</span><span>"</span>dog.png<span>"</span></span> <span>alt</span><span><span>=</span><span>"</span>A picture of a dog<span>"</span></span> <span>width</span><span><span>=</span><span>"</span>300<span>"</span></span> <span>height</span><span><span>=</span><span>"</span>200<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div>
+  <h3>12.1. The <code>figure</code> tag</h3>
+  <p>The <code>figure</code> tag is often used along with the <code>img</code> tag.</p>
+  <p><code>figure</code> is a semantic tag often used when you want to display an image with a caption. You use it like this:</p>
+  <div><pre><code><span><span><span>&lt;</span>figure</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>img</span> <span>src</span><span><span>=</span><span>"</span>dog.png<span>"</span></span> <span>alt</span><span><span>=</span><span>"</span>A nice dog<span>"</span></span> <span>/&gt;</span></span>
+    <span><span><span>&lt;</span>figcaption</span><span>&gt;</span></span>A nice dog<span><span><span>&lt;/</span>figcaption</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>figure</span><span>&gt;</span></span>
+  </code></pre></div><p>The <code>figcaption</code> tag wraps the caption text.</p>
+  <h3>12.2. Responsive images using <code>srcset</code></h3>
+  <p>The <code>srcset</code> attribute allows you to set responsive images that the browser can use depending on the pixel density or window width, according to your preferences. This way, it can only download the resources it needs to render the page, without downloading a bigger image if it’s on a mobile device, for example.</p>
+  <p>Here’s an example, where we give 4 additional images for 4 different screen sizes:</p>
+  <div><pre><code><span><span><span>&lt;</span>img</span>
+    <span>src</span><span><span>=</span><span>"</span>dog.png<span>"</span></span>
+    <span>alt</span><span><span>=</span><span>"</span>A picture of a dog<span>"</span></span>
+    <span>srcset</span><span><span>=</span><span>"</span>
+      dog-500.png   500w,
+      dog-800.png   800w,
+      dog-1000.png 1000w,
+      dog-1400.png 1400w
+    <span>"</span></span>
+  <span>/&gt;</span></span>
+  </code></pre></div><p>In the <code>srcset</code> we use the <code>w</code> measure to indicate the window width.</p>
+  <p>Since we do so, we also need to use the <code>sizes</code> attribute:</p>
+  <div><pre><code><span><span><span>&lt;</span>img</span>
+    <span>src</span><span><span>=</span><span>"</span>dog.png<span>"</span></span>
+    <span>alt</span><span><span>=</span><span>"</span>A picture of a dog<span>"</span></span>
+    <span>sizes</span><span><span>=</span><span>"</span>(max-width: 500px) 100vw, (max-width: 900px) 50vw, 800px<span>"</span></span>
+    <span>srcset</span><span><span>=</span><span>"</span>
+      dog-500.png   500w,
+      dog-800.png   800w,
+      dog-1000.png 1000w,
+      dog-1400.png 1400w
+    <span>"</span></span>
+  <span>/&gt;</span></span>
+  </code></pre></div><p>In this example the <code>(max-width: 500px) 100vw, (max-width: 900px) 50vw, 800px</code> string in the <code>sizes</code> attribute describes the size of the image in relation to the viewport, with multiple conditions separated by a comma.</p>
+  <p>The media condition <code>max-width: 500px </code> sets the size of the image in correlation to the viewport width. In short, if the window size is &lt; 500px, it renders the image at 100% of the window size.</p>
+  <p>If the window size is bigger but &lt; <code>900px</code>, it renders the image at 50% of the window size.</p>
+  <p>And if even bigger, it renders the image at 800px.</p>
+  <p>The <code>vw</code> unit of measure can be new to you, and in short we can say that 1 <code>vw</code> is 1% of the window width, so <code>100vw</code> is 100% of the window width.</p>
+  <p>A useful website to generate the <code>srcset</code> and progressively smaller images is <a target="_blank" href="https://responsivebreakpoints.com/">https://responsivebreakpoints.com/</a>.</p>
+  <h3>12.3. The <code>picture</code> tag</h3>
+  <p>HTML also gives us the <code>picture</code> tag, which does a very similar job to <code>srcset</code>, and the differences are very subtle.</p>
+  <p>You use <code>picture</code> when instead of just serving a smaller version of a file, you completely want to change it. Or serve a different image format.</p>
+  <p>The best use case I found is when serving a WebP image, which is a format still not widely supported. In the <code>picture</code> tag you specify a list of images, and they will be used in order, so in the next example, browsers that support WebP will use the first image, and fallback to JPG if not:</p>
+  <div><pre><code><span><span><span>&lt;</span>picture</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>source</span> <span>type</span><span><span>=</span><span>"</span>image/webp<span>"</span></span> <span>srcset</span><span><span>=</span><span>"</span>image.webp<span>"</span></span> <span>/&gt;</span></span>
+    <span><span><span>&lt;</span>img</span> <span>src</span><span><span>=</span><span>"</span>image.jpg<span>"</span></span> <span>alt</span><span><span>=</span><span>"</span>An image<span>"</span></span> <span>/&gt;</span></span>
+  <span><span><span>&lt;/</span>picture</span><span>&gt;</span></span>
+  </code></pre></div><blockquote>
+  <p>The <code>source</code> tag defines one (or more) formats for the images. The <code>img</code> tag is the fallback in case the browser is very old and does not support the <code>picture</code> tag.</p>
+  </blockquote>
+  <p>In the <code>source</code> tag inside <code>picture</code> you can add a <code>media</code> attribute to set media queries.</p>
+  <p>The example that follows kind of works like the above example with <code>srcset</code>:</p>
+  <div><pre><code><span><span><span>&lt;</span>picture</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>source</span> <span>media</span><span><span>=</span><span>"</span>(min-width: 500w)<span>"</span></span> <span>srcset</span><span><span>=</span><span>"</span>dog-500.png<span>"</span></span> <span>sizes</span><span><span>=</span><span>"</span>100vw<span>"</span></span> <span>/&gt;</span></span>
+    <span><span><span>&lt;</span>source</span> <span>media</span><span><span>=</span><span>"</span>(min-width: 800w)<span>"</span></span> <span>srcset</span><span><span>=</span><span>"</span>dog-800.png<span>"</span></span> <span>sizes</span><span><span>=</span><span>"</span>100vw<span>"</span></span> <span>/&gt;</span></span>
+    <span><span><span>&lt;</span>source</span> <span>media</span><span><span>=</span><span>"</span>(min-width: 1000w)<span>"</span></span> <span>srcset</span><span><span>=</span><span>"</span>dog-1000.png<span>"</span></span> <span>sizes</span><span><span>=</span><span>"</span>800px<span>"</span></span> <span>/&gt;</span></span>
+    <span><span><span>&lt;</span>source</span> <span>media</span><span><span>=</span><span>"</span>(min-width: 1400w)<span>"</span></span> <span>srcset</span><span><span>=</span><span>"</span>dog-1400.png<span>"</span></span> <span>sizes</span><span><span>=</span><span>"</span>800px<span>"</span></span> <span>/&gt;</span></span>
+    <span><span><span>&lt;</span>img</span> <span>src</span><span><span>=</span><span>"</span>dog.png<span>"</span></span> <span>alt</span><span><span>=</span><span>"</span>A dog image<span>"</span></span> <span>/&gt;</span></span>
+  <span><span><span>&lt;/</span>picture</span><span>&gt;</span></span>
+  </code></pre></div><p>But that’s not its use case, because as you can see it’s much more verbose.</p>
+  <p>The <code>picture</code> tag is recent but is now <a target="_blank" href="https://caniuse.com/#search=picture">supported</a> by all the major browsers except Opera Mini and IE (all versions).</p>
+  <h2 id="accessibility">13. Accessibility</h2>
+  <p>It’s important we design our HTML with accessibility in mind.</p>
+  <p>Having accessible HTML means that people with disabilities can use the Web. There are totally blind or visually impaired users, people with hearing loss issues and a multitude of other different disabilities.</p>
+  <p>Unfortunately this topic does not take the importance it needs, and it doesn’t seem as cool as others.</p>
+  <p>What if a person can’t <em>see</em> your page, but still wants to consume its content? First, how do they do that? They can’t use the mouse, they use something called a <strong>screen reader</strong>. You don’t have to imagine that. You can try one now: Google provides the free <a target="_blank" href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn/">ChromeVox Chrome Extension</a>. Accessibility must also take care of allowing tools to easily select elements or navigate through the pages.</p>
+  <p>Web pages and Web apps are not always built with accessibility as one of their first goals, and maybe version 1 is released not accessible but it’s possible to make a web page accessible after the fact. Sooner is better, but it’s never too late.</p>
+  <p>It’s important and in my country, websites built by the government or other public organizations must be accessible.</p>
+  <p>What does this mean to make an HTML accessible? Let me illustrate the main things you need to think about.</p>
+  <blockquote>
+  <p>Note: there are several other things to take care about, which might go in the CSS topic, like colors, contrast and fonts. Or <a target="_blank" href="https://css-tricks.com/accessible-svgs/">how to make SVG images accessible</a>. I don’t talk about them here.</p>
+  </blockquote>
+  <h3>13.1. Use semantic HTML</h3>
+  <p>Semantic HTML is very important and it’s one of the main things you need to take care of. Let me illustrate a few common scenarios.</p>
+  <p>It’s important to use the correct structure for heading tags. The most important is <code>h1</code>, and you use higher numbers for less important ones, but all the same-level headings should have the same meaning (think about it like a tree structure)</p>
+  <div><pre><code>
+  h1
+  h2
+  h3
+  h2
+  h2
+  h3
+  h4
+  </code></pre></div><p>Use <code>strong</code> and <code>em</code> instead of <code>b</code> and <code>i</code>. Visually they look the same, but the first 2 have more meaning associated with them. <code>b</code> and <code>i</code> are more visual elements.</p>
+  <p>Lists are important. A screen reader can detect a list and provide an overview, then let the user choose to get into the list or not.</p>
+  <p>A table should have a <code>caption</code> tag that describes its content:</p>
+  <div><pre><code><span><span><span>&lt;</span>table</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>caption</span><span>&gt;</span></span>
+      Dogs age
+    <span><span><span>&lt;/</span>caption</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Dog<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>th</span><span>&gt;</span></span>Age<span><span><span>&lt;/</span>th</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>tr</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>Roger<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>td</span><span>&gt;</span></span>7<span><span><span>&lt;/</span>td</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>tr</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>table</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h3>13.2. Use <code>alt</code> attributes for images</h3>
+  <p>All images must have an <code>alt</code> tag describing the image content. It’s not just a good practice, it’s required by the HTML standard and your HTML without it is not validated.</p>
+  <div><pre><code><span><span><span>&lt;</span>img</span> <span>src</span><span><span>=</span><span>"</span>dog.png<span>"</span></span> <span>alt</span><span><span>=</span><span>"</span>picture of my dog<span>"</span></span> <span>/&gt;</span></span>
+  </code></pre></div><p>It’s also good for search engines, if that’s an incentive for you to add it.</p>
+  <h3>13.3. Use the <code>role</code> attribute</h3>
+  <p>The <code>role</code> attribute lets you assign specific roles to the various elements in your page.</p>
+  <p>You can assign lots of different roles: complementary, list, listitem, main, navigation, region, tab, alert, application, article, banner, button, cell, checkbox, contentinfo, dialog, document, feed, figure, form, grid, gridcell, heading, img, listbox, row, rowgroup, search, switch, table, tabpanel, textbox, timer.</p>
+  <p>It’s a lot and for the full reference of each of them I give you <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles">this MDN link</a>. But you don’t need to assign a role to every element in the page. Screen readers can infer from the HTML tag in most cases. For example you don’t need to add a role tag to semantic tags like <code>nav</code>, <code>button</code>, <code>form</code>.</p>
+  <p>Let’s take the <code>nav</code> tag example. You can use it to define the page navigation like this:</p>
+  <div><pre><code><span><span><span>&lt;</span>nav</span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>ul</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>li</span><span>&gt;</span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>/<span>"</span></span><span>&gt;</span></span>Home<span><span><span>&lt;/</span>a</span><span>&gt;</span></span><span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>li</span><span>&gt;</span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>/blog<span>"</span></span><span>&gt;</span></span>Blog<span><span><span>&lt;/</span>a</span><span>&gt;</span></span><span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>ul</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>nav</span><span>&gt;</span></span>
+  </code></pre></div><p>If you were <em>forced</em> to use a <code>div</code> tag instead of <code>nav</code>, you’d use the <code>navigation</code> role:</p>
+  <div><pre><code><span><span><span>&lt;</span>div</span> <span>role</span><span><span>=</span><span>"</span>navigation<span>"</span></span><span>&gt;</span></span>
+    <span><span><span>&lt;</span>ul</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>li</span><span>&gt;</span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>/<span>"</span></span><span>&gt;</span></span>Home<span><span><span>&lt;/</span>a</span><span>&gt;</span></span><span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+      <span><span><span>&lt;</span>li</span><span>&gt;</span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>/blog<span>"</span></span><span>&gt;</span></span>Blog<span><span><span>&lt;/</span>a</span><span>&gt;</span></span><span><span><span>&lt;/</span>li</span><span>&gt;</span></span>
+    <span><span><span>&lt;/</span>ul</span><span>&gt;</span></span>
+  <span><span><span>&lt;/</span>div</span><span>&gt;</span></span>
+  </code></pre></div><p>So here you got a practical example: <code>role</code> is used to assign a meaningful value when the tag does not convey the meaning already.</p>
+  <h3>13.4. Use the <code>tabindex</code> attribute</h3>
+  <p>The <code>tabindex</code> attribute allows you to change the order of how pressing the Tab key selects “selectable” elements. By defaults only links and form elements are “selectable” by navigation using the Tab key (and you don’t need to set <code>tabindex</code> on them).</p>
+  <p>Adding <code>tabindex="0"</code> makes an element selectable:</p>
+  <div><pre><code><span><span><span>&lt;</span>div</span> <span>tabindex</span><span><span>=</span><span>"</span>0<span>"</span></span><span>&gt;</span></span>...<span><span><span>&lt;/</span>div</span><span>&gt;</span></span>
+  </code></pre></div><p>Using <code>tabindex="-1"</code> instead removes an element from this tab-based navigation, and it can be pretty useful.</p>
+  <h3>13.5. Use the <code>aria</code> attributes</h3>
+  <p>ARIA is an acronym that means Accessible Rich Internet Applications and defines semantics that can be applied to elements.</p>
+  <h4>13.5.1. <code>aria-label</code></h4>
+  <p>This attribute is used to add a string to describe an element.</p>
+  <p>Example:</p>
+  <div><pre><code><span><span><span>&lt;</span>p</span> <span>aria-label</span><span><span>=</span><span>"</span>The description of the product<span>"</span></span><span>&gt;</span></span>...<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div><p>I use this attribute on my blog sidebar, where I have an input box for search without an explicit label, as it has a placeholder attribute.</p>
+  <h4>13.5.2. <code>aria-labelledby</code></h4>
+  <p>This attribute sets a correlation between the current element and the one that labels it.</p>
+  <p>If you know how an <code>input</code> element can be associated to a <code>label</code> element, that’s similar.</p>
+  <p>We pass the item id that describes the current element.</p>
+  <p>Example:</p>
+  <div><pre><code><span><span><span>&lt;</span>h3</span> <span>id</span><span><span>=</span><span>"</span>description<span>"</span></span><span>&gt;</span></span>The description of the product<span><span><span>&lt;/</span>h3</span><span>&gt;</span></span>
+  
+  <span><span><span>&lt;</span>p</span> <span>aria-labelledby</span><span><span>=</span><span>"</span>description<span>"</span></span><span>&gt;</span></span>...<span><span><span>&lt;/</span>p</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h4>13.5.3. <code>aria-describedby</code></h4>
+  <p>This attribute lets us associate an element with another element that serves as description.</p>
+  <p>Example:</p>
+  <div><pre><code><span><span><span>&lt;</span>button</span> <span>aria-describedby</span><span><span>=</span><span>"</span>payNowDescription<span>"</span></span><span>&gt;</span></span>Pay now<span><span><span>&lt;/</span>button</span><span>&gt;</span></span>
+  
+  <span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>payNowDescription<span>"</span></span><span>&gt;</span></span>
+    Clicking the button will send you to our Stripe form!
+  <span><span><span>&lt;/</span>div</span><span>&gt;</span></span>
+  </code></pre></div>
+  <h4>13.5.4. Use aria-hidden to hide content</h4>
+  <p>I like a minimalistic design in my sites. My blog for example is mostly just content, with some links in the sidebar. But some things in the sidebar are just visual elements that don’t add up to the experience of a person that can’t see the page. Like my logo picture, or the dark/bright theme selector.</p>
+  <p>Adding the <code>aria-hidden="true"</code> attribute will tell screen readers to ignore that element.</p>
+  
+
+</div>
+
+  <a id="top-btn" href="html.html"><img id="top" src="images/top1.png" alt="" ></a>
+
+
+  <footer>
+    <img  id="imd-logo" src="images/imed_logo1.png" alt="">
+    
+  </footer>
+     
+<script src="script.js"></script>
+</body>
+
+</html>
+

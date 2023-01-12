@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+  }
+    body {
+        background-image: url(images/bg2.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+       margin-bottom: 80px;
+    }
+    
+   
+
+    #sidenav a {
+      position: fixed;
+      left: -200px;
+      transition: 0.4s; 
+      padding: 5px;
+      width: 250px; 
+      text-decoration: none; 
+      font-size: 15px;
+      color: white;
+      border-radius: 0 5px 5px 0;
+      text-align: right; 
+      height: 45px;
+      
+      
+    }
+    #sidenav a:hover {
+      left: 0;
+      text-align: left;
+      background-color: #2196F3; 
+      flex-direction: row-reverse;
+      justify-content: left;
+      
+    }
+    
+
+    
+    #b0 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 150px;
+      background-color: none;
+      
+
+      
+      
+    }
+  
+    #b1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 200px;
+      background-color: none;
+      
+     
+    }
+    
+    #b2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 250px;
+      background-color: none; 
+      
+    }
+    
+    #b3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 300px;
+      background-color: none;
+       
+    }
+    
+    #b4 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 350px;
+      background-color: none; 
+      
+    }
+    #b5 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 400px;
+      background-color:none; 
+      
+    }
+    #b6 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 400px;
+      background-color: none;
+       
+    }
+    #b7 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 450px;
+      background-color: none;
+       
+    }
+    #b8 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 500px;
+      background-color: none;
+       
+    }
+    #b9 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 550px;
+      background-color: none;
+       
+    }
+    #b10 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 600px;
+      background-color: none;
+       
+    }
+    #b11 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 650px;
+      background-color: none;
+       
+    }
+
+
+    #home {
+      position: sticky;
+      top: 20px;
+      left:3px;
+      width:140px;
+      height: 50px;
+      
+  }
+
+.parag {
+  margin-left: 200px;
+  margin-right: 200px;
+  
+}
+
+h1 {
+  padding: 10px 0;
+  color: red;
+  text-shadow: #de4e22 1px 0 8px;
+}
+h2 {
+  padding: 10px 0;
+  color: rgb(71, 14, 177);
+  text-shadow: #604dbe 1px 0 8px;
+
+}
+h3 {
+  padding: 10px 0;
+  color: rgb(18, 163, 224);
+  
+
+}
+
+ul {
+  margin-left: 80px;
+}
+
+.parag img {
+  
+  max-width: 95%;
+  max-height: 95%;
+  padding: 0px;
+  display: block;
+  margin: 20px auto;
+  
+  border-radius: 5px 5px;
+border-style: dashed;
+color: #04AA6D;
+background-color: azure;
+
+ 
+}
+#js-img {
+  display: flex;
+  float:right;
+  padding:15px;
+  max-width:12%;
+  max-height: 12%;
+  position: sticky;
+  z-index: 11;
+
+
+}
+
+.imd-code {
+  margin: 25px;
+  background-color: rgb(243, 246, 214);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+ol {
+
+  margin: 15px;
+  padding-left: 50px;
+}
+
+pre {
+  margin: 25px;
+  background-color: rgb(243, 246, 214);
+  padding: 30px;
+  border-radius: 10px;
+
+}
+
+iframe {
+
+  margin-left: 220px;
+  width: 70vw;
+  height: 70vh;
+}
+
+#tryit {
+
+  background-color: #04AA6D;
+}

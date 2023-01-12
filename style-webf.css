@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+  }
+
+
+.footer {  
+    
+    position: fixed; 
+    display: flex;
+    height: 50px; 
+    bottom: 0px;  
+    width: 100%;  
+    background-color: #0D1E55;
+    color: white;  
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    
+    } 
+
+    
+    
+    .webfund {
+        padding-left: 5%;
+        line-height: 25pt;
+    }
+    .page1 {
+        background-image: url(images/bg2.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+ 
+
+#first-line {
+    text-align: center;
+
+}
+
+.pdf {
+    display: flex;
+    width: calc(100vw - 250px);
+    align-items: center;
+    margin-left: 180px;
+    margin-left: 6vw;
+    
+        
+}
+
+
+#embed-file {
+   
+    
+        
+        background: none;
+        border: none;
+        height: 80vh;
+        width: 30cm;
+        margin-left: 12vw;
+        border-radius: 10px;
+        
+       
+}
+
+#home {
+    position: sticky;
+    top: 20px;
+    left:2px
+    
+}
+
+
+
+
+#sidenav a {
+    position: absolute; 
+    left: -100px;
+    transition: 0.4s; 
+    padding: 15px;
+    width: 240px; 
+    text-decoration: none; 
+    font-size: 15px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    text-align: right; 
+  }
+  #sidenav a:hover {
+    left: 0;
+    text-align: left;
+    
+  }
+  #b0 {
+    top: 100px;
+    background-color: #d18e82;
+   
+  }
+
+  #b1 {
+    top: 165px;
+    background-color: #04AA6D;
+   
+  }
+  
+  #b2 {
+    top: 230px;
+    background-color: #2196F3; 
+    
+  }
+  
+  #b3 {
+    top: 295px;
+    background-color: #f44336;
+     
+  }
+  
+  #b4 {
+    top: 360px;
+    background-color: #555; 
+    
+  }
+  #b5 {
+    top: 425px;
+    background-color: rgb(52, 61, 5); 
+    
+  }
+  #b6 {
+    top: 490px;
+    background-color: rgb(161, 15, 125);
+     
+  }
+  #b7 {
+    top: 555px;
+    background-color: rgb(14, 106, 176);
+     
+  }
+  #b8 {
+    top: 620px;
+    background-color: rgba(108, 206, 23, 0.755);
+     
+  }
+  
+ #img-web {
+    display: flex;
+    width: calc(100vw - 200px);
+    position: absolute;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+    margin-left: 140px;
+    padding: 20px 100px;
+ }
+
+ #img-web img {
+
+max-width: 80%;
+border-radius: 20px 20px;
+
+}
+
+  

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Ayeb Imed</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/imed.png">
+    <link rel="stylesheet" href="style-javascript.css">
+   
+    
+
+</head>
+
+<body>
+  <img id="js-img" src="images/js.png" alt="HTML tutorial">
+  <a href="index.html"><img id="home" src="images/home1.png" alt="home" ></a>
+  <div class="side-barp1" id="sidenav">
+
+    <a id="b0" href="#What is JavaScript?" >What is JavaScript?<img src="images/1.png" alt="1" width="40px" height="40px"></a>
+    <a id="b1" href="#JavaScript Variables" >JavaScript Variables<img src="images/2.png" alt="" widh="40px" height="40px"></a>
+    <a id="b2" href="#JavaScript Array Methods" >JavaScript Array Methods<img src="images/3.png" alt="" widh="40px" height="40px"></a>
+    <a id="b3" href="#JavaScript Loops" >JavaScript Loops<img src="images/4.png" alt="" widh="40px" height="40px"></a>
+    <a id="b4" href="#Conditional Statements" >Conditional Statements<img src="images/5.png" alt="" widh="40px" height="40px"></a>
+    <a id="b5" href="#Video-Tuto" >Video Tutorial<img src="images/6.png" alt="" widh="40px" height="40px"></a>
+    
+
+</div>
+
+<!-----------------------------------------Actual JavaScript Engine Performance------------------------------------------------------->
+<div class="parag">
+<h1 id="What is JavaScript?">What is JavaScript?</h1>
+<p>JavaScript is a very powerful <strong> client-side scripting language</strong>. JavaScript is used mainly for enhancing 
+  the interaction of a user with the webpage. In other words, you can make your webpage more lively and 
+  interactive, with the help of JavaScript. JavaScript is also being used widely in game development and Mobile
+   application development.</p>
+<img src="images/javascript1_1.webp" alt="">
+<h2>Javascript History</h2>
+<p>JavaScript was developed by Brendan Eich in 1995, which appeared in Netscape, a popular browser of that time.</p>
+<img src="images/javascript1_2.webp" alt="">
+<p>The language was initially called LiveScript and was later renamed JavaScript. There are many programmers who 
+  think that JavaScript and Java are the same. <strong>In fact, JavaScript and Java are very much unrelated. Java is a 
+  very complex programming language whereas JavaScript is only a scripting language.</strong> The syntax of JavaScript is 
+  mostly influenced by the programming language C.</p>
+  <h2>How to Run JavaScript?</h2>
+  <p>Being a scripting language, <strong>JavaScript cannot run on its own. In fact, the browser is responsible for running JavaScript code. </strong>
+    When a user requests an HTML page with JavaScript in it, the script is sent to the browser and it is up to the
+     browser to execute it. The main advantage of JavaScript is that <strong>all modern web browsers support</strong> JavaScript. 
+     So, you do not have to worry about whether your site visitor uses Internet Explorer, Google Chrome, 
+     Firefox or any other browser. JavaScript will be supported. Also, JavaScript <strong>runs on any operating system</strong> 
+     including Windows, Linux or Mac. Thus, JavaScript overcomes the main disadvantages of VBScript 
+     (Now deprecated) which is limited to just IE and Windows.</p>
+
+ <h2>Tools You Need</h2>
+  <p>To start with, you need a text editor to write your code and a browser to display the web pages you develop. 
+    You can use a text editor of your choice including Notepad++, Visual Studio Code, Sublime Text, Atom or any 
+    other text editor you are comfortable with. You can use any web browser including Google Chrome, Firefox, 
+    Microsoft Edge, Internet Explorer etc.
+  </p>
+  <h2>A Simple JavaScript Program</h2>
+  <p>You should place all your JavaScript code within <strong>&lt;script&gt; tags </strong>(&lt;script&gt; and &lt;/script&gt;) if you are keeping 
+  your JavaScript code within the HTML document itself. This helps your browser distinguish your JavaScript code 
+  from the rest of the code. As there are other client-side scripting languages (Example: VBScript), it is highly 
+  recommended that you specify the scripting language you use. You have to use the type attribute within the 
+  &lt;script&gt; tag and set its value to text/javascript like this:</p>
+<div class="imd-code"><code >&lt;script type="text/javascript"&gt;</code></div>
+
+<h2>Hello World Example:</h2>
+
+<div class="imd-code">
+  <code style="color: green;">&lt;html&gt;</code><br>
+  <code style="color: green;">&lt;head&gt;</code><br>
+  <code style="color: green;">&ensp;&ensp;&ensp;&lt;title&gt;<span style="color: black;">My First JavaScript code!!!</span>&lt;/title&gt</code><br>
+  <code style="color: green;">&ensp;&ensp;&ensp;&lt;script <span style="color: blue;">type=</span><span style="color: brown;">"text/javascript"</span>&gt;</code><br>
+  <code >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;alert("Hello World!");</code><br>
+  <code style="color: green;">&ensp;&ensp;&ensp;&lt;/script&gt;</code><br>
+  <code style="color: green;">&lt;/head&gt;</code><br>
+  <code style="color: green;"style="color: green;">&lt;/html&gt;</code>
+</div>
+
+<p><strong>Note:</strong> type=”text/javascript” is not necessary in HTML5. Following code will work.</p>
+
+<div class="imd-code">
+  <code style="color: green;">&lt;html&gt;</code><br>
+  <code style="color: green;">&lt;head&gt;</code><br>
+  <code style="color: green;">&ensp;&ensp;&ensp;&lt;title&gt;<span style="color: black;">My First JavaScript code!!!</span>&lt;/title&gt</code><br>
+  <code style="color: green;">&ensp;&ensp;&ensp;&lt;script&gt;</code><br>
+  <code >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;alert("Hello World!");</code><br>
+  <code style="color: green;">&ensp;&ensp;&ensp;&lt;/script&gt;</code><br>
+  <code style="color: green;">&lt;/head&gt;</code><br>
+  <code style="color: green;"style="color: green;">&lt;/html&gt;</code>
+</div>
+
+<h4>Summary</h4>
+
+<ul type="circle">
+  <li>JavaScript is a client-side scripting language developed by Brendan Eich.</li>
+  <li>JavaScript can be run on any operating systems and almost all web browsers.</li>
+  <li>You need a text editor to write JavaScript code and a browser to display your web page.
+    You Might Like:</li>
+</ul>
+
+<h1 id="JavaScript Variables">JavaScript Variables</h1>
+<p>Variables are used to <strong>store values</strong> (name = “John”) <strong>or expressions</strong> (sum = x + y).</p>
+<h2>Declare Variables in JavaScript</h2>
+<p>Before using a variable, you first need to declare it. You have to use the keyword <strong>var</strong> to declare a variable like this:</p>
+
+
+<div class="imd-code">
+  <code>var name;</code>
+</div>
+
+<h2>Assign a Value to the Variable</h2>
+<p>You can assign a value to the variable either while declaring the variable or after declaring the variable.</p>
+<div class="imd-code">
+  <code>var name = "John";</code>
+</div>
+<p>OR</p>
+<div class="imd-code">
+  <code>var name;</code>
+  <br>
+  <br>
+  <code>name = "John";</code>
+</div>
+<h2>Naming Variables</h2>
+<p>Though you can name the variables as you like, it is a good programming practice to give descriptive and meaningful names to the variables. 
+  Moreover, variable names should start with a letter and they are case sensitive. Hence the variables student name and studentName are different 
+  because the letter n in a name is different (n and N).</p>
+  
+  <div class="imd-code">
+    <code style="color: green;">&lt;html&gt;</code><br>
+    <code style="color: green;">&lt;head&gt;</code><br>
+    <code style="color: green;">&ensp;&ensp;&ensp;&lt;title&gt;<span style="color: black;">Variables!!!</span>&lt;/title&gt</code><br>
+    <code style="color: green;">&ensp;&ensp;&ensp;&lt;script <span style="color: blue;">type=</span><span style="color: brown;">"text/javascript"</span>&gt;</code><br>
+    &ensp;&ensp;&ensp;var one = 22;<br>
+    &ensp;&ensp;&ensp;var two = 3;<br>
+    &ensp;&ensp;&ensp;var add = one + two;<br>
+    &ensp;&ensp;&ensp;var minus = one - two;<br>
+    &ensp;&ensp;&ensp;var multiply = one * two;<br>
+    &ensp;&ensp;&ensp;var divide = one/two;<br>
+      
+    
+    
+    <code >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;document.write("First No: = " + one + "<span style="color: green;">&lt;br /&gt;</span>Second No: = " + two + "<span style="color: green;"> &lt;br /&gt;</span>");</code><br>
+    <code >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;document.write(one + " + " + two + " = " + add + "<span style="color: green;">&lt;br /&gt;</span>");</code><br>
+    <code >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;document.write(one + " - " + two + " = " + minus + "<span style="color: green;">&lt;br /&gt;</span>");</code><br>
+    <code >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;document.write(one + " * " + two + " = " + multiply + "<span style="color: green;">&lt;br /&gt;</span>");</code><br>
+    <code >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;document.write(one + " / " + two + " = " + divide + "<span style="color: green;">&lt;br /&gt;</span>");</code><br>
+    
+    <code style="color: green;">&ensp;&ensp;&ensp;&lt;/script&gt;</code><br>
+    <code style="color: green;">&lt;/head&gt;</code><br>
+    <code style="color: green;"style="color: green;">&lt;/html&gt;</code>
+  </div>
+
+  <h1 id="JavaScript Array Methods">JavaScript Array Methods</h1>
+  <h2>What is an Array?</h2>
+  <p>An array is an object that can store a <strong>collection of items.</strong> Arrays become really useful when you need to store large amounts of data of the 
+    same type. Suppose you want to store details of 500 employees. If you are using variables, you will have to create 500 variables whereas you 
+    can do the same with a single array. You can access the items in an array by referring to its <strong>indexnumber</strong> and the index of the first element 
+    of an array is zero.</p>
+
+
+<h2>JavaScript Create Array</h2>
+<p>You can create an array in JavaScript as given below.</p>
+
+<div class="imd-code"><code >var students = ["John", "Ann", "Kevin"];</code></div>
+<p>Here, you are initializing your array as and when it is created with values “John”, “Ann” and “Kevin”.The index of “John”, “Ann” and “Kevin” 
+  is 0, 1 and 2 respectively. If you want to add more elements to the students array, you can do it like this:</p>
+
+<div class="imd-code"><code >students[3] = "Emma";<br>students[4] = "Rose";</code></div>
+<p>You can also create an array using Array constructor like this:</p>
+<div class="imd-code"><code >var students = new Array("John", "Ann", "Kevin");</code></div>
+<p>OR</p>
+<div class="imd-code"><code >var students = new Array();<br>students[0] = "John";<br>students[1] = "Ann";<br>students[2] = "Kevin";</code></div>
+<h2>JavaScript Array Methods</h2>
+<p>The Array object has many properties and methods which help developers to handle arrays easily and efficiently. You can get the value of a 
+  property by specifying arrayname.property and the output of a method by specifying arrayname.method().</p>
+<ol>
+  <li><strong>length property –></strong> If you want to know the number of elements in an array, you can use the length property.</li>
+  <li><strong>prototype property –></strong> If you want to add new properties and methods, you can use the prototype property.</li>
+  <li><strong>reverse method –></strong> You can reverse the order of items in an array using a reverse method.</li>
+  <li><strong>sort method –></strong> You can sort the items in an array using sort method.</li>
+  <li><strong>pop method –></strong> You can remove the last item of an array using a pop method.</li>
+  <li><strong>shift method –></strong> You can remove the first item of an array using shift method.</li>
+  <li><strong>push method –></strong> You can add a value as the last item of the array.</li>
+</ol>
+<h1 id="JavaScript Loops">JavaScript Loops</h1>
+<h2>How to use Loop?</h2>
+<p>Loops are useful when you have to execute the same lines of code repeatedly, for a specific number of times or as long as a specific condition 
+  is true. Suppose you want to type a ‘Hello’ message 100 times in your webpage. Of course, you will have to copy and paste the same line 100 
+  times. Instead, if you use loops, you can complete this task in just 3 or 4 lines.</p>
+
+  <img src="images/javascript4_1.webp" alt="How to use Loop?">
+<h2>Different Types of Loops</h2>
+<p>There are mainly four types of loops in JavaScript.</p>
+<ol>
+  <li>for loop</li>
+  <li>for/in a loop (explained later)</li>
+  <li>while loop</li>
+  <li>do…while loop</li>
+</ol>
+<h3>for loop</h3>
+<p>Syntax:</p>
+<div class="imd-code"><code >for(statement1; statement2; statment3)<br><br>{<br><br> lines of code to be executed <br><br>} </code></div>
+<ol>
+  <li>The statement1 is executed first even before executing the looping code. So, this statement is normally used to assign values to variables that will be used inside the loop.</li>
+  <li>The statement2 is the condition to execute the loop.</li>
+  <li>The statement3 is executed every time after the looping code is executed.</li>
+</ol>
+<h4>Example</h4>
+
+<pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;script type="text/javascript"&gt;
+      var students = new Array("John", "Ann", "Aaron", "Edwin", "Elizabeth");
+      document.write("&lt;b&gt;Using for loops &lt;/b&gt;&lt;br /&gt;");
+      for (i=0;i&lt;students.length;i++)
+      {
+      document.write(students[i] + "&lt;br /&gt;");
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</pre>
+
+  
+
+<h3>while loop</h3>
+<p>Syntax:</p>
+<div class="imd-code"><code >while(condition)<br><br>{<br><br> lines of code to be executed <br><br>} </code></div>
+<p>The “while loop” is executed as long as the specified condition is true. Inside the while loop, you should include the statement that will 
+  end the loop at some point of time. Otherwise, your loop will never end and your browser may crash.</p>
+  <h4>Example:</h4>
+  <pre>
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;script type="text/javascript"&gt;
+        document.write("&lt;b&gt;Using while loops &lt;/b&gt;&lt;br /&gt;");
+        var i = 0, j = 1, k;
+        document.write("Fibonacci series less than 40&lt;br /&gt;");
+        while(i&lt;40)
+        {
+          document.write(i + "&lt;br /&gt;");
+          k = i+j;
+          i = j;
+          j = k;
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</pre>
+
+    <h3>do…while loop</h3>
+    <p>Syntax:</p>
+
+<div class="imd-code"><code >do<br><br>{<br><br> lines of code to be executed <br><br>} while (condition) </code></div>
+ <p>The do…while loop is very similar to while loop. The only difference is that in do…while loop, the block of code gets 
+  executed once even before checking the condition.</p> 
+
+<h4>Example:</h4>
+<pre>
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;script type="text/javascript"&gt;
+      document.write("&lt;b&gt;Using do...while loops &lt;/b&gt;&lt;br /&gt;");
+      var i = 2;
+      document.write("Even numbers less than 20&lt;br /&gt;");
+      do
+      {
+        document.write(i + "&lt;br /&gt;");
+        i = i + 2;
+      }while(i&lt;20)
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</pre>
+
+
+
+  <h1 id="Conditional Statements">JavaScript Conditional Statements</h1>
+  <h2>How to use Conditional Statements</h2>
+  <p>Conditional statements are used to decide the flow of execution based on different conditions. If a condition is true, you can 
+    perform one action and if the condition is false, you can perform another action.</p>
+<img src="images/javascript5_1.webp" alt="How to use Conditional Statements">
+
+<h2>Different Types of Conditional Statements</h2>
+<p>There are mainly three types of conditional statements in JavaScript.</p>
+<ol>
+  <li>If statement</li>
+  <li>If…Else statement</li>
+  <li>If…Else If…Else statement</li>
+</ol>
+<h3>If statement</h3>
+<p>Syntax:</p>
+<div class="imd-code"><code >if (condition)<br><br>{<br><br> lines of code to be executed if condition is true <br><br>} </code></div>
+<p>You can use If statement if you want to check only a specific condition.</p>
+<h4>Example</h4>
+
+<pre>
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;IF Statments!!!&lt;/title&gt;
+    &lt;script type="text/javascript"&gt;
+      var age = prompt("Please enter your age");
+      if(age&gt;=18)
+      document.write("You are an adult &lt;br /&gt;");
+      if(age&lt;18)
+      document.write("You are NOT an adult &lt;br /&gt;");
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</pre>
+
+<h3>If…Else statement</h3>
+<p>Syntax:</p>
+
+<div class="imd-code"><code >if (condition)<br><br>{<br><br> lines of code to be executed if the condition is true <br><br>} <br><br> else<br><br> { <br><br> lines of code to be executed if the condition is false
+  <br><br> }</code></div>
+
+<p>You can use If….Else statement if you have to check two conditions and execute a different set of codes.</p>
+<h4>Example:</h4>
+<pre>
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;script type="text/javascript"&gt;
+      var one = prompt("Enter the first number");
+      var two = prompt("Enter the second number");
+      one = parseInt(one);
+      two = parseInt(two);
+      if (one == two)
+        document.write(one + " is equal to " + two + ".");
+      else if (one&lt;two)
+        document.write(one + " is less than " + two + ".");
+      else
+        document.write(one + " is greater than " + two + ".");
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</pre>
+
+  <h3>If…Else If…Else statement</h3>
+  <p>Syntax:</p>
+
+
+<div class="imd-code">
+  <code >if (condition1)
+  <br><br>{
+  <br><br> lines of code to be executed if condition1 is true
+  <br><br>} 
+  <br><br> else if(condition2)
+  <br><br> { 
+  <br><br> lines of code to be executed if condition2 is true
+  <br><br> }
+  <br><br> else
+  <br><br> { 
+  <br><br> lines of code to be executed if condition1 is false and condition2 is false
+  <br><br> } 
+
+  </code>
+
+</div>
+
+
+<P>You can use If….Else If….Else statement if you want to check more than two conditions.</P>
+<H4>Example:</H4>
+
+<pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;script type="text/javascript"&gt;
+      var one = prompt("Enter the first number");
+      var two = prompt("Enter the second number");
+      one = parseInt(one);
+      two = parseInt(two);
+      if (one == two)
+        document.write(one + " is equal to " + two + ".");
+      else if (one&lt;two)
+        document.write(one + " is less than " + two + ".");
+      else
+        document.write(one + " is greater than " + two + ".");
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</pre>
+
+
+
+
+<h1>JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour</h1>
+</div>
+<iframe id="Video-Tuto" src="https://www.youtube.com/embed/W6NZfCO5SIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+  <a id="top-btn" href="javascript.html"><img id="top" src="images/top1.png" alt="" ></a>
+
+
+
+<footer>
+  <img  id="imd-logo" src="images/imed_logo1.png" alt="">
+  
+</footer>
+<script src="script.js"></script>
+</body>
+
+
+</html>
+
+
+

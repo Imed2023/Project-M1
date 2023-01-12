@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Ayeb Imed</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/imed.png">
+    <link rel="stylesheet" href="style-dom.css">
+
+    
+
+</head>
+
+<body>
+  <img id="dom-img" src="images/dom.png" alt="DOM tutorial">
+  <a href="index.html"><img id="home" src="images/home1.png" alt="home" ></a>
+ 
+<div class="sidebar">
+
+  <div class="link">
+    <a id="b0" href="#DOM Intro" >DOM Intro</a>
+    <hr>
+    <a id="b1" href="#DOM Methods" >DOM Methods</a>
+    <hr>
+    <a id="b2" href="#DOM Document" >DOM Document</a>
+    <hr>
+    <a id="b3" href="#DOM Elements" >DOM Elements</a>
+    <hr>
+    <a id="b4" href="#DOM HTML" >DOM HTML</a>
+    <hr>
+    <a id="b5" href="#DOM Forms" >DOM Forms</a>
+    <hr>
+    <a id="b6" href="#DOM CSS" >DOM CSS</a>
+    <hr>
+    <a id="b7" href="#DOM Animations" >DOM Animations</a>
+    <hr>
+    <a id="b8" href="#DOM Events" >DOM Events</a>
+    <hr>
+    <a id="b9" href="#DOM Event Listener" >DOM Event Listener</a>
+    <hr>
+    <a id="b10" href="#DOM Navigation" >DOM Navigation</a>
+    <hr>
+    <a id="b11" href="#DOM Nodes" >DOM Nodes</a>
+    <hr>
+    <a id="b12" href="#DOM Collections" >DOM Collections</a>
+    <hr>
+    <a id="b13" href="#DOM Node Lists" >DOM Node Lists</a>
+    </div>
+  
+
+    <div class="img-logo">
+      <img src="images/f_dom.webp" alt="1" width="100px" height="100px">
+    </div>
+
+</div>
+
+
+  
+  
+<div class="parag">
+
+  <h1 id="DOM Intro">JavaScript HTML DOM</h1>
+  <p>With the HTML DOM, JavaScript can access and change all the elements of an HTML document.</p>
+  <h2>The HTML DOM (Document Object Model)</h2>
+  <p>When a web page is loaded, the browser creates a <strong>D</strong>ocument
+  <strong>O</strong>bject <strong>M</strong>odel of the page. </p>
+  <p>The <strong>HTML DOM</strong> model is constructed as a tree of <strong>Objects</strong>:</p>
+  <div>
+  <h3>The HTML DOM Tree of Objects</h3>
+  <div>
+  <img style="max-width:100%" src="images/pic_htmltree.png" alt="DOM HTML tree">
+  </div>
+  </div>
+  <p>With the object model, JavaScript gets all the power it needs to create 
+  dynamic HTML: </p>
+  <ul>
+    <li>JavaScript can change all the HTML elements in the page</li>
+    <li>JavaScript can change all the HTML attributes in the page</li>
+    <li>JavaScript can change all the CSS styles in the page</li>
+    <li>JavaScript can remove existing HTML elements and attributes</li>
+    <li>JavaScript can add new HTML elements and attributes</li>
+    <li>JavaScript can react to all existing HTML events in the page</li>
+    <li>JavaScript can create new HTML events in the page</li>
+  </ul>
+  
+  <hr>
+  
+  <h2>What You Will Learn</h2>
+  <p>In the next chapters of this tutorial you will learn:</p>
+  <ul>
+    <li>How to change the content of HTML elements</li>
+    <li>How to change the style (CSS) of HTML elements</li>
+    <li>How to react to HTML DOM events</li>
+    <li>How to add and delete HTML elements</li>
+  </ul>
+  <hr>
+  
+  
+  <h2>What is the DOM?</h2>
+  <p>The DOM is a W3C (World Wide Web Consortium) standard.</p>
+  <p>The DOM defines a standard for accessing documents:</p>
+  <p><i>&quot;The W3C Document Object Model (DOM) is a platform and language-neutral 
+  interface that allows programs and scripts to dynamically access and update the 
+  content, structure, and style of a document.&quot;</i></p>
+  <p>The W3C DOM standard is separated into 3 different parts:</p>
+  <ul>
+    <li>Core DOM - standard model for all document types</li>
+    <li>XML DOM - standard model for XML documents</li>
+    <li>HTML DOM - standard model for HTML documents</li>
+  </ul>
+  <hr  />
+  <h2>What is the HTML DOM?</h2>
+  <p>The HTML DOM is a standard <strong>object</strong> model and <strong>
+  programming interface</strong> for HTML. It defines:</p>
+  <ul>
+    <li>The HTML elements as <b>objects</b>
+    <li>The <b>properties</b> of all HTML elements
+    <li>The <b>methods</b> to access all HTML elements</li>
+    <li>The <strong>events</strong> for all HTML elements</li>
+  </ul>
+  <p>In other words:<b> The HTML DOM is a standard for how to get, change, add, or delete HTML elements.</b></p>
+</div>
+
+<div class="parag">
+
+
+  <h1 id="DOM Methods">JavaScript - HTML DOM Methods</h1>
+  <p>HTML DOM methods are actions you can perform (on HTML Elements).</p>
+  <br>
+  <p>HTML DOM properties are values (of HTML Elements) that you can set or change.</p>
+  <h2>The DOM Programming Interface</h2>
+  <p>The HTML DOM can be accessed with JavaScript 
+  (and with other programming languages). </p>
+  <p>In the DOM, all HTML elements are defined as <strong>objects</strong>.</p>
+  <p>The programming interface is 
+  the properties and methods of each object.</p>
+  <p>A <b>property</b> is a value that you can get or set (like changing the 
+  content of an HTML element).</p>
+  <p>A <b>method</b> is an action you can do (like add 
+  or deleting an HTML element).</p>
+  <hr>
+  
+  <h2>Example</h2>
+  <p>The following example changes the content (the <code class="imd-codecol">innerHTML</code>) of the <code class="imd-codecol">&lt;p&gt;</code> element with <code class="imd-codecol">id=&quot;demo&quot;</code>:</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;html&gt;<br>
+  &lt;body&gt;<br><br>
+  &lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;<br><br>
+  &lt;script&gt;<br>
+   document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello World!&quot;;<br>
+  &lt;/script&gt;<br><br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;</div>
+  </div>
+  
+  <p>In the example above, <code class="imd-codecol">getElementById</code> is a <strong>method</strong>, while <code class="imd-codecol">innerHTML</code> is a 
+  <strong>property</strong>.</p>
+  <hr>
+  <h2>The getElementById Method</h2>
+  <p>The most common way to access an HTML element is to use the <code class="imd-codecol">id</code> of the 
+  element.</p>
+  <p>In the example above the <code class="imd-codecol">getElementById</code> method used <code class="imd-codecol">id=&quot;demo&quot;</code> to find the 
+  element.</p>
+  <hr>
+  <h2>The innerHTML Property</h2>
+  <p>The easiest way to get the content of an element is by using the <code class="imd-codecol">innerHTML</code> property.</p>
+  <p>The <code class="imd-codecol">innerHTML</code> property is useful for getting or replacing the content of HTML elements.</p>
+  
+  <div class="imd-panel">
+  <p>The <code class="imd-codecol">innerHTML</code> property can be used to get or change any HTML element, 
+  including <code class="imd-codecol">&lt;html&gt;</code> and <code class="imd-codecol">&lt;body&gt;</code>.</p>
+  </div>
+  
+</div>  
+
+<div class="parag">
+<hr>
+
+<h1 id="DOM Document">JavaScript HTML DOM Document</h1>
+<p>The HTML DOM document object is the owner of all other objects in your web page.</p>
+<h2>The HTML DOM Document Object</h2>
+<p>The document object represents your web page.</p>
+<p>If you want to access any element in an HTML page, you always start with accessing the 
+document object.</p>
+<p>Below are some examples of how you can use the document object to access and 
+manipulate HTML.</p>
+<hr>
+
+<h2>Finding HTML Elements</h2>
+
+<table class="table-imd">
+<tr>
+<th style="width:50%">Method</th>
+<th>Description</th>
+</tr>
+<tr>
+  <td>document.getElementById(<em>id</em>)</td>
+  <td>Find an element by element id</td>
+</tr>
+<tr>
+  <td>document.getElementsByTagName(<em>name</em>)</td>
+  <td>Find elements by tag name</td>
+</tr>
+<tr>
+  <td>document.getElementsByClassName(<em>name</em>)</td>
+  <td>Find elements by class name</td>
+</tr>
+</table>
+<hr>
+
+<h2>Changing HTML Elements</h2>
+
+<table class="table-imd">
+<tr>
+<th style="width:50%">Property</th>
+<th>Description</th>
+</tr>
+<tr>
+  <td><em>element</em>.innerHTML =&nbsp; <em>new html content</em></td>
+  <td>Change the inner HTML of an element</td>
+</tr>
+<tr>
+  <td><em>element</em>.<em>attribute = new value</em></td>
+  <td>Change the attribute value of an HTML element</td>
+</tr>
+  <tr>
+  <td><em>element</em>.style.<em>property = new style</em></td>
+  <td>Change the style of an HTML element</td>
+  </tr>
+  <tr>
+<th style="width:50%">Method</th>
+<th>Description</th>
+  </tr>
+  <tr>
+  <td><em>element</em>.setAttribute<em>(attribute, value)</em></td>
+  <td>Change the attribute value of an HTML element</td>
+  </tr>
+</table>
+<hr>
+
+<h2>Adding and Deleting Elements</h2>
+
+<table class="table-imd">
+<tr>
+<th style="width:50%">Method</th>
+<th>Description</th>
+</tr>
+<tr>
+  <td>document.createElement(<em>element</em>)</td>
+  <td>Create an HTML element</td>
+</tr>
+<tr>
+  <td>document.removeChild(<em>element</em>)</td>
+  <td>Remove an HTML element</td>
+</tr>
+<tr>
+  <td>document.appendChild(<em>element</em>)</td>
+  <td>Add an HTML element</td>
+</tr>
+<tr>
+  <td>document.replaceChild(<em>new, old</em>)</td>
+  <td>Replace an HTML element</td>
+</tr>
+<tr>
+  <td>document.write(<em>text</em>)</td>
+  <td>Write into the HTML output stream</td>
+</tr>
+</table>
+<hr>
+<hr>
+
+<h2>Adding Events Handlers</h2>
+
+<table class="table-imd">
+<tr>
+<th style="width:50%">Method</th>
+<th>Description</th>
+</tr>
+<tr>
+  <td>document.getElementById(<em>id</em>).onclick = function(){<em>code</em>}</td>
+  <td>Adding event handler code to an onclick event</td>
+</tr>
+</table>
+<hr>
+
+<h2>Finding HTML Objects</h2>
+<p>The first HTML DOM Level 1 (1998), defined 11 HTML objects, object collections, and properties. These are still valid in HTML5.</p>
+<p>Later, in HTML DOM Level 3, more objects, collections, and properties were added.</p>
+
+<table class="table-imd">
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>DOM</th>
+</tr>
+<tr>
+  <td>document.anchors</td>
+  <td>Returns all &lt;a&gt; elements that have a name attribute</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>document.applets</td>
+  <td><span class="deprecated">Deprecated</span></td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>document.baseURI</td>
+  <td>Returns the absolute base URI of the document</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.body</td>
+  <td>Returns the &lt;body&gt; element </td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>document.cookie</td>
+  <td>Returns the document's cookie</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>document.doctype</td>
+  <td>Returns the document's doctype</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.documentElement</td>
+  <td>Returns the &lt;html&gt; element </td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.documentMode</td>
+  <td>Returns the mode used by the browser</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.documentURI</td>
+  <td>Returns the URI of the document </td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.domain</td>
+  <td>Returns the domain name of the document server </td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>document.domConfig</td>
+  <td><span class="deprecated">Obsolete.</span></td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.embeds</td>
+  <td>Returns all &lt;embed&gt; elements</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.forms</td>
+  <td>Returns all &lt;form&gt; elements </td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>document.head</td>
+  <td>Returns the &lt;head&gt; element</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.images</td>
+  <td>Returns all &lt;img&gt; elements </td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>document.implementation</td>
+  <td>Returns the DOM implementation</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.inputEncoding</td>
+  <td>Returns the document's encoding (character set)</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.lastModified</td>
+  <td>Returns the date and time the document was updated</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.links</td>
+  <td>Returns all &lt;area&gt; and &lt;a&gt; elements that have a href attribute</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>document.readyState</td>
+  <td>Returns the (loading) status of the document</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.referrer</td>
+  <td>Returns the URI of the referrer (the linking document)</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>document.scripts</td>
+  <td>Returns all &lt;script&gt; elements</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.strictErrorChecking</td>
+  <td>Returns if error checking is enforced</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>document.title</td>
+  <td>Returns the &lt;title&gt; element </td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>document.URL</td>
+  <td>Returns the complete URL of the document </td>
+  <td>1</td>
+</tr>
+</table>
+
+</div>
+
+<div class="parag">
+
+  
+  <h1 id="DOM Elements">JavaScript HTML DOM Elements</h1>
+  <p>This page teaches you how to find and access HTML elements in an HTML page.</p>
+  <h2>Finding HTML Elements</h2>
+  <p>Often, with JavaScript, you want to manipulate HTML elements.</p>
+  <p>To do so, you have to find the elements first. There are several ways to do this:</p>
+  <ul>
+    <li>Finding HTML elements by id</li>
+    <li>Finding HTML elements by tag name </li>
+    <li>Finding HTML elements by class name</li>
+    <li>Finding HTML elements by CSS selectors</li>
+    <li>Finding HTML elements by HTML object collections</li>
+  </ul>
+  <hr>
+  
+  <h2>Finding HTML Element by Id</h2>
+  
+  <p>The easiest way to find an HTML element in the DOM, is by using the element id.</p>
+  <p>codeth <code class="imd-codecol">id=&quot;intro&quot;</code>:</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  const element = document.getElementById(&quot;intro&quot;);
+  </div>
+  
+  </div>
+  <p>If the element is found, the method will return the element as an object (in element).</p>
+  <p>If the element is not found, element will contain <code class="imd-codecol">null</code>.</p>
+  <hr>
+  
+  <h2>Finding HTML Elements by Tag Name</h2>
+  <p>This example finds all <code class="imd-codecol">&lt;p&gt;</code> elements:</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  const element = document.getElementsByTagName(&quot;p&quot;);</div>
+  
+  </div>
+  
+  <p>codeth <code class="imd-codecol">id=&quot;main&quot;</code>, and then finds all <code class="imd-codecol">&lt;p&gt;</code> elements 
+  inside <code class="imd-codecol">&quot;main&quot;</code>:</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  const x = document.getElementById(&quot;main&quot;);<br>
+  const y = x.getElementsByTagName(&quot;p&quot;);
+  </div>
+ 
+  </div>
+  <hr>
+  <hr>
+  
+  <h2>Finding HTML Elements by Class Name</h2>
+  <p>If you want to find all HTML elements with the same class name, use 
+  <code class="imd-codecol">getElementsByClassName()</code>.<br>
+  </p>
+  
+  <p>This example returns a list of all elements with <code class="imd-codecol">class=&quot;intro&quot;</code>.</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  const x = document.getElementsByClassName(&quot;intro&quot;);</div>
+ 
+  </div>
+  
+  <hr>
+  <h2>Finding HTML Elements by CSS Selectors</h2>
+  <p>If you want to find all HTML elements that match a specified CSS selector 
+  (id, class names, types, attributes, values of attributes, etc), use the <code class="imd-codecol">querySelectorAll()</code> method.<br>
+  </p>
+  
+  <p>This example returns a list of all <code class="imd-codecol">&lt;p&gt;</code> elements with <code class="imd-codecol">class=&quot;intro&quot;</code>.</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  const x = document.querySelectorAll(&quot;p.intro&quot;);</div>
+  
+  </div>
+  
+  <hr>
+  <h2>Finding HTML Elements by HTML Object Collections</h2>
+  <p>This example finds the form element with <code class="imd-codecol">id=&quot;frm1&quot;</code>, in the forms 
+  collection, and displays all element 
+  values:</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  const x = document.forms[&quot;frm1&quot;];<br>
+  let text = &quot;&quot;;<br>
+  for (let i = 0; i &lt; x.length; i++) {<br>&nbsp; text += x.elements[i].value + &quot;&lt;br&gt;&quot;;<br>}<br>document.getElementById(&quot;demo&quot;).innerHTML = text;</div>
+  
+  </div>
+  <p>The following HTML objects (and object collections) are also accessible:</p>
+  <ul>
+    <li><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_anchors">document.anchors</a></li>
+    <li><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_body">document.body</a></li>
+    <li><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_element">document.documentElement</a></li>
+    <li><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_embeds">document.embeds</a></li>
+    <li><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_forms">document.forms</a></li>
+    <li><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_head">document.head</a></li>
+    <li><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_images">document.images</a></li>
+    <li><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_links">document.links</a></li>
+    <li><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_scripts">document.scripts</a></li>
+    <li><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_title">document.title</a></li>
+  </ul>
+  <hr>
+
+
+
+  
+</div>
+
+<div class="parag">
+
+
+  <h1 id="DOM HTML">JavaScript HTML DOM - Changing HTML</h1>
+  <P>The HTML DOM allows JavaScript to change the content of HTML elements.</P>
+  <h2>Changing HTML Content</h2>
+  <p>The easiest way to modify the content of an HTML element is by using the <code class="imd-codecol">innerHTML</code> property.</p>
+  
+  <p>To change the content of an HTML element, use this syntax:</p>
+  <div class="code"><div>
+  document.getElementById(<i>id</i>).innerHTML =<i> new HTML</i>
+  </div>
+  </div>
+  
+  <p>This example changes the content of a <code class="imd-codecol">&lt;p&gt;</code> element:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;html&gt;<br>
+  &lt;body&gt;<br><br>
+  &lt;p id=&quot;p1&quot;&gt;Hello World!&lt;/p&gt;<br><br>
+  &lt;script&gt;<br>
+  document.getElementById(&quot;p1&quot;).innerHTML = &quot;New text!&quot;;<br>
+  &lt;/script&gt;<br><br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;
+  </div>
+  
+  </div>
+  
+  <p>Example explained:</p>
+  <ul>
+    <li>The HTML document above contains a <code class="imd-codecol">&lt;p&gt;</code> element with <code class="imd-codecol">id=&quot;p1&quot;</code></li>
+    <li>We use the HTML DOM to get the element with <code class="imd-codecol">id=&quot;p1&quot;</code></li>
+    <li>A JavaScript changes the content (<code class="imd-codecol">innerHTML</code>) of that element to &quot;New 
+    text!&quot;</li>
+  </ul>
+  <p>This example changes the content of an <code class="imd-codecol">&lt;h1&gt;</code> element:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
+  &lt;body&gt;<br>
+  <br>
+  &lt;h1 id=&quot;id01&quot;&gt;Old Heading&lt;/h1&gt;<br>
+  <br>
+  &lt;script&gt;<br>
+  const element = document.getElementById(&quot;id01&quot;);<br>element.innerHTML = &quot;New Heading&quot;;<br>
+  &lt;/script&gt;<br>
+  <br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;
+  </div>
+  
+  </div>
+  
+  <p>Example explained:</p>
+  <ul>
+    <li>The HTML document above contains an <code class="imd-codecol">&lt;h1&gt;</code> element with <code class="imd-codecol">id=&quot;id01&quot;</code></li>
+    <li>We use the HTML DOM to get the element with <code class="imd-codecol">id=&quot;id01&quot;</code></li>
+    <li>A JavaScript changes the content (<code class="imd-codecol">innerHTML</code>) of that element to &quot;New 
+    Heading&quot;</li>
+  </ul>
+  <hr>
+    
+  <h2>Changing the Value of an Attribute</h2>
+  
+  <p>To change the value of an HTML attribute, use this syntax: </p>
+  <div class="code"><div>
+  document.getElementById(<i>id</i>).<i>attribute = new value</i>
+  </div>
+  </div>
+  <p>This example changes the value of the src attribute of an <code class="imd-codecol">&lt;img&gt;</code> element:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+   &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
+  &lt;body&gt;<br>
+  <br>
+  &lt;img id=&quot;myImage&quot; src=&quot;smiley.gif&quot;&gt;<br>
+  <br>
+  &lt;script&gt;<br>
+  document.getElementById(&quot;myImage&quot;).src = &quot;landscape.jpg&quot;;<br>
+  &lt;/script&gt;<br>
+  <br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;
+  </div>
+  
+  </div>
+  
+  <p>Example explained:</p>
+  <ul>
+    <li>The HTML document above contains an <code class="imd-codecol">&lt;img&gt;</code> element with <code class="imd-codecol">id=&quot;myImage&quot;</code></li>
+    <li>We use the HTML DOM to get the element with <code class="imd-codecol">id=&quot;myImage&quot;</code></li>
+    <li>A JavaScript changes the <code class="imd-codecol">src</code> attribute of that element from &quot;smiley.gif&quot; to &quot;landscape.jpg&quot;</li>
+  </ul>
+  
+  <hr>
+  <h2>Dynamic HTML content</h2>
+  
+  <p>JavaScript can create dynamic HTML content:</p>
+  <p id="today" onload=Today()></p> 
+  <script> 
+  document.getElementById("today").innerHTML="Date : " + Date();
+  </script>
+
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+   &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
+  &lt;body&gt;<br>
+  <br>
+  &lt;script&gt;<br>
+  document.getElementById("demo").innerHTML = "Date : " + Date();
+  &lt;/script&gt;<br>
+  <br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;
+  </div>
+  
+  </div>
+  <hr>
+  <h2>document.write()</h2>
+  
+  <p>In JavaScript, <code class="imd-codecol">document.write()</code> can be used to write directly to the HTML 
+  output stream:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+   &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
+  &lt;body&gt;<br>
+  <br>
+  &lt;p&gt;Bla bla bla&lt;/p&gt;<br>
+  <br>
+  &lt;script&gt;<br>
+  document.write(Date());<br>
+  &lt;/script&gt;<br>
+  <br>
+  &lt;p&gt;Bla bla bla&lt;/p&gt;<br>
+  <br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;
+  </div>
+  
+  </div>
+  
+  <div class="imd-panel">
+  <p>Never use <code class="imd-codecol">document.write()</code> after the document is loaded. It will 
+  overwrite the document.</p>
+  </div>
+  
+
+
+</div>
+
+
+<div class="parag">
+
+  <h1 id="DOM Forms">JavaScript Forms</h1>
+  
+  <h2>JavaScript Form Validation</h2>
+  <p>HTML form validation can be done by JavaScript.</p>
+  <p>If a form field (fname) is empty, this function alerts a message, and returns 
+  false, to prevent the form from being submitted:</p>
+  <div class="imd-exple">
+  <h3>JavaScript Example</h3>
+  <div class="code">
+  function validateForm() {<br>
+  &nbsp;&nbsp;let
+  x = document.forms[&quot;myForm&quot;][&quot;fname&quot;].value;<br>
+    &nbsp;
+  if (x == &quot;&quot;) {<br>
+    &nbsp;&nbsp;&nbsp; alert(&quot;Name must be filled out&quot;);<br>
+    &nbsp;&nbsp;&nbsp; return false;<br>
+    &nbsp;&nbsp;}<br>
+  }</div></div>
+  
+  <p>The function can be called when the form is submitted:</p>
+  
+  <div class="imd-exple">
+  <h3>HTML Form Example</h3>
+  <div class="code">
+  &lt;form name=&quot;myForm&quot; action=&quot;/action_page.php&quot; <strong>onsubmit=&quot;return validateForm()&quot;</strong> 
+  method=&quot;post&quot;&gt;<br>
+   Name: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;<br>
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>
+  &lt;/form&gt;</div>
+  
+  </div>
+  <hr>
+  
+  <h2>JavaScript Can Validate Numeric Input</h2>
+  <p>JavaScript is often used to validate numeric input:</p>
+  
+  <div class="imd-exple">
+  <p>Please input a number between 1 and 10</p>
+  <input id="numb" type="text">
+  <button type="button" onclick=isNumber()>Submit</button>
+  <p id="demo"></p>
+  
+  </div>
+  
+  <hr>
+  
+  <h2>Automatic HTML Form Validation</h2>
+  <p>HTML form validation can be performed automatically by the browser:</p>
+  <p>If a form field (fname) is empty, the <code class="imd-codecol">required</code> attribute prevents this form from being 
+  submitted: </p>
+  
+  <div class="imd-exple">
+  <h3>HTML Form Example</h3>
+  <div class="code">
+  &lt;form action=&quot;/action_page.php&quot; method=&quot;post&quot;&gt;<br>
+  &nbsp; &lt;input type=&quot;text&quot; name=&quot;fname&quot; <strong>required</strong>&gt;<br>
+  &nbsp;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>
+  &lt;/form&gt;</div>
+  
+  </div>
+  
+  <div class="imd-panel">
+  <p>Automatic HTML form validation does not work in Internet Explorer 9 or earlier.</p>
+  </div>
+  
+  <hr>
+  <h2>Data Validation</h2>
+  <p>Data validation is the process of ensuring that user input is clean, 
+  correct, and useful.</p>
+  <p>Typical validation tasks are:</p>
+  <ul>
+    <li>has the user filled in all required fields?</li>
+    <li>has the user entered a valid date?</li>
+      <li>has the user entered text in a numeric field?</li>
+  </ul>
+  <p>Most often, the purpose of data validation is to ensure correct user input.</p>
+  <p>Validation can be defined by many different methods, and deployed in many 
+  different ways.</p>
+  <p><strong>Server side validation</strong> is performed by a web server, after input has been sent to the 
+  server.</p>
+  
+  <p><strong>Client side validation</strong> is performed by a web browser, before input is sent to a web server.</p>
+  <hr>
+  
+  <h2>HTML Constraint Validation</h2>
+  <p>HTML5 introduced a new HTML validation concept called <strong>constraint 
+  validation</strong>.</p>
+  <p>HTML constraint validation is based on:</p>
+  <ul>
+   <li>Constraint validation <strong>HTML</strong> <strong>Input Attributes</strong></li>
+   <li>Constraint validation <strong>CSS Pseudo Selectors</strong></li>
+   <li>Constraint validation <strong>DOM Properties and Methods</strong></li>
+  </ul>
+  <hr>
+  
+  <h2>Constraint Validation HTML Input Attributes</h2>
+  <table class="table-imd">
+  <tr>
+  <th style="width:25%">Attribute</th>
+  <th>Description</th>
+  </tr>
+  <tr>
+  <td>disabled</td>
+  <td>Specifies that the input element should be disabled</td>
+  </tr>
+  <tr>
+  <td>max</td>
+  <td>Specifies the maximum value of an input element</td>
+  </tr>
+  <tr>
+  <td>min</td>
+  <td>Specifies the minimum value of an input element</td>
+  </tr>
+  <tr>
+  <td>pattern</td>
+  <td>Specifies the value pattern of an input element</td>
+  </tr>
+  <tr>
+  <td>required</td>
+  <td>Specifies that the input field requires an element</td>
+  </tr>
+  <tr>
+  <td>type&nbsp;</td>
+  <td>Specifies the type of an input element</td>
+  </tr>
+  </table>
+  
+  <p>For a full list, go to <a target="_blank" href="https://www.w3schools.com/html/html_form_attributes.asp">HTML 
+  Input Attributes</a>.</p>
+  
+  <hr>
+  
+  <h2>Constraint Validation CSS Pseudo Selectors</h2>
+  <table class="table-imd">
+  <tr>
+  <th style="width:25%">Selector</th>
+  <th>Description</th>
+  </tr>
+  <tr>
+  <td>:disabled</td>
+  <td>Selects input elements with the &quot;disabled&quot; attribute specified</td>
+  </tr>
+  <tr>
+  <td>:invalid</td>
+  <td>Selects input elements with invalid values</td>
+  </tr>
+  <tr>
+  <td>:optional</td>
+  <td>Selects input elements with no &quot;required&quot; attribute specified</td>
+  </tr>
+  <tr>
+  <td>:required</td>
+  <td>Selects input elements with the &quot;required&quot; attribute specified</td>
+  </tr>
+  <tr>
+  <td>:valid</td>
+  <td>Selects input elements with valid values</td>
+  </tr>
+  </table>
+  
+  <p>For a full list, go to <a target="_blank" href="https://www.w3schools.com//css/css_pseudo_classes.asp">CSS 
+  Pseudo Classes</a>.</p>
+  <br>
+
+
+
+</div>
+
+<div class="parag">
+
+  <h1 id="DOM CSS">JavaScript HTML DOM - Changing CSS</h1>
+  <p>The HTML DOM allows JavaScript to change the style of HTML elements.</p>
+  <h2>Changing HTML Style</h2>
+  <p>To change the style of an HTML element, use this syntax:</p>
+  
+  <div class="code"><div>
+  document.getElementById(<i>id</i>).style.<i>property </i>=<i> new style</i>
+  </div></div>
+  
+  <p>The following example changes the style of a <code class="imd-codecol">&lt;p&gt;</code> element:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;html&gt;<br>
+  &lt;body&gt;<br><br>
+  &lt;p id=&quot;p2&quot;&gt;Hello World!&lt;/p&gt;<br>
+  <br>
+  &lt;script&gt;<br>
+  document.getElementById(&quot;p2&quot;).style.color = &quot;blue&quot;;<br>
+  &lt;/script&gt;<br>
+  <br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;
+  </div>
+  
+  </div>
+  <hr>
+  
+  <h2>Using Events</h2>
+  <p>The HTML DOM allows you to execute code when an event occurs.</p>
+  <p>Events are generated by the browser when &quot;things happen&quot; to HTML elements:</p>
+  <ul>
+    <li>An element is clicked on</li>
+    <li>The page has loaded</li>
+    <li>Input fields are changed</li>
+  </ul>
+  <p>You will learn more about events in the next chapter of this tutorial.</p>
+  
+  <p>This example changes the style of the HTML element with <code class="imd-codecol">id=&quot;id1&quot;</code>, when the 
+  user clicks a button:</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;h1 id=&quot;id1&quot;&gt;My Heading 1&lt;/h1&gt;<br><br>
+  &lt;button type=&quot;button&quot; <br>onclick=&quot;document.getElementById('id1').style.color = 'red'&quot;&gt;<br>
+  Click Me!&lt;/button&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+  
+  </div>
+  <hr>
+  <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+  
+  
+    <div id="adngin-mid_content-0"></div>
+    
+  </div>
+  <hr>
+  
+  <h2>More Examples</h2>
+  <p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_visibility" target="_blank">Visibility</a>
+  How to make an element invisible. Do you want to show the element or not?</p>
+  
+  <hr>
+  
+  <h2>HTML DOM Style Object Reference</h2>
+  
+  <p>For all HTML DOM style properties, look at our complete
+  <a target="_blank" href="https://www.w3schools.com//jsref/dom_obj_style.asp">HTML DOM Style Object Reference</a>.</p>
+  <hr>
+
+</div>
+
+<div class="parag">
+
+
+  <h1 id="DOM Animations">JavaScript HTML DOM Animation</h1>
+  <p>Learn to create HTML animations using JavaScript.</p>
+  <h2>A Basic Web Page</h2>
+  <p>To demonstrate how to create HTML animations with JavaScript, we will use a simple 
+  web page:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;My First 
+   JavaScript Animation&lt;/h1&gt;<br><br>
+  &lt;div id=&quot;animation&quot;&gt;My animation will go here&lt;/div&gt;<br><br>
+  &lt;/body&gt;<br>&lt;/html&gt;<br></div>
+  </div>
+  <hr>
+  <h2>Create an Animation Container</h2>
+  
+  <p>All animations should be relative to a container element.</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;div id =&quot;container&quot;&gt;<br>&nbsp;&nbsp;&lt;div id =&quot;animate&quot;&gt;My 
+   animation will go here&lt;/div&gt;<br>&lt;/div&gt;</div>
+  </div>
+  <hr>
+  <h2>Style the Elements</h2>
+  <p>The container element should be created with style = &quot;<code class="imd-codecol">position: relative</code>&quot;.</p>
+  <p>The animation element should be created with style = &quot;<code class="imd-codecol">position: absolute</code>&quot;.</p>
+  <div class="imd-exple">
+   <h3>Example</h3>
+  <div class="w3-code notranslate cssHigh">
+   #container {<br>&nbsp;&nbsp;width: 400px;<br>&nbsp;&nbsp;height: 
+   400px;<br>&nbsp; position: relative;<br>&nbsp; 
+   background: yellow;<br>
+   }<br>#animate {<br>&nbsp; width: 50px;<br>&nbsp; height: 
+   50px;<br>&nbsp; position: absolute;<br>&nbsp; 
+   background: red;<br>}
+  </div>
+   
+  </div>
+  
+  <hr>
+  <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+  
+  
+    <div id="adngin-mid_content-0"></div>
+    
+  </div>
+  <hr>
+  <h2>Animation Code</h2>
+  <p>JavaScript animations are done by programming gradual changes in an element's 
+  style.</p>
+  <p>The changes are called by a timer. When the timer interval is small, the 
+  animation looks continuous.</p>
+  <p>The basic code is:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  id = setInterval(frame, 5);<br><br>function frame() {<br>&nbsp; if (/* 
+   test for finished */) {<br>&nbsp;&nbsp;&nbsp;&nbsp;clearInterval(id);<br>&nbsp;&nbsp;} else {<br>
+    &nbsp;&nbsp;&nbsp; 
+   /* code to change the element style */&nbsp; <br>&nbsp;&nbsp;}<br>}
+  </div>
+  </div>
+  
+  <hr>
+  <h2>Create the Full Animation Using JavaScript</h2>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  function myMove() {<br>
+  &nbsp; let id = null;<br>
+  &nbsp; const elem = document.getElementById(&quot;animate&quot;);<br>
+  &nbsp; let pos = 0;<br>&nbsp; 
+    clearInterval(id);<br>&nbsp; id = setInterval(frame, 5);<br>&nbsp; 
+   function frame() {<br>&nbsp;&nbsp;&nbsp; if (pos == 
+   350) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   clearInterval(id);<br>&nbsp;&nbsp;&nbsp; } else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+   pos++; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elem.style.top = pos + 'px'; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elem.style.left = pos + 'px'; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}</div>
+   
+  </div>
+  
+
+
+
+</div>
+
+
+<div class="parag">
+
+  <h1 id="DOM Events">JavaScript HTML DOM Events</h1>
+  <p>HTML DOM allows JavaScript to react to HTML events:</p>
+  <h2>Reacting to Events</h2>
+  <p>A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.</p>
+  
+  <p>To execute code when a user clicks on an element, add JavaScript code to an HTML event attribute:</p>
+  <div class="code">
+  
+  onclick=<i>JavaScript</i>
+  
+  </div>
+  
+  <p>Examples of HTML events:</p>
+  <ul>
+    <li>When a user clicks the mouse</li>
+    <li>When a web page has loaded</li>
+    <li>When an image has been loaded</li>
+    <li>When the mouse moves over an element</li>
+    <li>When an input field is changed</li>
+    <li>When an HTML form is submitted</li>
+    <li>When a user strokes a key </li>
+  </ul>
+  
+  <p>In this example, the content of the <code class="imd-codecol">&lt;h1&gt;</code> element is changed when a user clicks on it:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  </div>
+  <div class="code">
+  &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
+  &lt;body&gt;<br><br>
+  &lt;h1 onclick=&quot;this.innerHTML = 'Ooops!'&quot;&gt;Click on this text!&lt;/h1&gt;<br><br>
+  &lt;/body&gt;<br>&lt;/html&gt;
+  </div>
+  <p>In this example, a function is called from the event handler:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>
+  &lt;h1 onclick=&quot;changeText(this)&quot;&gt;Click on this text!&lt;/h1&gt;<br>
+   <br>&lt;script&gt;<br>
+  function changeText(id) {
+  <br>
+  &nbsp;&nbsp;id.innerHTML = &quot;Ooops!&quot;;<br>
+  }<br>
+  &lt;/script&gt;<br><br>
+  &lt;/body&gt;<br>&lt;/html&gt;
+  </div>
+  </div>
+  <hr>
+  
+  
+  <h2>HTML Event Attributes</h2>
+  <p>To assign events to HTML elements you can use event attributes.</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <p>Assign an onclick event to a button element:</p>
+  <div class="code">
+  &lt;button onclick=&quot;displayDate()&quot;&gt;Try it&lt;/button&gt;
+  </div>
+  </div>
+  <p>In the example above, a function named <code class="imd-codecol">displayDate</code> will be executed 
+  when the button is clicked.</p>
+  <hr>
+  <h2>Assign Events Using the HTML DOM</h2>
+  <p>The HTML DOM allows you to assign events to HTML elements using JavaScript: </p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <p>Assign an onclick event to a button element:</p>
+  <div class="code">
+  &lt;script&gt;<br>
+  document.getElementById(&quot;myBtn&quot;).onclick = displayDate;<br>
+  &lt;/script&gt;
+  </div>
+  </div>
+  <p>In the example above, a function named <code class="imd-codecol">displayDate</code> is assigned to 
+  an HTML element with the <code class="imd-codecol">id=&quot;myBtn&quot;</code>.</p>
+  <p>The function will be executed 
+  when the button is clicked.</p>
+  <hr>
+  
+  <h2>The onload and onunload Events</h2>
+  <p>The <code class="imd-codecol">onload</code> and <code class="imd-codecol">onunload</code> events are triggered when the user enters or leaves the page.</p>
+  <p>The <code class="imd-codecol">onload</code> event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information.</p>
+  <p>The <code class="imd-codecol">onload</code> and <code class="imd-codecol">onunload</code> events can be used to deal with cookies.</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;body onload=&quot;checkCookies()&quot;&gt;
+  </div>
+  </div>
+  <hr>
+  
+  <h2>The onchange Event</h2>
+  <p>The <b style="color: crimson;"> onchange</b> event is often used in combination with validation of input fields.</p>
+  <p>Below is an example of how to use the onchange. The <b style="color: crimson;"> upperCase()</b> 
+  function will be called when a user changes the content of an input field.</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;input type=&quot;text&quot; id=&quot;fname&quot;
+  onchange=&quot;upperCase()&quot;&gt;</div>
+  </div>
+  <hr>
+  
+  <h2>The onmouseover and onmouseout Events</h2>
+  <p>The <code class="imd-codecol">onmouseover</code> and <code class="imd-codecol">onmouseout</code> events can be used to trigger a function when the user mouses 
+  over, or out of, an HTML element:</p>
+  
+  
+  <hr>
+  
+  <h2>The onmousedown, onmouseup and onclick Events</h2>
+  <p>The <code class="imd-codecol">onmousedown</code>, <code class="imd-codecol">onmouseup</code>, and <code class="imd-codecol">onclick</code> events are all parts of a 
+  mouse-click. First when a mouse-button is clicked, the onmousedown event is 
+  triggered, then, when the mouse-button 
+  is released, the onmouseup event is triggered, finally, when the mouse-click is completed, the onclick event is triggered.</p>
+  
+   
+  
+  <hr>
+  
+  <h2>More Examples</h2>
+  
+  <p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onmousedown" target="_blank">onmousedown and onmouseup</a><br>
+  Change an image when a user holds down the mouse button.</p>
+  
+  <p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onload" target="_blank">onload</a><br>
+  Display an alert box when the page has finished loading.</p>
+   
+  <p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onfocus" target="_blank">onfocus</a><br>
+  Change the background-color of an input field when it gets focus.</p>
+  
+  <p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onmouse" target="_blank">Mouse Events</a><br>
+  Change the color of an element when the cursor moves over it.</p>
+  
+  <hr>
+  
+  <h2>HTML DOM Event Object Reference</h2>
+  
+  <p>For a list of all HTML DOM events, look at our complete <a target="_blank" href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM Event Object Reference</a>.</p>
+  <hr>
+
+
+
+</div>
+
+
+<div class="parag">
+
+  <h1 id="DOM Event Listener">JavaScript HTML DOM EventListener</h1>
+
+  <h2>The addEventListener() method</h2>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <p>Add an event listener that fires when a user clicks a button:</p>
+  <div class="code">
+   document.getElementById("myBtn").addEventListener("click", displayDate);</div>
+  <a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_addeventlistener_displaydate" class="w3-btn w3-margin-bottom"></a>
+  </div>
+  <p>The <code class="imd-codecol">addEventListener()</code> method attaches an event handler to the specified element.</p>
+  <p>The <code class="imd-codecol">addEventListener()</code> method attaches an event handler to an element without overwriting existing event handlers.</p>
+  <p>You can add many event handlers to one element.</p>
+  <p>You can add many event handlers of the same type to one element, i.e two &quot;click&quot; events.</p>
+  <p>You can add event listeners to any DOM object not only HTML elements. i.e the window object.</p>
+  <p>The <code class="imd-codecol">addEventListener()</code> method makes it easier to control how the event reacts to bubbling.</p>
+  <p>When using the <code class="imd-codecol">addEventListener()</code> method, the JavaScript is separated from the HTML markup, for better readability 
+  and allows you to add event listeners even when you do not control the HTML markup.</p>
+  <p>You can easily remove an event listener by using the <code class="imd-codecol">removeEventListener()</code> method.<br></p>
+  <hr>
+  
+  <h2>Syntax</h2>
+  <div class="code"><div>
+   <em>element</em>.addEventListener(<em>event, function, useCapture</em>);</div></div>
+  <p>The first parameter is the type of the event (like &quot;<code class="imd-codecol">click</code>&quot; or &quot;<code class="imd-codecol">mousedown</code>&quot; 
+  or any other <a target="_blank" href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM Event</a>.)</p>
+  <p>The second parameter is the function we want to call when the event occurs. </p>
+  <p>The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.</p>
+  
+  <div class="imd-panel">
+  <p>Note that you don't use the 
+  &quot;on&quot; prefix for the event; use &quot;<code class="imd-codecol">click</code>&quot; instead of &quot;<code class="imd-codecol">onclick</code>&quot;.</p>
+  </div>
+  
+  <hr>
+  <h2>Add an Event Handler to an Element</h2>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <p>Alert &quot;Hello World!&quot; when the user clicks on an element:</p>
+  <div class="code">
+   <em>element</em>.addEventListener("click", function(){ alert("Hello World!"); });</div>
+  <a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_addeventlistener_add" class="w3-btn w3-margin-bottom"></a>
+  </div>
+  
+  <p>You can also refer to an external &quot;named&quot; function:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <p>Alert &quot;Hello World!&quot; when the user clicks on an element:</p>
+  <div class="code">
+    <em>element</em>.addEventListener(&quot;click&quot;,  myFunction);<br><br>function myFunction() {<br>&nbsp;&nbsp;alert (&quot;Hello World!&quot;);<br>}</div>
+  </div>
+  <hr>
+  
+  <h2>Add Many Event Handlers to the Same Element</h2>
+  
+  <p>The <code class="imd-codecol">addEventListener()</code> method allows you to add many events to the same 
+  element, without overwriting existing events:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+   <em>element</em>.addEventListener(&quot;click&quot;, myFunction);<br>
+   <em>element</em>.addEventListener(&quot;click&quot;, mySecondFunction);<br>
+   </div>
+  </div>
+  
+  <p>You can add events of different types to the same element:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  <em>element</em>.addEventListener(&quot;mouseover&quot;, myFunction);<br>
+  <em>element</em>.addEventListener(&quot;click&quot;, mySecondFunction);<br>
+  <em>element</em>.addEventListener(&quot;mouseout&quot;, myThirdFunction);</div>
+  </div>
+  <hr>
+  
+  <h2>Add an Event Handler to the window Object</h2>
+  <p>The <code class="imd-codecol">addEventListener()</code> method allows you to add event listeners on any HTML 
+  DOM object such as HTML elements, the HTML document, the window object, or other 
+  objects that support events, like the <code class="imd-codecol">xmlHttpRequest</code> object.</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  
+  <p>Add an event listener that fires when a user resizes the window:</p>
+  
+  <div class="code">
+  window.addEventListener(&quot;resize&quot;, function(){<br>
+  &nbsp;&nbsp;document.getElementById("demo").innerHTML = <em>sometext</em>;<br>
+  });
+  </div>
+  </div>
+  <hr>
+  
+  <h2>Passing Parameters</h2>
+  <p>When passing parameter values, use 
+  an &quot;anonymous function&quot; that calls the specified function with the parameters:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  <em>element</em>.addEventListener(&quot;click&quot;, function(){ myFunction(p1, p2); });
+  </div>
+  </div>
+  <hr>
+  
+  <h2>Event Bubbling or Event Capturing?</h2>
+  <p>There are two ways of event propagation in the HTML DOM, bubbling and capturing.</p>
+  <p>Event propagation is a way of defining the element order when an event occurs.
+  If you have a &lt;p&gt; element inside a &lt;div&gt; element, and the user clicks on the &lt;p&gt; element, which element's 
+  &quot;click&quot; event should be handled first?</p>
+  
+  <p>In <em>bubbling </em>the inner most element's event is handled first and then the outer:
+  the &lt;p&gt; element's click event is handled first, then the &lt;div&gt; element's click event.</p>
+  
+  <p>In <em>capturing </em>the outer most element's event is handled first and then the inner:
+  the &lt;div&gt; element's click event will be handled first, then the &lt;p&gt; element's click event.</p>
+  
+  <p>With the addEventListener() method you can specify the propagation type by using the "useCapture" parameter:</p>
+  
+  <div class="code"><div>
+  addEventListener(<em>event</em>, <em>function</em>, <span class="marked"><em>useCapture</em></span>);</div></div>
+  
+  <p>The default value is false, which will use the bubbling propagation, when the value is set to true, the event uses the capturing propagation.</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  document.getElementById("myP").addEventListener(&quot;click&quot;, myFunction, true);<br>
+  document.getElementById("myDiv").addEventListener(&quot;click&quot;, myFunction, true);
+  </div>
+  </div>
+  <hr>
+  
+  <h2>The removeEventListener() method</h2>
+  <p>The <code class="imd-codecol">removeEventListener()</code> method removes event handlers that have been 
+  attached with the addEventListener() method:</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  <em>element</em>.removeEventListener(&quot;mousemove&quot;, myFunction);</div>
+  </div>
+  <hr>
+  
+  <h2>HTML DOM Event Object Reference</h2>
+  <p>For a list of all HTML DOM events, look at our complete <a target="_blank" href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM Event Object Reference</a>.</p>
+  
+</div>
+
+<div class="parag">
+
+  <h1 id="DOM Navigation">JavaScript HTML DOM Navigation</h1>
+  <p>With the HTML DOM, you can navigate the node tree using node relationships.</p>
+  <h2>DOM Nodes</h2>
+  <p>According to the W3C HTML DOM standard, everything in an HTML document is a node:</p>
+  <ul>
+    <li>The entire document is a document node</li>
+    <li>Every HTML element is an element node</li>
+    <li>The text inside HTML elements are text nodes</li>
+    <li>Every HTML attribute is an attribute node (deprecated)</li>
+    <li> All comments are comment nodes</li>
+  </ul>
+
+  <img src="images/pic_htmltree.png" alt="DOM Nodes">
+  <p>With the HTML DOM, all nodes in the node tree can be accessed by JavaScript.</p>
+  <p>New nodes can be created, and all nodes can be modified or deleted.</p>
+  <h2>Node Relationships</h2>
+  <p>The nodes in the node tree have a hierarchical relationship to each other.</p>
+  <p>The terms parent, child, and sibling are used to describe the relationships.</p>
+  <br>
+  <ul>
+    <li>In a node tree, the top node is called the root (or root node)</li>
+    <li>Every node has exactly one parent, except the root (which has no parent)</li>
+    <li>A node can have a number of children</li>
+    <li>Siblings (brothers or sisters) are nodes with the same parent</li>
+  </ul>
+  
+  <div class="imd-nav">
+  <div class="code">
+       &lt;html&gt;<br><br>
+       &ensp; &lt;head&gt;<br>
+       &ensp;&ensp;&ensp;&lt;title&gt;DOM Tutorial&lt;/title&gt;<br>
+       &ensp; &lt;/head&gt;<br><br>
+       &ensp; &lt;body&gt;<br>
+       &ensp;&ensp;&ensp;&lt;h1&gt;DOM Lesson one&lt;/h1&gt;<br>
+       &ensp;&ensp;&ensp;&lt;p&gt;Hello world!&lt;/p&gt;<br>
+       &ensp; &lt;/body&gt;<br><br>
+       &lt;/html&gt;
+
+      
+   </div>
+   <img src="images/pic_navigate.gif" alt="">
+  </div>
+ 
+  <p>From the HTML above you can read:</p><br>
+<ul>
+  <li><code class="imd-codecol">&lt;html&gt;</code>&ensp;is the root node</li>
+  <li><code class="imd-codecol">&lt;html&gt;</code>&ensp;has no parents</li>
+  <li><code class="imd-codecol">&lt;html&gt;</code>&ensp;is the parent of <code class="imd-codecol">&lt;head&gt;</code> and <code class="imd-codecol">&lt;body&gt;</code></li>
+  <li><code class="imd-codecol">&lt;head&gt;</code>&ensp;is the first child of <code class="imd-codecol">&lt;html&gt;</code></li>
+  <li><code class="imd-codecol">&lt;body&gt;</code>&ensp;is the last child of <code class="imd-codecol">&lt;html&gt;</code></li>
+  
+</ul>
+<br>
+<p>and:</p>
+<br>
+<ul>
+  <li><code class="imd-codecol">&lt;head&gt;</code> has one child: <code class="imd-codecol">&lt;title&gt;</code></li>
+  <li><code class="imd-codecol">&lt;title&gt;</code> has one child (a text node): &quot;DOM Tutorial&quot;</li>
+  <li><code class="imd-codecol">&lt;body&gt;</code> has two children: <code class="imd-codecol">&lt;h1&gt;</code> and <code class="imd-codecol">&lt;p&gt;</code></li>
+  <li><code class="imd-codecol">&lt;h1&gt;</code> has one child: &quot;DOM Lesson one&quot;</li>
+  <li><code class="imd-codecol">&lt;p&gt;</code> has one child: &quot;Hello world!&quot;</li>
+  <li><code class="imd-codecol">&lt;h1&gt;</code> and <code class="imd-codecol">&lt;p&gt;</code> are siblings</li>
+</ul>
+
+<h2>Navigating Between Nodes</h2>
+<p>You can use the following node properties to navigate between nodes with 
+JavaScript:</p>
+<ul>
+  <li><code class="imd-codecol">parentNode</code></li>
+  <li><code class="imd-codecol">childNodes[<em>nodenumber</em>]</code></li>
+  <li><code class="imd-codecol">firstChild</code></li>
+  <li><code class="imd-codecol">lastChild</code></li>
+  <li><code class="imd-codecol">nextSibling</code></li>
+  <li><code class="imd-codecol">previousSibling</code></li>
+</ul>
+<ul>
+  <li><code class="imd-codecol">&lt;head&gt;</code> has one child: <code class="imd-codecol">&lt;title&gt;</code></li>
+  <li><code class="imd-codecol">&lt;title&gt;</code> has one child (a text node): &quot;DOM Tutorial&quot;</li>
+  <li><code class="imd-codecol">&lt;body&gt;</code> has two children: <code class="imd-codecol">&lt;h1&gt;</code> and <code class="imd-codecol">&lt;p&gt;</code></li>
+  <li><code class="imd-codecol">&lt;h1&gt;</code> has one child: &quot;DOM Lesson one&quot;</li>
+  <li><code class="imd-codecol">&lt;p&gt;</code> has one child: &quot;Hello world!&quot;</li>
+  <li><code class="imd-codecol">&lt;h1&gt;</code> and <code class="imd-codecol">&lt;p&gt;</code> are siblings</li>
+</ul>
+<hr>
+<h2>Navigating Between Nodes</h2>
+<p>You can use the following node properties to navigate between nodes with 
+JavaScript:</p>
+<ul>
+  <li><code class="imd-codecol">parentNode</code></li>
+  <li><code class="imd-codecol">childNodes[<em>nodenumber</em>]</code></li>
+  <li><code class="imd-codecol">firstChild</code></li>
+  <li><code class="imd-codecol">lastChild</code></li>
+  <li><code class="imd-codecol">nextSibling</code></li>
+  <li><code class="imd-codecol">previousSibling</code></li>
+</ul>
+<hr>
+
+<h2>Child Nodes and Node Values</h2>
+
+<div class="imd-panel">
+<p>A common error in DOM processing is to expect an element node to contain text.</p>
+</div>
+
+<div class=imd-exple">
+<h3>Example:</h3>
+<div class="code">
+ &lt;title 
+ id=&quot;demo&quot;&gt;DOM Tutorial&lt;/title&gt;
+</div>
+</div>
+
+<p>The element node 
+<code class="imd-codecol">&lt;title&gt;</code> (in the example above) does <strong>not</strong> contain text.</p>
+<p>It contains a <b>text node</b> with the value &quot;DOM Tutorial&quot;. </p>
+<p>The value of the text node can be accessed by the 
+node's 
+<code class="imd-codecol">innerHTML</code> property:
+<div class=imd-exple">
+<div class="code">
+myTitle = document.getElementById(&quot;demo&quot;).innerHTML;
+</div>
+</div>
+<p>Accessing the innerHTML property is the same as accessing the <code class="imd-codecol">nodeValue</code> 
+of the first child:</p>
+<div class=imd-exple">
+<div class="code">
+myTitle = document.getElementById(&quot;demo&quot;).firstChild.nodeValue;
+</div>
+</div>
+
+<p>Accessing the first child can also be done like this:</p>
+<div class=imd-exple">
+<div class="code">
+myTitle = document.getElementById(&quot;demo&quot;).childNodes[0].nodeValue;
+</div>
+</div>
+
+<p>All the (3) following examples retrieves the text of an <code class="imd-codecol">&lt;h1&gt;</code> element and copies it 
+into a <code class="imd-codecol">&lt;p&gt;</code> element:</p>
+<div class=imd-exple">
+<h3>Example</h3>
+<div class="code">
+&lt;html&gt;<br>
+&lt;body&gt;<br><br>&lt;h1 id=&quot;id01&quot;&gt;My First Page&lt;/h1&gt;<br>&lt;p id=&quot;id02&quot;&gt;&lt;/p&gt;<br><br>
+&lt;script&gt;<br>
+ document.getElementById(&quot;id02&quot;).innerHTML 
+ = document.getElementById(&quot;id01&quot;).innerHTML;<br>
+&lt;/script&gt;<br><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+ 
+</div>
+
+<div class=imd-exple">
+<h3>Example</h3>
+<div class="code">
+&lt;html&gt;<br>
+&lt;body&gt;<br><br>&lt;h1 id=&quot;id01&quot;&gt;My First Page&lt;/h1&gt;<br>&lt;p id=&quot;id02&quot;&gt;&lt;/p&gt;<br><br>
+&lt;script&gt;<br>
+ document.getElementById(&quot;id02&quot;).innerHTML = document.getElementById(&quot;id01&quot;).firstChild.nodeValue;<br>
+&lt;/script&gt;<br><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+
+</div>
+
+<div class=imd-exple">
+<h3>Example</h3>
+<div class="code">
+&lt;html&gt;<br>
+&lt;body&gt;<br><br>&lt;h1 id=&quot;id01&quot;&gt;My First Page&lt;/h1&gt;<br>&lt;p id=&quot;id02&quot;&gt;Hello!&lt;/p&gt;<br><br>
+&lt;script&gt;<br>
+ document.getElementById(&quot;id02&quot;).innerHTML = document.getElementById(&quot;id01&quot;).childNodes[0].nodeValue;<br>
+&lt;/script&gt;<br><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+ 
+</div>
+
+<hr>
+
+<h2>InnerHTML</h2>
+<p>In this tutorial we use the innerHTML property to retrieve the content of an 
+HTML element.</p>
+<p>However, learning 
+the other methods above is useful for understanding the tree structure and the 
+navigation of the DOM.</p>
+<hr>
+
+<h2>DOM Root Nodes</h2>
+<p>There are two special properties that allow access to the full document:</p>
+<ul>
+  <li><code class="imd-codecol">document.body</code> - The body of the document</li>
+  <li><code class="imd-codecol">document.documentElement</code> - The full document</li>
+</ul>
+
+<div class=imd-exple">
+<h3>Example</h3>
+<div class="code">
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+<br>
+&lt;h2&gt;JavaScript HTMLDOM&lt;/h2&gt;<br>&lt;p&gt;Displaying document.body&lt;/p&gt;<br><br>&lt;p 
+id=&quot;demo&quot;&gt;&lt;/p&gt;<br><br>&lt;script&gt;<br>document.getElementById(&quot;demo&quot;).innerHTML 
+= document.body.innerHTML;<br>&lt;/script&gt;<br>
+<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+
+</div>
+
+<div class=imd-exple">
+<h3>Example</h3>
+<div class="code">
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+<br>
+&lt;h2&gt;JavaScript HTMLDOM&lt;/h2&gt;<br>&lt;p&gt;Displaying document.documentElement&lt;/p&gt;<br>
+<br>&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;<br><br>&lt;script&gt;<br>
+document.getElementById(&quot;demo&quot;).innerHTML = 
+document.documentElement.innerHTML;<br>&lt;/script&gt;<br>
+<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+
+</div>
+<hr>
+
+<h2>The nodeName Property</h2>
+<p>The <code class="imd-codecol">nodeName</code> property specifies the name of a node.</p>
+<ul>
+  <li>nodeName is read-only</li>
+  <li>nodeName of an element node is the same as the tag name</li>
+  <li>nodeName of an attribute node is the attribute name</li>
+  <li>nodeName of a text node is always #text</li>
+  <li>nodeName of the document node is always #document</li>
+</ul>
+
+<div class=imd-exple">
+<h3>Example</h3>
+ <div class="code">
+  &lt;h1 id=&quot;id01&quot;&gt;My First Page&lt;/h1&gt;<br>
+ &lt;p id=&quot;id02&quot;&gt;&lt;/p&gt;<br><br>&lt;script&gt;<br>document.getElementById(&quot;id02&quot;).innerHTML 
+ = document.getElementById(&quot;id01&quot;).nodeName;<br>&lt;/script&gt;</div>
+
+</div>
+<div class="imd-panel">
+<p><b>Note:</b> <code class="imd-codecol">nodeName</code> always contains the uppercase tag name of an HTML element.</p>
+</div>
+<hr>
+
+<h2>The nodeValue Property</h2>
+<p>The <code class="imd-codecol">nodeValue</code> property specifies the value of a node.</p>
+<ul>
+  <li>nodeValue for element nodes is <code class="imd-codecol">null</code></li>
+  <li>nodeValue for text nodes is the text itself</li>
+  <li>nodeValue for attribute nodes is the attribute value</li>
+</ul>
+
+<hr>
+<h2>The nodeType Property</h2>
+<p>The <code class="imd-codecol">nodeType</code> property is read only. It returns the type of a node.</p>
+
+<div class=imd-exple">
+<h3>Example</h3>
+<div class="code">
+ &lt;h1 id=&quot;id01&quot;&gt;My First Page&lt;/h1&gt;<br>
+ &lt;p id=&quot;id02&quot;&gt;&lt;/p&gt;<br><br>&lt;script&gt;<br>document.getElementById(&quot;id02&quot;).innerHTML 
+ = document.getElementById(&quot;id01&quot;).nodeType;<br>&lt;/script&gt;</div>
+
+</div>
+
+<p>The most important nodeType properties are:</p>
+
+<table>
+<tr>
+<th>Node</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+<tr>
+  <td>ELEMENT_NODE</td>
+  <td>1</td>
+  <td>&lt;h1 class=&quot;heading&quot;&gt;W3Schools&lt;/h1&gt;</td>
+</tr>
+<tr>
+  <td>ATTRIBUTE_NODE</td>
+  <td>2</td>
+  <td>&nbsp;class = &quot;heading&quot; (deprecated)</td>
+</tr>
+<tr>
+  <td>TEXT_NODE</td>
+  <td>3</td>
+  <td>W3Schools</td>
+</tr>
+<tr>
+  <td>COMMENT_NODE</td>
+  <td>8</td>
+  <td>&lt;!-- This is a comment --&gt;</td>
+</tr>
+<tr>
+  <td>DOCUMENT_NODE</td>
+  <td>9</td>
+  <td>The HTML document itself (the parent of &lt;html&gt;)</td>
+</tr>
+<tr>
+  <td>DOCUMENT_TYPE_NODE</td>
+  <td>10</td>
+  <td>&lt;!Doctype html&gt;</td>
+</tr>
+</table>
+
+<div class="imd-panel">
+<p>Type 2 is deprecated in the HTML DOM (but works). It is not deprecated in the XML DOM.</p>
+</div>
+
+
+</div>
+
+<div class="parag">
+
+  <h1 id="DOM Nodes">JavaScript HTML DOM Elements (Nodes)</h1>
+
+  <p>Adding and Removing Nodes (HTML Elements)</p>
+  <hr>
+  <h2>Creating New HTML Elements (Nodes)</h2>
+  <p>To add a new element to the HTML DOM, you must create the element (element node) first, 
+  and then append it to an existing element. </p>
+  <div class="imd-exple">
+  <h3>&nbsp;Example</h3>
+  <div class="code">
+  &lt;div id=&quot;div1&quot;&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p1&quot;&gt;This is a paragraph.&lt;/p&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p2&quot;&gt;This is another paragraph.&lt;/p&gt;<br>
+  &lt;/div&gt;<br><br>&lt;script&gt;<br>
+  const para = document.createElement(&quot;p&quot;);<br>
+  const node = document.createTextNode(&quot;This is new.&quot;);<br>
+  para.appendChild(node);<br><br>
+  const element = document.getElementById(&quot;div1&quot;);<br>
+  element.appendChild(para);<br>
+  &lt;/script&gt;
+  </div>
+  
+  <h2>Example Explained&nbsp;</h2>
+  <p>This code creates a new <code class="imd-codecol">&lt;p&gt;</code> element:</p>
+  
+  <div class="code">
+  <div>
+  const para = document.createElement(&quot;p&quot;);</div>
+  </div>
+  <p>To add text to the <code class="imd-codecol">&lt;p&gt;</code> element, you must create a text node first. This code creates a text node:</p>
+  
+  <div class="code">
+  <div>
+  const node = document.createTextNode(&quot;This is a new paragraph.&quot;);</div>
+  </div>
+  <p>Then you must append the text node to the <code class="imd-codecol">&lt;p&gt;</code> element:</p>
+  
+  <div class="code">
+  <div>
+  para.appendChild(node);</div>
+  </div>
+  <p>Finally you must append the new element to an existing element.</p>
+  <p>This code finds an existing element:</p>
+  
+  <div class="code">
+  <div>
+  const element = document.getElementById(&quot;div1&quot;);</div>
+  </div>
+  <p>This code appends the new element to the existing element:</p>
+  
+  <div class="code">
+  <div>
+   element.appendChild(para);</div>
+  </div>
+  
+  
+  <h2>Creating new HTML Elements - insertBefore()</h2>
+  <p>The <code class="imd-codecol">appendChild()</code> method in the previous example, appended the new element as 
+  the last child of the parent.</p>
+  <p>If you don't want that you can use the <code class="imd-codecol">insertBefore()</code> method: </p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;div id=&quot;div1&quot;&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p1&quot;&gt;This is a paragraph.&lt;/p&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p2&quot;&gt;This is another paragraph.&lt;/p&gt;<br>
+  &lt;/div&gt;<br><br>&lt;script&gt;<br>
+  const para = document.createElement(&quot;p&quot;);<br>
+  const node = document.createTextNode(&quot;This is new.&quot;);<br>
+  para.appendChild(node);<br><br>
+  const element = document.getElementById(&quot;div1&quot;);<br>
+  const child = document.getElementById(&quot;p1&quot;);<br>element.insertBefore(para, child);<br>
+  &lt;/script&gt;</div>
+  
+  </div>
+  
+  
+  <h2>Removing Existing HTML Elements</h2>
+  <p>To remove an HTML element, use the <code class="imd-codecol">remove()</code> 
+  method:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;div&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p1&quot;&gt;This is a paragraph.&lt;/p&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p2&quot;&gt;This is another paragraph.&lt;/p&gt;<br>
+  &lt;/div&gt;<br><br>&lt;script&gt;<br>
+  const elmnt = document.getElementById(&quot;p1&quot;);
+  elmnt.remove();<br>
+  &lt;/script&gt;</div>
+  
+  </div>
+  
+  
+  <h2>Example Explained&nbsp;</h2>
+  <p>The HTML document contains a <code class="imd-codecol">&lt;div&gt;</code> element with two child nodes (two <code class="imd-codecol">&lt;p&gt;</code> 
+  elements):</p>
+  
+  <div class="code">
+  <div>
+  &lt;div&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p1&quot;&gt;This is a paragraph.&lt;/p&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p2&quot;&gt;This is another paragraph.&lt;/p&gt;<br>
+  &lt;/div&gt;</div>
+  </div>
+  <p>Find the element you want to remove:</p>
+  
+  <div class="code">
+  <div>
+  const elmnt = document.getElementById(&quot;p1&quot;);</div>
+  </div>
+  <p>Then execute the remove() method on that element:</p>
+  
+  <div class="code">
+  <div>
+  elmnt.remove();</div>
+  </div>
+  
+  <div class="imd-panel">
+  <p>The <code class="imd-codecol">remove()</code> method does not work in 
+  older browsers, see the example below on how to use <code class="imd-codecol">
+  removeChild()</code> instead.</p>
+  </div>
+  <hr>
+  
+  <h2>Removing a Child Node</h2>
+  
+  <p>For browsers that does not support the <code class="imd-codecol">remove()</code> method, you have to find the 
+  parent node to remove an element:</p>
+  
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;div id=&quot;div1&quot;&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p1&quot;&gt;This is a paragraph.&lt;/p&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p2&quot;&gt;This is another paragraph.&lt;/p&gt;<br>
+  &lt;/div&gt;<br><br>&lt;script&gt;<br>
+  const parent = document.getElementById(&quot;div1&quot;);<br>
+  const child = document.getElementById(&quot;p1&quot;);<br>
+  parent.removeChild(child);<br>
+  &lt;/script&gt;</div>
+  
+  </div>
+  
+  
+  <h2>Example Explained&nbsp;</h2>
+  <p>This HTML document contains a <code class="imd-codecol">&lt;div&gt;</code> element with two child nodes (two <code class="imd-codecol">&lt;p&gt;</code> 
+  elements):</p>
+  
+  <div class="code">
+  <div>
+  &lt;div id=&quot;div1&quot;&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p1&quot;&gt;This is a paragraph.&lt;/p&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p2&quot;&gt;This is another paragraph.&lt;/p&gt;<br>
+  &lt;/div&gt;</div>
+  </div>
+  <p>Find the element with <code class="imd-codecol">id=&quot;div1&quot;</code>:</p>
+  
+  <div class="code">
+  <div>
+  const parent = document.getElementById(&quot;div1&quot;);</div>
+  </div>
+  <p>Find the <code class="imd-codecol">&lt;p&gt;</code> element with <code class="imd-codecol">id=&quot;p1&quot;</code>:</p>
+  
+  <div class="code">
+  <div>
+  const child = document.getElementById(&quot;p1&quot;);</div>
+  </div>
+  <p>Remove the child from the parent:</p>
+  
+  <div class="code">
+  <div>
+  parent.removeChild(child);</div>
+  </div>
+  
+  <p>Here is a common workaround: Find the child you want to remove, and use its 
+  <code class="imd-codecol">parentNode</code> property to find the parent:</p>
+  <div class="code">
+  <div>
+  const child = document.getElementById(&quot;p1&quot;);<br>child.parentNode.removeChild(child);</div>
+  </div>
+  <hr>
+  
+  <h2>Replacing HTML Elements&nbsp;</h2>
+  <p>To replace an element to the HTML DOM, use the <code class="imd-codecol">replaceChild()</code> method:</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  &lt;div id=&quot;div1&quot;&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p1&quot;&gt;This is a paragraph.&lt;/p&gt;<br>
+  &nbsp;
+  &lt;p id=&quot;p2&quot;&gt;This is another paragraph.&lt;/p&gt;<br>
+  &lt;/div&gt;<br><br>&lt;script&gt;<br>
+  const para = document.createElement(&quot;p&quot;);<br>
+  const node = document.createTextNode(&quot;This is new.&quot;);<br>para.appendChild(node);<br>
+   <br>const parent = document.getElementById(&quot;div1&quot;);<br>const child = document.getElementById(&quot;p1&quot;);<br>parent.replaceChild(para, child);<br>
+  &lt;/script&gt;</div>
+  
+
+
+</div>
+</div>
+</div>
+
+<div class="parag">
+
+
+  <h1 id="DOM Collections">JavaScript HTML DOM Collections</h1>
+
+  <h2>The HTMLCollection Object</h2>
+  <p>The <code class="imd-codecol">getElementsByTagName()</code> method returns an <code class="imd-codecol">HTMLCollection</code> object.</p>
+  <p>An <code class="imd-codecol">HTMLCollection</code> object is 
+  an array-like list (collection) of HTML elements.</p>
+  <p>The following code selects all <code class="imd-codecol">&lt;p&gt;</code> elements in a document:</p>
+  
+  <h3>Example</h3>
+  <div class="code">
+  const myCollection = document.getElementsByTagName(&quot;p&quot;);
+  </div>
+  <p>The elements in the collection can be accessed by an index number.</p>
+    <p>To access the 
+  second &lt;p&gt; element you can write:</p>
+  <div class="code">
+  myCollection[1]
+  </div>
+  
+  
+  <p><b>Note:</b> The index starts at 0.</p>
+  
+  
+  <h2>HTML HTMLCollection Length</h2>
+  <p>The <code class="imd-codecol">length</code> property defines the number of elements in an <code class="imd-codecol">HTMLCollection</code>:</p>
+  
+  <h3>Example</h3>
+  <div class="code">
+  myCollection.length
+  </div>
+  
+  
+  <p>The <code class="imd-codecol">length</code> property is useful when you want to loop through the elements in a 
+  collection:</p>
+  
+  <h3>Example</h3>
+  <p>Change the text color of all &lt;p&gt; elements:</p>
+  <div class="code">
+  const myCollection = document.getElementsByTagName(&quot;p&quot;);<br>
+  for (let i = 0; i &lt; myCollection.length; i++) {<br>
+  &nbsp;&nbsp;myCollection[i].style.color = &quot;red&quot;;<br>
+  }
+   
+  </div>
+  
+  <div class="imd-panel">
+  <p><strong>An HTMLCollection is NOT an array!</strong><br></p>
+    <p>An HTMLCollection may look 
+  like an array, but it is not.</p>
+    <p>You can loop through the list and refer to 
+  the elements with a number (just like an array).</p>
+    <p>However, you cannot use array methods like valueOf(), pop(), push(), 
+  or join() on an HTMLCollection.</p>
+  </div>
+  
+
+
+</div>
+
+<div class="parag">
+<h1 id="DOM Node Lists">JavaScript HTML DOM Node Lists</h1>
+
+  <h2>The HTML DOM NodeList Object</h2>
+  <p>A <code class="imd-codecol">NodeList</code> object is a list (collection) of nodes extracted from a 
+  document.</p>
+  <p>A <code class="imd-codecol">NodeList</code> object is almost the same as an <code class="imd-codecol">HTMLCollection</code> object.</p>
+  <p>Some (older) browsers return a NodeList object instead of an HTMLCollection 
+  for methods like <code class="imd-codecol">getElementsByClassName()</code>.</p>
+  <p>All browsers return a NodeList object for the property <code class="imd-codecol">childNodes</code>.&nbsp; </p>
+  <p>Most browsers return a NodeList object for the method <code class="imd-codecol">querySelectorAll()</code>.</p>
+  <p>The following code selects all <code class="imd-codecol">&lt;p&gt;</code> nodes in a document:</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  const myNodeList = document.querySelectorAll(&quot;p&quot;);
+  </div>
+  <p>The elements in the NodeList can be accessed by an index number.</p>
+    <p>To access the 
+  second &lt;p&gt; node you can write:</p>
+  <div class="code">
+  myNodeList[1]
+  </div>
+  
+  </div>
+  <p><b>Note:</b> The index starts at 0.</p>
+  <hr>
+  
+  <h2>HTML DOM Node List Length</h2>
+  <p>The <code class="imd-codecol">length</code> property defines the number of nodes in a node list:</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <div class="code">
+  myNodelist.length
+  </div>
+  
+  </div>
+  <p>The <code class="imd-codecol">length</code> property is useful when you want to loop through the nodes in a node 
+  list:</p>
+  <div class="imd-exple">
+  <h3>Example</h3>
+  <p>Change the color of all &lt;p&gt; elements in a node 
+  list:</p>
+  <div class="code">
+  const myNodelist = document.querySelectorAll(&quot;p&quot;);<br>
+  for (let i = 0; i &lt; myNodelist.length; i++) {<br>
+  &nbsp; myNodelist[i].style.color = &quot;red&quot;;<br>
+  }
+  </div>
+  
+  </div>
+  
+  
+  <hr>
+  <h2>The Difference Between an HTMLCollection and a NodeList</h2>
+  
+  <p>A <b>NodeList</b> and an <b>HTMLcollection</b> is very much the same thing.</p>
+  
+  <p>Both are array-like collections (lists) of nodes (elements) extracted from a 
+  document. The nodes can be accessed by index numbers. The index starts at 0.</p>
+  
+  <p>Both have a <b>length</b> property that returns the number of elements in the list (collection).</p>
+  
+  <p>An HTMLCollection is a collection of <b>document elements</b>.</p>
+  <p>A NodeList is a collection of <b>document nodes</b> (element nodes, attribute nodes, and text nodes).</p>
+  
+  <p>HTMLCollection items can be accessed by their name, id, or index number.</p>
+  <p>NodeList items can only be accessed by their index number.</p>
+  
+  <p>An HTMLCollection is always a <b>live</b> collection. Example: If you add a &lt;li&gt; element to a list in the DOM, the list in the HTMLCollection will also change.</p>
+  
+  <p>A NodeList is most often a <b>static</b> collection. Example: If you add a &lt;li&gt; element to a list in the DOM, the list in NodeList will not change.</p>
+  
+  <p>The <code class="imd-codecol">getElementsByClassName()</code> and <code class="imd-codecol">getElementsByTagName()</code>
+  methods return a live HTMLCollection.</p> 
+  
+  <p>The <code class="imd-codecol">querySelectorAll()</code> method returns a static NodeList.</p>
+  
+  <p>The <code class="imd-codecol">childNodes</code> property returns a live NodeList.</p> 
+  <hr>
+  
+  <div class="imd-panel">
+  <h2>Not an Array!</h2>
+  <p>A NodeList may look like an array, but it is not.</p>
+  <p>You can loop through a NodeList and refer to its nodes by index.</p>
+  <p>But, you cannot use Array methods like push(), pop(), or join() on a NodeList.</p>
+  </div>
+  
+
+</div>
+
+  <a id="top-btn" href=""><img id="top" src="images/top1.png" alt="" ></a>
+
+
+<footer>
+  <img  id="imd-logo" src="images/imed_logo1.png" alt="">
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+
+</html>
+
